@@ -50,7 +50,10 @@ public class Validation implements Validating
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
+	private ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"lemna/validation/localizations/logs",
+		this.locale
+	);
 
 	/**
 	 * Конструктор для {@code Validation}.
@@ -76,7 +79,10 @@ public class Validation implements Validating
 		{
 			this.locale = locale;
 
-			this.localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
+			this.localeLogs = ResourceBundle.getBundle(
+				"lemna/validation/localizations/logs",
+				this.locale
+			);
 		}
 	}
 

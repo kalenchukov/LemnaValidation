@@ -25,19 +25,28 @@ public abstract class AbstractValidator implements Validator
 	 * Локализованные тексты логирования.
 	 */
 	@NotNull
-	protected ResourceBundle localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
+	protected ResourceBundle localeLogs = ResourceBundle.getBundle(
+		"lemna/validation/localizations/logs",
+		this.locale
+	);
 
 	/**
 	 * Локализованные тексты нарушений.
 	 */
 	@NotNull
-	protected ResourceBundle localeViolations = ResourceBundle.getBundle("localizations/violations", this.locale);
+	protected ResourceBundle localeViolations = ResourceBundle.getBundle(
+		"lemna/validation/localizations/violations",
+		this.locale
+	);
 
 	/**
 	 * Локализованные тексты исключений.
 	 */
 	@NotNull
-	protected ResourceBundle localeExceptions = ResourceBundle.getBundle("localizations/exceptions", this.locale);
+	protected ResourceBundle localeExceptions = ResourceBundle.getBundle(
+		"lemna/validation/localizations/exceptions",
+		this.locale
+	);
 
 	/**
 	 * Сообщение нарушения.
@@ -64,8 +73,15 @@ public abstract class AbstractValidator implements Validator
 		{
 			this.locale = locale;
 
-			this.localeLogs = ResourceBundle.getBundle("localizations/logs", this.locale);
-			this.localeViolations = ResourceBundle.getBundle("localizations/violations", this.locale);
+			this.localeLogs = ResourceBundle.getBundle(
+				"lemna/validation/localizations/logs",
+				this.locale
+			);
+
+			this.localeViolations = ResourceBundle.getBundle(
+				"lemna/validation/localizations/violations",
+				this.locale
+			);
 		}
 	}
 
