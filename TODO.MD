@@ -4,6 +4,12 @@
 [x] - не делать
 
 # CORE
+* Добавить аннотацию @Alphabet(alphabet = )
+* Добавить аннотацию @Kit(letters = true, numbers = true, graph = true)
+* Валидатор для проверки URL
+* Валидатор для проверки email
+* Валидатор для проверки IP адреса
+
 * [>] Валидатор для проверки Mac адреса
 * [>] Валидатор для проверки IP адреса
 * [>] Исключаемые значения в ограничениях Length, Year, Day, Hour, Number, NumberFloat, Pattern
