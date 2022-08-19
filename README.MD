@@ -313,7 +313,7 @@ import dev.kalenchukov.lemna.validation.constraints.Millisecond;
 public class Experimental
 {
 	@Millisecond
-	private Byte millisecond = 256;
+	private Short millisecond = 256;
 }
 ```
 
