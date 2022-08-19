@@ -115,6 +115,35 @@ public class Experimental
 }
 ```
 
+#### Аннотация "@Letter"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по буквам алфавита.
+
+##### Параметры
+
+| Параметр | Описание                   | Обязательный |
+|:--------:|:---------------------------|:------------:|
+| alphabet | Задаёт алфавит             |      Да      |
+| message  | Задаёт сообщение нарушения |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* Character
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.alphabet.resources.Alphabet;
+import dev.kalenchukov.lemna.validation.constraints.Letter;
+
+public class Experimental
+{
+	@Letter(alphabet = Alphabet.RUSSIAN)
+	private String word = "Печаль";
+}
+```
+
 #### Аннотация "@Size"
 
 Значение поля класса аннотированное данной аннотацией ограничивается количеством элементов.

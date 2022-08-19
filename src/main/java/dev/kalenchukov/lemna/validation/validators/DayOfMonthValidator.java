@@ -199,7 +199,6 @@ public final class DayOfMonthValidator extends AbstractValidator
 			return false;
 		}
 
-		System.out.println(value > 31);
 		if (value > 31)
 		{
 			this.setMessage(StringFormat.format(

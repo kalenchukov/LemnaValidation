@@ -9,6 +9,7 @@ module dev.kalenchukov.lemna.validation
 	requires org.jetbrains.annotations;
 	requires log4j;
 	requires dev.kalenchukov.string.formatting;
+	requires dev.kalenchukov.alphabet;
 
 	exports dev.kalenchukov.lemna.validation;
 	exports dev.kalenchukov.lemna.validation.constraints;

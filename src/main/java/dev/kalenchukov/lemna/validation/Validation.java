@@ -254,6 +254,7 @@ public class Validation implements Validating
 		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
 		validators.put(Second.class.getName(), new SecondValidator(this.locale));
 		validators.put(Year.class.getName(), new YearValidator(this.locale));
+		validators.put(Letter.class.getName(), new LetterValidator(this.locale));
 
 		validators.put(Valid.class.getName(), new ValidValidator(this.locale));
 		validators.put(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
