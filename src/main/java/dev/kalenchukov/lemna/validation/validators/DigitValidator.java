@@ -21,6 +21,7 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.Digit;
+import dev.kalenchukov.lemna.validation.constraints.Letter;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.numeralsystem.Numerable;
 import dev.kalenchukov.string.formatting.StringFormat;
@@ -118,20 +119,7 @@ public final class DigitValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
-
-		if (!alphabet.contains(value))
-		{
-			this.setMessage(StringFormat.format(
-				constraint.message(),
-				"DEFAULT_MESSAGE",
-				this.localeViolations.getString("90016")
-			));
-
-			return false;
-		}
-
-		return true;
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -146,20 +134,38 @@ public final class DigitValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
-
 		for (Character character : value.toCharArray())
 		{
-			if (!alphabet.contains(character))
-			{
-				this.setMessage(StringFormat.format(
-					constraint.message(),
-					"DEFAULT_MESSAGE",
-					this.localeViolations.getString("90016")
-				));
-
+			if (!this.isValidAbstract(constraint, character)) {
 				return false;
 			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Проверка значения поля класса абстрактного типа.
+	 * В качестве абстракции используется тип {@code Character}.
+	 *
+	 * @param constraint Проверяемое ограничение.
+	 * @param value Значение поля класса.
+	 * @return {@code True} если значение поля корректно, иначе {@code false}.
+	 */
+	private boolean isValidAbstract(@NotNull final Digit constraint, @NotNull final Character value)
+	{
+
+		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
+
+		if (!alphabet.contains(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90016")
+			));
+
+			return false;
 		}
 
 		return true;
