@@ -121,10 +121,12 @@ public class Experimental
 
 ##### Параметры
 
-| Параметр | Описание                   | Обязательный |
-|:--------:|:---------------------------|:------------:|
-| alphabet | Задаёт алфавит             |      Да      |
-| message  | Задаёт сообщение нарушения |     Нет      |
+| Параметр  | Описание                   | Обязательный |
+|:---------:|:---------------------------|:------------:|
+| alphabet  | Задаёт алфавит             |      Да      |
+| upperCase | Прописной регистр букв     |     Нет      |
+| lowerCase | Строчный регистр букв      |     Нет      |
+|  message  | Задаёт сообщение нарушения |     Нет      |
 
 ##### Поддерживаемые типы полей
 
@@ -139,7 +141,7 @@ import dev.kalenchukov.lemna.validation.constraints.Letter;
 
 public class Experimental
 {
-	@Letter(alphabet = Alphabet.RUSSIAN)
+	@Letter(alphabet = Alphabet.RUSSIAN, upperCase = true, lowerCase = true)
 	private String word = "Печаль";
 }
 ```

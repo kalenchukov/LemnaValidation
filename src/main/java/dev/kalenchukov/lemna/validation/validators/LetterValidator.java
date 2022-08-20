@@ -22,6 +22,7 @@ import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.Letter;
+import dev.kalenchukov.lemna.validation.constraints.Number;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
 import org.jetbrains.annotations.NotNull;
@@ -118,20 +119,7 @@ public final class LetterValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		Alphabetical alphabet = constraint.alphabet().getAlphabet();
-
-		if (!alphabet.contains(value))
-		{
-			this.setMessage(StringFormat.format(
-				constraint.message(),
-				"DEFAULT_MESSAGE",
-				this.localeViolations.getString("90003")
-			));
-
-			return false;
-		}
-
-		return true;
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -146,20 +134,62 @@ public final class LetterValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		Alphabetical alphabet = constraint.alphabet().getAlphabet();
-
 		for (Character character : value.toCharArray())
 		{
-			if (!alphabet.contains(character))
-			{
-				this.setMessage(StringFormat.format(
-					constraint.message(),
-					"DEFAULT_MESSAGE",
-					this.localeViolations.getString("90003")
-				));
-
+			if (!this.isValidAbstract(constraint, character)) {
 				return false;
 			}
+		}
+
+		return true;
+	}
+
+	/**
+	 * Проверка значения поля класса абстрактного типа.
+	 * В качестве абстракции используется тип {@code Character}.
+	 *
+	 * @param constraint Проверяемое ограничение.
+	 * @param value Значение поля класса.
+	 * @return {@code True} если значение поля корректно, иначе {@code false}.
+	 */
+	private boolean isValidAbstract(@NotNull final Letter constraint, @NotNull final Character value)
+	{
+		Objects.requireNonNull(constraint);
+		Objects.requireNonNull(value);
+
+		Alphabetical alphabet = constraint.alphabet().getAlphabet();
+
+		if (!alphabet.contains(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90003")
+			));
+
+			return false;
+		}
+
+		if (!constraint.upperCase() && Character.isUpperCase(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90017")
+			));
+
+			return false;
+		}
+
+		if (!constraint.lowerCase() && Character.isLowerCase(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90018")
+			));
+
+			return false;
 		}
 
 		return true;

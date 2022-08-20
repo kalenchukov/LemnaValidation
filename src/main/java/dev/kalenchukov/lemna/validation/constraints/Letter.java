@@ -39,6 +39,20 @@ public @interface Letter
 	Alphabet alphabet();
 
 	/**
+	 * Задаёт разрешение прописных букв.
+	 *
+	 * @return {@code True}, если прописные буквы разрешены, иначе {@code false}.
+	 */
+	boolean upperCase() default true;
+
+	/**
+	 * Задаёт разрешение строчных букв.
+	 *
+	 * @return {@code True}, если строчные буквы разрешены, иначе {@code false}.
+	 */
+	boolean lowerCase() default true;
+
+	/**
 	 * Задаёт сообщение о нарушении.
 	 * Переменные: <ul>
 	 *     <li>{@code %FIELD%} - название поля класса</li>
