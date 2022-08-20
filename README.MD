@@ -144,6 +144,35 @@ public class Experimental
 }
 ```
 
+#### Аннотация "@Digit"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по цифрам системы счисления.
+
+##### Параметры
+
+|    Параметр    | Описание                   | Обязательный |
+|:--------------:|:---------------------------|:------------:|
+| numeralSystem  | Задаёт систему счисления   |      Да      |
+|    message     | Задаёт сообщение нарушения |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* Character
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
+import dev.kalenchukov.lemna.validation.constraints.Digit;
+
+public class Experimental
+{
+	@Digit(numeralSystem = NumeralSystem.DECIMAL)
+	private String word = "0123456789";
+}
+```
+
 #### Аннотация "@Size"
 
 Значение поля класса аннотированное данной аннотацией ограничивается количеством элементов.
