@@ -164,11 +164,11 @@ public class Experimental
 #### Пример
 
 ```java
-import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
+import dev.kalenchukov.lemna.validation.constraints.Letter;
 
 public class Experimental
 {
-	@LetterAlphabet(upperCase = false)
+	@Letter(upperCase = false)
 	private String word = "печаль";
 }
 ```
