@@ -18,11 +18,9 @@
 
 package dev.kalenchukov.lemna.validation.validators;
 
-import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.Letter;
-import dev.kalenchukov.lemna.validation.constraints.Number;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
 import org.jetbrains.annotations.NotNull;
@@ -157,14 +155,12 @@ public final class LetterValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		Alphabetical alphabet = constraint.alphabet().getAlphabet();
-
-		if (!alphabet.contains(value))
+		if (!Character.isLetter(value))
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
 				"DEFAULT_MESSAGE",
-				this.localeViolations.getString("90003")
+				this.localeViolations.getString("90019")
 			));
 
 			return false;

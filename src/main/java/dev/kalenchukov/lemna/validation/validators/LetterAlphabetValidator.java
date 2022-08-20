@@ -18,11 +18,11 @@
 
 package dev.kalenchukov.lemna.validation.validators;
 
+import dev.kalenchukov.alphabet.Alphabetical;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
-import dev.kalenchukov.lemna.validation.constraints.Digit;
+import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
-import dev.kalenchukov.numeralsystem.Numerable;
 import dev.kalenchukov.string.formatting.StringFormat;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -32,14 +32,14 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * Класс проверяющего для ограничения {@link Digit}.
+ * Класс проверяющего для ограничения {@link LetterAlphabet}.
  */
-public final class DigitValidator extends AbstractValidator
+public final class LetterAlphabetValidator extends AbstractValidator
 {
 	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
-	public DigitValidator(@NotNull final Locale locale)
+	public LetterAlphabetValidator(@NotNull final Locale locale)
 	{
 		super(Objects.requireNonNull(locale));
 	}
@@ -53,7 +53,7 @@ public final class DigitValidator extends AbstractValidator
 	{
 		Objects.requireNonNull(field);
 
-		Digit constraint = field.getDeclaredAnnotation(Digit.class);
+		LetterAlphabet constraint = field.getDeclaredAnnotation(LetterAlphabet.class);
 
 		boolean valid = this.isValid(field, constraint, value);
 
@@ -80,7 +80,7 @@ public final class DigitValidator extends AbstractValidator
 	 * @return {@code True} если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException Если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Digit constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field, @NotNull final LetterAlphabet constraint, @Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -113,7 +113,7 @@ public final class DigitValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidCharacter(@NotNull final Digit constraint, @NotNull final Character value)
+	private boolean isValidCharacter(@NotNull final LetterAlphabet constraint, @NotNull final Character value)
 	{
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
@@ -128,7 +128,7 @@ public final class DigitValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidString(@NotNull final Digit constraint, @NotNull final String value)
+	private boolean isValidString(@NotNull final LetterAlphabet constraint, @NotNull final String value)
 	{
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
@@ -151,17 +151,30 @@ public final class DigitValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Digit constraint, @NotNull final Character value)
+	private boolean isValidAbstract(@NotNull final LetterAlphabet constraint, @NotNull final Character value)
 	{
+		Objects.requireNonNull(constraint);
+		Objects.requireNonNull(value);
 
-		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
+		if (!Character.isLetter(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90019")
+			));
+
+			return false;
+		}
+
+		Alphabetical alphabet = constraint.alphabet().getAlphabet();
 
 		if (!alphabet.contains(value))
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
 				"DEFAULT_MESSAGE",
-				this.localeViolations.getString("90016")
+				this.localeViolations.getString("90003")
 			));
 
 			return false;

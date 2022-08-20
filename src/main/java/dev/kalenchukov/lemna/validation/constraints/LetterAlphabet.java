@@ -18,33 +18,25 @@
 
 package dev.kalenchukov.lemna.validation.constraints;
 
+import dev.kalenchukov.alphabet.resources.Alphabet;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
- * Ограничение по буквам.
+ * Ограничение по буквам алфавита.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
-public @interface Letter
+public @interface LetterAlphabet
 {
 	/**
-	 * Задаёт разрешение прописных букв.
+	 * Задаёт алфавит.
 	 *
-	 * @return {@code True}, если прописные буквы разрешены, иначе {@code false}.
+	 * @return алфавит.
 	 */
-	boolean upperCase() default true;
-
-	/**
-	 * Задаёт разрешение строчных букв.
-	 *
-	 * @return {@code True}, если строчные буквы разрешены, иначе {@code false}.
-	 */
-	boolean lowerCase() default true;
+	@NotNull
+	Alphabet alphabet();
 
 	/**
 	 * Задаёт сообщение о нарушении.

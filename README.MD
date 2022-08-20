@@ -115,7 +115,7 @@ public class Experimental
 }
 ```
 
-#### Аннотация "@Letter"
+#### Аннотация "@LetterAlphabet"
 
 Значение поля класса аннотированное данной аннотацией ограничивается по буквам алфавита.
 
@@ -124,6 +124,34 @@ public class Experimental
 | Параметр  | Описание                   | Обязательный |
 |:---------:|:---------------------------|:------------:|
 | alphabet  | Задаёт алфавит             |      Да      |
+|  message  | Задаёт сообщение нарушения |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* Character
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.alphabet.resources.Alphabet;
+import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
+
+public class Experimental
+{
+	@LetterAlphabet(alphabet = Alphabet.RUSSIAN)
+	private String word = "Печаль";
+}
+```
+
+#### Аннотация "@Letter"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по буквам.
+
+##### Параметры
+
+| Параметр  | Описание                   | Обязательный |
+|:---------:|:---------------------------|:------------:|
 | upperCase | Прописной регистр букв     |     Нет      |
 | lowerCase | Строчный регистр букв      |     Нет      |
 |  message  | Задаёт сообщение нарушения |     Нет      |
@@ -136,13 +164,12 @@ public class Experimental
 #### Пример
 
 ```java
-import dev.kalenchukov.alphabet.resources.Alphabet;
-import dev.kalenchukov.lemna.validation.constraints.Letter;
+import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
 
 public class Experimental
 {
-	@Letter(alphabet = Alphabet.RUSSIAN, upperCase = true, lowerCase = true)
-	private String word = "Печаль";
+	@LetterAlphabet(upperCase = false)
+	private String word = "печаль";
 }
 ```
 

@@ -18,7 +18,6 @@
 
 package dev.kalenchukov.lemna.validation.validators;
 
-import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
@@ -40,7 +39,7 @@ public class LetterValidatorTest
 	{
 		class Experimental
 		{
-			@Letter(alphabet = Alphabet.RUSSIAN)
+			@Letter
 			private Integer word = 12345;
 		}
 
@@ -56,7 +55,7 @@ public class LetterValidatorTest
 	{
 		class Experimental
 		{
-			@Letter(alphabet = Alphabet.RUSSIAN)
+			@Letter
 			private String word = null;
 		}
 
@@ -74,8 +73,8 @@ public class LetterValidatorTest
 	{
 		class Experimental
 		{
-			@Letter(alphabet = Alphabet.RUSSIAN)
-			private Character word = 'W';
+			@Letter
+			private Character word = '#';
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -92,7 +91,7 @@ public class LetterValidatorTest
 	{
 		class Experimental
 		{
-			@Letter(alphabet = Alphabet.RUSSIAN)
+			@Letter
 			private String word = "Печаль";
 		}
 
@@ -110,7 +109,7 @@ public class LetterValidatorTest
 	{
 		class Experimental
 		{
-			@Letter(alphabet = Alphabet.RUSSIAN)
+			@Letter
 			private Character word = 'Ж';
 		}
 
@@ -118,5 +117,150 @@ public class LetterValidatorTest
 		List<Violating> violation = validation.validate();
 
 		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с корректным значением прописного регистра в поле типа {@code String}.
+	 */
+	@Test
+	public void TestValidStringTypeValueCorrectUpperCase()
+	{
+		class Experimental
+		{
+			@Letter(lowerCase = false)
+			private String word = "МАЛЫШ";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с корректным значением прописного регистра в поле типа {@code Character}.
+	 */
+	@Test
+	public void TestValidCharacterTypeValueCorrectUpperCase()
+	{
+		class Experimental
+		{
+			@Letter(lowerCase = false)
+			private Character word = 'Ж';
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с корректным значением строчного регистра в поле типа {@code String}.
+	 */
+	@Test
+	public void TestValidStringTypeValueCorrectLowerCase()
+	{
+		class Experimental
+		{
+			@Letter(upperCase = false)
+			private String word = "малыш";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с корректным значением строчного регистра в поле типа {@code Character}.
+	 */
+	@Test
+	public void TestValidCharacterTypeValueCorrectLowerCase()
+	{
+		class Experimental
+		{
+			@Letter(upperCase = false)
+			private Character word = 'ж';
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(0, violation.size());
+	}
+
+
+	/**
+	 * Проверка с не корректным значением прописного регистра в поле типа {@code String}.
+	 */
+	@Test
+	public void TestValidStringTypeValueNotCorrectUpperCase()
+	{
+		class Experimental
+		{
+			@Letter(lowerCase = false)
+			private String word = "малыш";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
+	}
+
+	/**
+	 * Проверка с не корректным значением прописного регистра в поле типа {@code Character}.
+	 */
+	@Test
+	public void TestValidCharacterTypeValueNotCorrectUpperCase()
+	{
+		class Experimental
+		{
+			@Letter(lowerCase = false)
+			private Character word = 'ж';
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
+	}
+
+	/**
+	 * Проверка с не корректным значением строчного регистра в поле типа {@code String}.
+	 */
+	@Test
+	public void TestValidStringTypeValueNotCorrectLowerCase()
+	{
+		class Experimental
+		{
+			@Letter(upperCase = false)
+			private String word = "МАЛЫШ";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
+	}
+
+	/**
+	 * Проверка с не корректным значением строчного регистра в поле типа {@code Character}.
+	 */
+	@Test
+	public void TestValidCharacterTypeValueNotCorrectLowerCase()
+	{
+		class Experimental
+		{
+			@Letter(upperCase = false)
+			private Character word = 'Ж';
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
 	}
 }
