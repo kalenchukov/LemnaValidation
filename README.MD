@@ -173,6 +173,32 @@ public class Experimental
 }
 ```
 
+#### Аннотация "@EmailAddress"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по адресу электронной почты.
+
+##### Параметры
+
+| Параметр | Описание                             | Обязательный |
+|:--------:|:-------------------------------------|:------------:|
+| message  | Задаёт сообщение нарушения           |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.lemna.validation.constraints.EmailAddress;
+
+public class Experimental
+{
+	@EmailAddress
+	private String emailAddress = "aleksey.kalenchukov@yandex.ru";
+}
+```
+
 #### Аннотация "@LetterAlphabet"
 
 Значение поля класса аннотированное данной аннотацией ограничивается по буквам алфавита.
