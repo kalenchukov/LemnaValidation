@@ -18,10 +18,12 @@
 
 package dev.kalenchukov.lemna.validation.validators;
 
+import dev.kalenchukov.alphabet.resources.Alphabet;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.Letter;
+import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import org.junit.Test;
 
@@ -63,6 +65,24 @@ public class LetterValidatorTest
 		List<Violating> violation = validation.validate();
 
 		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с пустым значением.
+	 */
+	@Test
+	public void TestValidValueNotCorrectEmpty()
+	{
+		class Experimental
+		{
+			@Letter
+			private String word = "";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
 	}
 
 	/**

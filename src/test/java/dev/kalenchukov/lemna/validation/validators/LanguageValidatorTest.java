@@ -21,8 +21,10 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
+import dev.kalenchukov.lemna.validation.constraints.Exist;
 import dev.kalenchukov.lemna.validation.constraints.Language;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
+import dev.kalenchukov.lemna.validation.supports.existences.GenderExistence;
 import org.junit.Test;
 
 import java.util.List;
@@ -62,6 +64,24 @@ public class LanguageValidatorTest
 		List<Violating> violation = validation.validate();
 
 		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с пустым значением.
+	 */
+	@Test
+	public void TestValidValueNotCorrectEmpty()
+	{
+		class Experimental
+		{
+			@Language
+			private String language = "";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
 	}
 
 	/**

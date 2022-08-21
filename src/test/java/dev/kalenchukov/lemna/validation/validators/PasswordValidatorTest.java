@@ -67,6 +67,24 @@ public class PasswordValidatorTest
 	}
 
 	/**
+	 * Проверка с пустым значением.
+	 */
+	@Test
+	public void TestValidValueNotCorrectEmpty()
+	{
+		class Experimental
+		{
+			@Password
+			private String password = "";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
+	}
+
+	/**
 	 * Проверка с корректным значением в поле типа {@code String}.
 	 */
 	@Test

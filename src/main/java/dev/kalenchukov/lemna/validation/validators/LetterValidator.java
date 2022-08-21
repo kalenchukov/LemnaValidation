@@ -132,6 +132,10 @@ public final class LetterValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
+		if (value.isEmpty()) {
+			return false;
+		}
+
 		for (Character character : value.toCharArray())
 		{
 			if (!this.isValidAbstract(constraint, character)) {

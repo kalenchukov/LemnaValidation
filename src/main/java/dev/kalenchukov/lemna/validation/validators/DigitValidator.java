@@ -133,6 +133,10 @@ public final class DigitValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
+		if (value.isEmpty()) {
+			return false;
+		}
+
 		for (Character character : value.toCharArray())
 		{
 			if (!this.isValidAbstract(constraint, character)) {
@@ -153,7 +157,6 @@ public final class DigitValidator extends AbstractValidator
 	 */
 	private boolean isValidAbstract(@NotNull final Digit constraint, @NotNull final Character value)
 	{
-
 		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
 
 		if (!alphabet.contains(value))

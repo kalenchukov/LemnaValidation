@@ -21,6 +21,7 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
+import dev.kalenchukov.lemna.validation.constraints.Password;
 import dev.kalenchukov.lemna.validation.constraints.Pattern;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import org.junit.Test;
@@ -63,6 +64,24 @@ public class PatternValidatorTest
 		List<Violating> violation = validation.validate();
 
 		assertEquals(0, violation.size());
+	}
+
+	/**
+	 * Проверка с пустым значением.
+	 */
+	@Test
+	public void TestValidValueNotCorrectEmpty()
+	{
+		class Experimental
+		{
+			@Pattern(regexp = "[A-F]+")
+			private String hexadecimal = "";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		assertEquals(1, violation.size());
 	}
 
 	/**
