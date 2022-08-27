@@ -23,6 +23,7 @@ import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.Language;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
+import dev.kalenchukov.string.regexp.StringRegexp;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -129,7 +130,7 @@ public final class LanguageValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (!value.matches("[a-z]{2}-[A-Z]{2}"))
+		if (!StringRegexp.isLocalization(value))
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

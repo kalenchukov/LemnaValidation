@@ -23,6 +23,7 @@ import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.IpAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
+import dev.kalenchukov.string.regexp.StringRegexp;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -113,14 +114,11 @@ public final class IpAddressValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		final String patternIp4 = "^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";
-		final String patternIp6 = "^((^|:)[0-9a-fA-F]{0,4}){2,8}$";
-
-		if (constraint.v4() && !value.isEmpty() && value.matches(patternIp4)) {
+		if (constraint.v4() && StringRegexp.isInet4Address(value)) {
 			return true;
 		}
 
-		if (constraint.v6() && !value.isEmpty() && value.matches(patternIp6)) {
+		if (constraint.v6() && StringRegexp.isInet6Address(value)) {
 			return true;
 		}
 

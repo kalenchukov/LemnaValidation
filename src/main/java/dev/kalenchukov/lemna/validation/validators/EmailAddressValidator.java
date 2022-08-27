@@ -24,6 +24,7 @@ import dev.kalenchukov.lemna.validation.constraints.EmailAddress;
 import dev.kalenchukov.lemna.validation.constraints.IpAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
+import dev.kalenchukov.string.regexp.StringRegexp;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -114,34 +115,17 @@ public final class EmailAddressValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		final String patternEmailAddress =
-			"^" +
-			"(?<email>" +
-				"(?=.{1,64}@)" +
-				"(?<localPart>" +
-					"([\\p{L}0-9_-]+)" +
-					"(\\.[\\p{L}0-9_-]+)*" +
-				")" +
-			"@" +
-				"(?<domain>" +
-					"[^-]" +
-					"([\\p{L}0-9-]+)*" +
-					"(\\.[\\p{L}0-9-]+)*" +
-					"\\.(?<domainTld>(\\p{L}{2,}))" +
-				")" +
-			")" +
-			"$";
+		if (!StringRegexp.isEmailAddress(value))
+		{
+			this.setMessage(StringFormat.format(
+				constraint.message(),
+				"DEFAULT_MESSAGE",
+				this.localeViolations.getString("90025")
+			));
 
-		if (!value.isEmpty() && value.matches(patternEmailAddress)) {
-			return true;
+			return false;
 		}
 
-		this.setMessage(StringFormat.format(
-			constraint.message(),
-			"DEFAULT_MESSAGE",
-			this.localeViolations.getString("90025")
-		));
-
-		return false;
+		return true;
 	}
 }

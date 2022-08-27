@@ -111,7 +111,7 @@ public class IpAddressValidatorTest
 		class Experimental
 		{
 			@IpAddress(v4 = false)
-			private String ipAddress = "2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d";
+			private String ipAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -147,7 +147,7 @@ public class IpAddressValidatorTest
 		class Experimental
 		{
 			@IpAddress(v6 = false)
-			private String ipAddress = "2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d";
+			private String ipAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
 		}
 
 		Validating validation = new Validation(new Experimental());
