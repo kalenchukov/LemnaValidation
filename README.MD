@@ -89,9 +89,9 @@ public class Experimental
 }
 ```
 
-#### Аннотация "@Language"
+#### Аннотация "@Localization"
 
-Значение поля класса аннотированное данной аннотацией ограничивается по языку.
+Значение поля класса аннотированное данной аннотацией ограничивается по локализации.
 
 ##### Параметры
 
@@ -106,12 +106,12 @@ public class Experimental
 #### Пример
 
 ```java
-import dev.kalenchukov.lemna.validation.constraints.Language;
+import dev.kalenchukov.lemna.validation.constraints.Localization;
 
 public class Experimental
 {
-    @Language
-    private String language = "ru-RU";
+	@Localization
+	private String localization = "ru-RU";
 }
 ```
 

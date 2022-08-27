@@ -20,7 +20,7 @@ package dev.kalenchukov.lemna.validation.validators;
 
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
-import dev.kalenchukov.lemna.validation.constraints.Language;
+import dev.kalenchukov.lemna.validation.constraints.Localization;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
 import dev.kalenchukov.string.regexp.StringRegexp;
@@ -32,14 +32,14 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * Класс проверяющего для ограничения {@link Language}.
+ * Класс проверяющего для ограничения {@link Localization}.
  */
-public final class LanguageValidator extends AbstractValidator
+public final class LocalizationValidator extends AbstractValidator
 {
 	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
-	public LanguageValidator(@NotNull final Locale locale)
+	public LocalizationValidator(@NotNull final Locale locale)
 	{
 		super(Objects.requireNonNull(locale));
 	}
@@ -53,7 +53,7 @@ public final class LanguageValidator extends AbstractValidator
 	{
 		Objects.requireNonNull(field);
 
-		Language constraint = field.getDeclaredAnnotation(Language.class);
+		Localization constraint = field.getDeclaredAnnotation(Localization.class);
 
 		boolean valid = this.isValid(field, constraint, value);
 
@@ -80,7 +80,7 @@ public final class LanguageValidator extends AbstractValidator
 	 * @return {@code True} если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException Если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Language constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field, @NotNull final Localization constraint, @Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -109,7 +109,7 @@ public final class LanguageValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidString(@NotNull final Language constraint, @NotNull final String value)
+	private boolean isValidString(@NotNull final Localization constraint, @NotNull final String value)
 	{
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
@@ -125,7 +125,7 @@ public final class LanguageValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Language constraint, @NotNull final String value)
+	private boolean isValidAbstract(@NotNull final Localization constraint, @NotNull final String value)
 	{
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);

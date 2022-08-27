@@ -21,17 +21,15 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
-import dev.kalenchukov.lemna.validation.constraints.Exist;
-import dev.kalenchukov.lemna.validation.constraints.Language;
+import dev.kalenchukov.lemna.validation.constraints.Localization;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
-import dev.kalenchukov.lemna.validation.supports.existences.GenderExistence;
 import org.junit.Test;
 
 import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class LanguageValidatorTest
+public class LocalizationValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
@@ -41,8 +39,8 @@ public class LanguageValidatorTest
 	{
 		class Experimental
 		{
-			@Language
-			private Integer language = 1;
+			@Localization
+			private Integer localization = 1;
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -57,8 +55,8 @@ public class LanguageValidatorTest
 	{
 		class Experimental
 		{
-			@Language
-			private String language = null;
+			@Localization
+			private String localization = null;
 		}
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
@@ -74,8 +72,8 @@ public class LanguageValidatorTest
 	{
 		class Experimental
 		{
-			@Language
-			private String language = "";
+			@Localization
+			private String localization = "";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -92,8 +90,8 @@ public class LanguageValidatorTest
 	{
 		class Experimental
 		{
-			@Language
-			private String language = "язык";
+			@Localization
+			private String localization = "Локализация";
 		}
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
@@ -109,8 +107,8 @@ public class LanguageValidatorTest
 	{
 		class Experimental
 		{
-			@Language
-			private String language = "ru-RU";
+			@Localization
+			private String localization = "ru-RU";
 		}
 
 		Validating validation = new Validation(new Experimental());

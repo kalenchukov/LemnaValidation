@@ -26,13 +26,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Ограничение по языку.
+ * Ограничение по локализации.
  * Для языка используется стандарт ISO 639-1.
  * Для страны используется стандарт ISO 3166-1 alpha-2.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Language
+public @interface Localization
 {
 	/**
 	 * Задаёт сообщение о нарушении.

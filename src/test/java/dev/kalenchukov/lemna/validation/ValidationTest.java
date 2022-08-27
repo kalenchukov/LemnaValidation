@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation;
 
-import dev.kalenchukov.lemna.validation.constraints.Language;
+import dev.kalenchukov.lemna.validation.constraints.Localization;
 import org.junit.Test;
 
 import java.util.List;
@@ -28,21 +28,21 @@ import static org.junit.Assert.*;
 public class ValidationTest
 {
 	/**
-	 * Проверка настырности на примере ограничения {@link Language}.
+	 * Проверка настырности на примере ограничения {@link Localization}.
 	 */
 	@Test
 	public void TestValidatePushyTrue()
 	{
 		class Experimental
 		{
-			@Language
-			private String language1 = "value";
+			@Localization
+			private String localization1 = "value";
 
-			@Language
-			private String language2 = "ru-RU";
+			@Localization
+			private String localization2 = "ru-RU";
 
-			@Language
-			private String language3 = "VALUE";
+			@Localization
+			private String localization3 = "VALUE";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -53,21 +53,21 @@ public class ValidationTest
 	}
 
 	/**
-	 * Проверка не настырности на примере ограничения {@link Language}.
+	 * Проверка не настырности на примере ограничения {@link Localization}.
 	 */
 	@Test
 	public void TestValidatePushyFalse()
 	{
 		class Experimental
 		{
-			@Language
-			private String language1 = "ru-RU";
+			@Localization
+			private String localization1 = "ru-RU";
 
-			@Language
-			private String language2 = "value";
+			@Localization
+			private String localization2 = "value";
 
-			@Language
-			private String language3 = "VALUE";
+			@Localization
+			private String localization3 = "VALUE";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -85,13 +85,13 @@ public class ValidationTest
 	{
 		class Experimental
 		{
-			@Language(message = "Некорректный формат языка в поле класса '%FIELD%'")
-			private String language1 = "value";
+			@Localization(message = "Некорректный формат локализации в поле класса '%FIELD%'")
+			private String localization = "value";
 		}
 
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals("Некорректный формат языка в поле класса '%FIELD%'", violation.get(0).getMessage());
+		assertEquals("Некорректный формат локализации в поле класса '%FIELD%'", violation.get(0).getMessage());
 	}
 }

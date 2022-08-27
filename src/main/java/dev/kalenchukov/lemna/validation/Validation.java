@@ -241,7 +241,7 @@ public class Validation implements Validating
 		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
 		validators.put(Size.class.getName(), new SizeValidator(this.locale));
 		validators.put(Length.class.getName(), new LengthValidator(this.locale));
-		validators.put(Language.class.getName(), new LanguageValidator(this.locale));
+		validators.put(Localization.class.getName(), new LocalizationValidator(this.locale));
 		validators.put(Number.class.getName(), new NumberValidator(this.locale));
 		validators.put(NumberFloat.class.getName(), new NumberFloatValidator(this.locale));
 		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
