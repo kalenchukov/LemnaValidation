@@ -256,7 +256,7 @@ public class Validation implements Validating
 		validators.put(Year.class.getName(), new YearValidator(this.locale));
 		validators.put(Letter.class.getName(), new LetterValidator(this.locale));
 		validators.put(LetterAlphabet.class.getName(), new LetterAlphabetValidator(this.locale));
-		validators.put(Digit.class.getName(), new DigitValidator(this.locale));
+		validators.put(DigitSystem.class.getName(), new DigitSystemValidator(this.locale));
 		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
 		validators.put(IpAddress.class.getName(), new IpAddressValidator(this.locale));
 		validators.put(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));

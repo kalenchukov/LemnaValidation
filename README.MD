@@ -277,11 +277,11 @@ public class Experimental
 
 ```java
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
-import dev.kalenchukov.lemna.validation.constraints.Digit;
+import dev.kalenchukov.lemna.validation.constraints.DigitSystem;
 
 public class Experimental
 {
-	@Digit(numeralSystem = NumeralSystem.DECIMAL)
+	@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 	private String word = "0123456789";
 }
 ```

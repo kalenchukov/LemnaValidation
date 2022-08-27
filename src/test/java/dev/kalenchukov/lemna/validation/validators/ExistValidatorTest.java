@@ -21,11 +21,9 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
-import dev.kalenchukov.lemna.validation.constraints.Digit;
 import dev.kalenchukov.lemna.validation.constraints.Exist;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.lemna.validation.supports.existences.GenderExistence;
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.Test;
 
 import java.util.List;

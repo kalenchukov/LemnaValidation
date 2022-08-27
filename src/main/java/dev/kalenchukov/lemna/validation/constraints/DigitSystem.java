@@ -27,11 +27,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Ограничение по системе счисления.
+ * Ограничение цифр по системе счисления.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
-public @interface Digit
+public @interface DigitSystem
 {
 	/**
 	 * Задаёт систему счисления.

@@ -21,8 +21,7 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
-import dev.kalenchukov.lemna.validation.constraints.DayOfMonth;
-import dev.kalenchukov.lemna.validation.constraints.Digit;
+import dev.kalenchukov.lemna.validation.constraints.DigitSystem;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.junit.Test;
@@ -31,7 +30,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class DigitValidatorTest
+public class DigitSystemValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
@@ -41,7 +40,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private Integer digit = 12345;
 		}
 
@@ -57,7 +56,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private String digit = null;
 		}
 
@@ -75,7 +74,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private String digit = "";
 		}
 
@@ -93,7 +92,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private Character digit = 'A';
 		}
 
@@ -111,7 +110,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private String digit = "12345";
 		}
 
@@ -129,7 +128,7 @@ public class DigitValidatorTest
 	{
 		class Experimental
 		{
-			@Digit(numeralSystem = NumeralSystem.DECIMAL)
+			@DigitSystem(numeralSystem = NumeralSystem.DECIMAL)
 			private Character digit = '0';
 		}
 
