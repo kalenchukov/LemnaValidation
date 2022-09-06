@@ -36,7 +36,7 @@ public class DigitValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class DigitValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -70,7 +70,7 @@ public class DigitValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void TestValidValueNotCorrectMin()
+	public void testValidValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class DigitValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void TestValidValueNotCorrectMax()
+	public void testValidValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -106,7 +106,7 @@ public class DigitValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void TestValidIntegerTypeValueCorrect()
+	public void testValidIntegerTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -124,7 +124,7 @@ public class DigitValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void TestValidLongTypeValueCorrect()
+	public void testValidLongTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -142,7 +142,7 @@ public class DigitValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void TestValidShortTypeValueCorrect()
+	public void testValidShortTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class DigitValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Byte}.
 	 */
 	@Test
-	public void TestValidByteTypeValueCorrect()
+	public void testValidByteTypeValueCorrect()
 	{
 		class Experimental
 		{

@@ -34,7 +34,7 @@ public class NoNullValidatorTest
 	 * Проверка с корректным значением.
 	 */
 	@Test
-	public void TestValidValueCorrect()
+	public void testValidValueCorrect()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class NoNullValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrect()
+	public void testValidValueNotCorrect()
 	{
 		class Experimental
 		{

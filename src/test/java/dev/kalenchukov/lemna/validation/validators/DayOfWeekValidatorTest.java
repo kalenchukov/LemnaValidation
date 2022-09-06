@@ -36,7 +36,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -70,7 +70,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrect()
+	public void testValidValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void TestValidValueNotCorrectFormat1()
+	public void testValidValueNotCorrectFormat1()
 	{
 		class Experimental
 		{
@@ -106,7 +106,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void TestValidValueNotCorrectFormat2()
+	public void testValidValueNotCorrectFormat2()
 	{
 		class Experimental
 		{
@@ -124,7 +124,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Byte}.
 	 */
 	@Test
-	public void TestValidByteTypeValueCorrect()
+	public void testValidByteTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -142,7 +142,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void TestValidShortTypeValueCorrect()
+	public void testValidShortTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void TestValidIntegerTypeValueCorrect()
+	public void testValidIntegerTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -178,7 +178,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void TestValidLongTypeValueCorrect()
+	public void testValidLongTypeValueCorrect()
 	{
 		class Experimental
 		{

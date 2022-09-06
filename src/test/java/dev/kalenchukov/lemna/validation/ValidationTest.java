@@ -31,7 +31,7 @@ public class ValidationTest
 	 * Проверка настырности на примере ограничения {@link Localization}.
 	 */
 	@Test
-	public void TestValidatePushyTrue()
+	public void testValidatePushyTrue()
 	{
 		class Experimental
 		{
@@ -56,7 +56,7 @@ public class ValidationTest
 	 * Проверка не настырности на примере ограничения {@link Localization}.
 	 */
 	@Test
-	public void TestValidatePushyFalse()
+	public void testValidatePushyFalse()
 	{
 		class Experimental
 		{
@@ -81,7 +81,7 @@ public class ValidationTest
 	 * Проверка собственного сообщения о нарушении.
 	 */
 	@Test
-	public void TestValidateMessage()
+	public void testValidateMessage()
 	{
 		class Experimental
 		{

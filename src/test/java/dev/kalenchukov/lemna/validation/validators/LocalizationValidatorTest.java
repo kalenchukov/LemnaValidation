@@ -35,7 +35,7 @@ public class LocalizationValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -51,7 +51,7 @@ public class LocalizationValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -68,7 +68,7 @@ public class LocalizationValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrectEmpty()
+	public void testValidValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -86,7 +86,7 @@ public class LocalizationValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrect()
+	public void testValidValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -103,7 +103,7 @@ public class LocalizationValidatorTest
 	 * Проверка с корректным значением в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueCorrect()
+	public void testValidStringTypeValueCorrect()
 	{
 		class Experimental
 		{

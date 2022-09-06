@@ -36,7 +36,7 @@ public class ExistValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class ExistValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -70,7 +70,7 @@ public class ExistValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrectEmpty()
+	public void testValidValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class ExistValidatorTest
 	 * Проверка с некорректным значением поля.
 	 */
 	@Test
-	public void TestValidValueNotCorrect()
+	public void testValidValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -106,7 +106,7 @@ public class ExistValidatorTest
 	 * Проверка с корректным значением поля.
 	 */
 	@Test
-	public void TestValidValueCorrect()
+	public void testValidValueCorrect()
 	{
 		class Experimental
 		{
@@ -124,7 +124,7 @@ public class ExistValidatorTest
 	 * Проверка с множественной проверкой и корректным значением поля.
 	 */
 	@Test
-	public void TestValidValueCorrectMany()
+	public void testValidValueCorrectMany()
 	{
 		class Experimental
 		{

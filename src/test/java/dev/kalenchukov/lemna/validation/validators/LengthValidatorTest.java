@@ -35,7 +35,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -51,7 +51,7 @@ public class LengthValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -69,7 +69,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void TestValidValueNotCorrectMin()
+	public void testValidValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -87,7 +87,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void TestValidValueNotCorrectMax()
+	public void testValidValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -105,7 +105,7 @@ public class LengthValidatorTest
 	 * Проверка с корректным значением в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueCorrect()
+	public void testValidStringTypeValueCorrect()
 	{
 		class Experimental
 		{

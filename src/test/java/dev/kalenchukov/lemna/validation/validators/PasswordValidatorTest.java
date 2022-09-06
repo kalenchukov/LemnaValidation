@@ -36,7 +36,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class PasswordValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -70,7 +70,7 @@ public class PasswordValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrectEmpty()
+	public void testValidValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class PasswordValidatorTest
 	 * Проверка с корректным значением в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueCorrect()
+	public void testValidStringTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -106,7 +106,7 @@ public class PasswordValidatorTest
 	 * Проверка с не корректным значением из-за недостатка букв в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectMinLetters()
+	public void testValidStringTypeValueNotCorrectMinLetters()
 	{
 		class Experimental
 		{
@@ -124,7 +124,7 @@ public class PasswordValidatorTest
 	 * Проверка с не корректным значением из-за недостатка цифр в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectMinDigits()
+	public void testValidStringTypeValueNotCorrectMinDigits()
 	{
 		class Experimental
 		{
@@ -142,7 +142,7 @@ public class PasswordValidatorTest
 	 * Проверка с не корректным значением из-за недостатка специальных символов в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectMinSpecial()
+	public void testValidStringTypeValueNotCorrectMinSpecial()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class PasswordValidatorTest
 	 * Проверка с не корректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectMixedCase()
+	public void testValidStringTypeValueNotCorrectMixedCase()
 	{
 		class Experimental
 		{

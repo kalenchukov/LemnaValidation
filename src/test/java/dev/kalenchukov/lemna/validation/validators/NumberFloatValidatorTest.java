@@ -35,7 +35,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -51,7 +51,7 @@ public class NumberFloatValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -69,7 +69,7 @@ public class NumberFloatValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Double}.
 	 */
 	@Test
-	public void TestValidDoubleTypeValueNotCorrectLessMin()
+	public void testValidDoubleTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -87,7 +87,7 @@ public class NumberFloatValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Float}.
 	 */
 	@Test
-	public void TestValidFloatTypeValueNotCorrectLessMin()
+	public void testValidFloatTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -105,7 +105,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Double}.
 	 */
 	@Test
-	public void TestValidDoubleTypeValueNotCorrectMin()
+	public void testValidDoubleTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -123,7 +123,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Float}.
 	 */
 	@Test
-	public void TestValidFloatTypeValueNotCorrectMin()
+	public void testValidFloatTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -141,7 +141,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Double}.
 	 */
 	@Test
-	public void TestValidDoubleTypeValueCorrect()
+	public void testValidDoubleTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -159,7 +159,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с корректным значением в поле типа {@code Float}.
 	 */
 	@Test
-	public void TestValidFloatTypeValueCorrect()
+	public void testValidFloatTypeValueCorrect()
 	{
 		class Experimental
 		{
@@ -177,7 +177,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Double}.
 	 */
 	@Test
-	public void TestValidDoubleTypeValueNotCorrectMax()
+	public void testValidDoubleTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -195,7 +195,7 @@ public class NumberFloatValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Float}.
 	 */
 	@Test
-	public void TestValidFloatTypeValueNotCorrectMax()
+	public void testValidFloatTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -213,7 +213,7 @@ public class NumberFloatValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Double}.
 	 */
 	@Test
-	public void TestValidDoubleTypeMoreMax()
+	public void testValidDoubleTypeMoreMax()
 	{
 		class Experimental
 		{
@@ -231,7 +231,7 @@ public class NumberFloatValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Float}.
 	 */
 	@Test
-	public void TestValidFloatTypeMoreMax()
+	public void testValidFloatTypeMoreMax()
 	{
 		class Experimental
 		{

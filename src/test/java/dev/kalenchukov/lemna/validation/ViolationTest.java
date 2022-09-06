@@ -31,7 +31,7 @@ public class ViolationTest
 	 * Проверка одинаковых объектов.
 	 */
 	@Test
-	public void testEquals1()
+	public void testEquals()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
@@ -39,14 +39,14 @@ public class ViolationTest
 		Violating violation1 = new Violation("id", "Сообщение", params);
 		Violating violation2 = new Violation("id", "Сообщение", params);
 
-		assertTrue(violation1.equals(violation2));
+		assertEquals(violation1, violation2);
 	}
 
 	/**
 	 * Проверка разных объектов.
 	 */
 	@Test
-	public void testEquals2()
+	public void testEqualsNot()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
@@ -54,14 +54,14 @@ public class ViolationTest
 		Violating violation1 = new Violation("id", "Сообщение", params);
 		Violating violation2 = new Violation("name", "Сообщение", params);
 
-		assertFalse(violation1.equals(violation2));
+		assertNotEquals(violation1, violation2);
 	}
 
 	/**
 	 * Проверка одинаковых объектов.
 	 */
 	@Test
-	public void testHashCode1()
+	public void testHashCodeEquals()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
@@ -76,7 +76,7 @@ public class ViolationTest
 	 * Проверка разных объектов.
 	 */
 	@Test
-	public void testHashCode2()
+	public void testHashCodeDifferent()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");

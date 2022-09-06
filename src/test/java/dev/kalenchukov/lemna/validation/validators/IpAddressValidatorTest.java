@@ -36,7 +36,7 @@ public class IpAddressValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test(expected = UnsupportedFieldTypeException.class)
-	public void TestValidNotCorrectFieldType()
+	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -52,7 +52,7 @@ public class IpAddressValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void TestValidValueNull()
+	public void testValidValueNull()
 	{
 		class Experimental
 		{
@@ -70,7 +70,7 @@ public class IpAddressValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void TestValidValueNotCorrectEmpty()
+	public void testValidValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -88,7 +88,7 @@ public class IpAddressValidatorTest
 	 * Проверка с корректным значением IP адреса четвёртой версии в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueCorrectVersion4()
+	public void testValidStringTypeValueCorrectVersion4()
 	{
 		class Experimental
 		{
@@ -106,7 +106,7 @@ public class IpAddressValidatorTest
 	 * Проверка с корректным значением IP адреса шестой версии в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueCorrectVersion6()
+	public void testValidStringTypeValueCorrectVersion6()
 	{
 		class Experimental
 		{
@@ -124,7 +124,7 @@ public class IpAddressValidatorTest
 	 * Проверка с не корректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectVersion4()
+	public void testValidStringTypeValueNotCorrectVersion4()
 	{
 		class Experimental
 		{
@@ -142,7 +142,7 @@ public class IpAddressValidatorTest
 	 * Проверка с не корректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectVersion6()
+	public void testValidStringTypeValueNotCorrectVersion6()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class IpAddressValidatorTest
 	 * Проверка с не корректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void TestValidStringTypeValueNotCorrectVersion4And6()
+	public void testValidStringTypeValueNotCorrectVersion4And6()
 	{
 		class Experimental
 		{
