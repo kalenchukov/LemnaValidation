@@ -21,8 +21,7 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
-import dev.kalenchukov.lemna.validation.constraints.IpAddress;
-import dev.kalenchukov.lemna.validation.constraints.Pattern;
+import dev.kalenchukov.lemna.validation.constraints.InetAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import org.junit.Test;
 
@@ -30,7 +29,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class IpAddressValidatorTest
+public class InetAddressValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
@@ -40,8 +39,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress
-			private Integer ipAddress = 12345;
+			@InetAddress
+			private Integer inetAddress = 12345;
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -56,8 +55,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress
-			private String ipAddress = null;
+			@InetAddress
+			private String inetAddress = null;
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -74,8 +73,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress
-			private String ipAddress = "";
+			@InetAddress
+			private String inetAddress = "";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -92,8 +91,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress(v6 = false)
-			private String ipAddress = "192.168.1.1";
+			@InetAddress(v6 = false)
+			private String inetAddress = "192.168.1.1";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -110,8 +109,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress(v4 = false)
-			private String ipAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
+			@InetAddress(v4 = false)
+			private String inetAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -128,8 +127,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress(v4 = false)
-			private String ipAddress = "192.168.1.1";
+			@InetAddress(v4 = false)
+			private String inetAddress = "192.168.1.1";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -146,8 +145,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress(v6 = false)
-			private String ipAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
+			@InetAddress(v6 = false)
+			private String inetAddress = "2001:0DB8:11A3:09D7:1F34:8A2E:07A0:765D";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -164,8 +163,8 @@ public class IpAddressValidatorTest
 	{
 		class Experimental
 		{
-			@IpAddress(v4 = false, v6 = false)
-			private String ipAddress = "192.168.1.1";
+			@InetAddress(v4 = false, v6 = false)
+			private String inetAddress = "192.168.1.1";
 		}
 
 		Validating validation = new Validation(new Experimental());

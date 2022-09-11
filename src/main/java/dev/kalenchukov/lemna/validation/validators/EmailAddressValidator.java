@@ -21,7 +21,6 @@ package dev.kalenchukov.lemna.validation.validators;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
 import dev.kalenchukov.lemna.validation.constraints.EmailAddress;
-import dev.kalenchukov.lemna.validation.constraints.IpAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
 import dev.kalenchukov.string.regexp.StringRegexp;

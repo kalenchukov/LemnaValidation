@@ -20,7 +20,7 @@ package dev.kalenchukov.lemna.validation.validators;
 
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.Violation;
-import dev.kalenchukov.lemna.validation.constraints.IpAddress;
+import dev.kalenchukov.lemna.validation.constraints.InetAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.string.formatting.StringFormat;
 import dev.kalenchukov.string.regexp.StringRegexp;
@@ -32,14 +32,14 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * Класс проверяющего для ограничения {@link IpAddress}.
+ * Класс проверяющего для ограничения {@link InetAddress}.
  */
-public final class IpAddressValidator extends AbstractValidator
+public final class InetAddressValidator extends AbstractValidator
 {
 	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
-	public IpAddressValidator(@NotNull final Locale locale)
+	public InetAddressValidator(@NotNull final Locale locale)
 	{
 		super(Objects.requireNonNull(locale));
 	}
@@ -53,7 +53,7 @@ public final class IpAddressValidator extends AbstractValidator
 	{
 		Objects.requireNonNull(field);
 
-		IpAddress constraint = field.getDeclaredAnnotation(IpAddress.class);
+		InetAddress constraint = field.getDeclaredAnnotation(InetAddress.class);
 
 		boolean valid = this.isValid(field, constraint, value);
 
@@ -80,7 +80,7 @@ public final class IpAddressValidator extends AbstractValidator
 	 * @return {@code True} если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException Если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final IpAddress constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field, @NotNull final InetAddress constraint, @Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -109,7 +109,7 @@ public final class IpAddressValidator extends AbstractValidator
 	 * @param value Значение поля класса.
 	 * @return {@code True} если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidString(@NotNull final IpAddress constraint, @NotNull final String value)
+	private boolean isValidString(@NotNull final InetAddress constraint, @NotNull final String value)
 	{
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);

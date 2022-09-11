@@ -22,7 +22,6 @@ import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.DayOfMonth;
-import dev.kalenchukov.lemna.validation.constraints.IpAddress;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import org.junit.Test;
 

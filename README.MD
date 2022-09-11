@@ -145,7 +145,7 @@ public class Experimental
 }
 ```
 
-#### Аннотация "@IpAddress"
+#### Аннотация "@InetAddress"
 
 Значение поля класса аннотированное данной аннотацией ограничивается по IP адресу.
 
@@ -164,12 +164,12 @@ public class Experimental
 #### Пример
 
 ```java
-import dev.kalenchukov.lemna.validation.constraints.IpAddress;
+import dev.kalenchukov.lemna.validation.constraints.InetAddress;
 
 public class Experimental
 {
-	@IpAddress(v6 = false)
-	private String ipAddress = "192.168.1.1";
+	@InetAddress(v6 = false)
+	private String inetAddress = "192.168.1.1";
 }
 ```
 

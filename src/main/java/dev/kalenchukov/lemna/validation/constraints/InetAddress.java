@@ -30,7 +30,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
-public @interface IpAddress
+public @interface InetAddress
 {
 	/**
 	 * Задаёт разрешение на IP адреса четвёртой версии.
