@@ -262,6 +262,7 @@ public class Validation implements Validating
 		validators.put(InetAddress.class.getName(), new InetAddressValidator(this.locale));
 		validators.put(MacAddress.class.getName(), new MacAddressValidator(this.locale));
 		validators.put(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));
+		validators.put(RgbNumeric.class.getName(), new RgbNumericValidator(this.locale));
 
 		validators.put(Valid.class.getName(), new ValidValidator(this.locale));
 		validators.put(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
