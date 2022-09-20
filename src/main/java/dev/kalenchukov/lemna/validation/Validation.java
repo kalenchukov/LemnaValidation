@@ -236,33 +236,43 @@ public class Validation implements Validating
 	{
 		Map<String, Validator> validators = new LinkedHashMap<>();
 
-		validators.put(NoNull.class.getName(), new NoNullValidator(this.locale));
 		validators.put(Id.class.getName(), new IdValidator(this.locale));
-		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
 		validators.put(Size.class.getName(), new SizeValidator(this.locale));
 		validators.put(Length.class.getName(), new LengthValidator(this.locale));
 		validators.put(Localization.class.getName(), new LocalizationValidator(this.locale));
+		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
+		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
+
+		validators.put(NoNull.class.getName(), new NoNullValidator(this.locale));
+		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
+
 		validators.put(Number.class.getName(), new NumberValidator(this.locale));
 		validators.put(NumberFloat.class.getName(), new NumberFloatValidator(this.locale));
-		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
-		validators.put(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
-		validators.put(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
-		validators.put(DayOfYear.class.getName(), new DayOfYearValidator(this.locale));
-		validators.put(Hour.class.getName(), new HourValidator(this.locale));
-		validators.put(Millisecond.class.getName(), new MillisecondValidator(this.locale));
-		validators.put(Minute.class.getName(), new MinuteValidator(this.locale));
-		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
-		validators.put(Second.class.getName(), new SecondValidator(this.locale));
+
 		validators.put(Year.class.getName(), new YearValidator(this.locale));
+		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
+
+		validators.put(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
+		validators.put(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
+		validators.put(DayOfYear.class.getName(), new DayOfYearValidator(this.locale));
+
+		validators.put(Hour.class.getName(), new HourValidator(this.locale));
+		validators.put(Minute.class.getName(), new MinuteValidator(this.locale));
+		validators.put(Second.class.getName(), new SecondValidator(this.locale));
+		validators.put(Millisecond.class.getName(), new MillisecondValidator(this.locale));
+
 		validators.put(Letter.class.getName(), new LetterValidator(this.locale));
 		validators.put(LetterAlphabet.class.getName(), new LetterAlphabetValidator(this.locale));
+
 		validators.put(Digit.class.getName(), new DigitValidator(this.locale));
 		validators.put(DigitSystem.class.getName(), new DigitSystemValidator(this.locale));
-		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
+
 		validators.put(InetAddress.class.getName(), new InetAddressValidator(this.locale));
 		validators.put(MacAddress.class.getName(), new MacAddressValidator(this.locale));
 		validators.put(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));
+
 		validators.put(RgbNumeric.class.getName(), new RgbNumericValidator(this.locale));
+		validators.put(RgbHex.class.getName(), new RgbHexValidator(this.locale));
 
 		validators.put(Valid.class.getName(), new ValidValidator(this.locale));
 		validators.put(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
