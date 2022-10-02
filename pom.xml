@@ -118,8 +118,7 @@
 						<id>attach-sources</id>
 						<phase>verify</phase>
 						<goals>
-							<goal>jar</goal>git add .
-
+							<goal>jar</goal>
 						</goals>
 					</execution>
 				</executions>
