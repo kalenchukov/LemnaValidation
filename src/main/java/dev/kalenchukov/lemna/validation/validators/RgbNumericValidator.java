@@ -114,7 +114,7 @@ public final class RgbNumericValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (StringRegexp.isRgb(value)) {
+		if (StringRegexp.isRgbNumeric(value)) {
 			return true;
 		}
 
