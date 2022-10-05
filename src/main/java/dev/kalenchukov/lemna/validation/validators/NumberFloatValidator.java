@@ -59,6 +59,8 @@ public final class NumberFloatValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
+			this.setParam("MIN", String.valueOf(constraint.min()));
+			this.setParam("MAX", String.valueOf(constraint.max()));
 
 			return new Violation(
 				field.getName(),
@@ -150,7 +152,6 @@ public final class NumberFloatValidator extends AbstractValidator
 
 		if (value < constraint.min())
 		{
-			this.setParam("MIN", String.valueOf(constraint.min()));
 			this.setMessage(StringFormat.format(
 				constraint.message(),
 				"DEFAULT_MESSAGE",
@@ -162,7 +163,6 @@ public final class NumberFloatValidator extends AbstractValidator
 
 		if (value > constraint.max())
 		{
-			this.setParam("MAX", String.valueOf(constraint.max()));
 			this.setMessage(StringFormat.format(
 				constraint.message(),
 				"DEFAULT_MESSAGE",
