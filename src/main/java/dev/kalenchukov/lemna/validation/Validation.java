@@ -41,6 +41,13 @@ public class Validation implements Validating
 	private Locale locale = new Locale("ru", "RU");
 
 	/**
+	 * Коллекция всех возможных проверяющих.
+	 */
+	@NotNull
+	@UnmodifiableView
+	private final Map<@NotNull String, @NotNull Validator> validators;
+
+	/**
 	 * Объект класса в котором необходимо проверить данные.
 	 */
 	@NotNull
@@ -77,6 +84,7 @@ public class Validation implements Validating
 		Objects.requireNonNull(object);
 
 		this.object = object;
+		this.validators = this.loadValidators();
 	}
 
 	/**
@@ -176,12 +184,11 @@ public class Validation implements Validating
 
 		List<Violating> violations = new ArrayList<>();
 
-		Map<@NotNull String, @NotNull Validator> validators = this.loadValidators();
-
 		for (Annotation constraintField : field.getDeclaredAnnotations())
 		{
 			Class<? extends Annotation> constraintType = constraintField.annotationType();
-			Validator constraintValidator = validators.get(constraintType.getName());
+
+			Validator constraintValidator = this.validators.get(constraintType.getName());
 
 			if (constraintValidator == null) {
 				continue;
@@ -234,6 +241,8 @@ public class Validation implements Validating
 	@NotNull
 	private Map<@NotNull String, @NotNull Validator> loadValidators()
 	{
+		LOG.debug(this.localeLogs.getString("00007"));
+
 		Map<String, Validator> validators = new LinkedHashMap<>();
 
 		validators.put(Id.class.getName(), new IdValidator(this.locale));
@@ -279,6 +288,8 @@ public class Validation implements Validating
 
 		validators.put(Exist.class.getName(), new ExistValidator(this.locale));
 		validators.put(Exist.ManyExist.class.getName(), new ExistValidator(this.locale));
+
+		LOG.debug(this.localeLogs.getString("00008"));
 
 		return Collections.unmodifiableMap(validators);
 	}
