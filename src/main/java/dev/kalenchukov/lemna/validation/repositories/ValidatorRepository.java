@@ -23,7 +23,7 @@ import dev.kalenchukov.lemna.validation.constraints.Number;
 import dev.kalenchukov.lemna.validation.validators.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.UnmodifiableView;
+import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
 
@@ -33,16 +33,16 @@ import java.util.*;
 public final class ValidatorRepository
 {
 	/**
-	 * Коллекция проверяющих.
-	 */
-	@NotNull
-	private final Map<@NotNull String, @NotNull Validator> validators;
-
-	/**
 	 * Локализация.
 	 */
 	@NotNull
 	private final Locale locale;
+
+	/**
+	 * Коллекция проверяющих.
+	 */
+	@NotNull
+	private final Map<@NotNull String, @NotNull Validator> validators;
 
 	/**
 	 * Конструктор для {@code ValidatorRepository}.
@@ -51,10 +51,8 @@ public final class ValidatorRepository
 	 */
 	public ValidatorRepository(@NotNull final Locale locale)
 	{
-		this.validators = new HashMap<>();
 		this.locale = locale;
-
-		this.loadValidators();
+		this.validators = this.loadValidators();
 	}
 
 	/**
@@ -62,7 +60,7 @@ public final class ValidatorRepository
 	 *
 	 * @return Коллекцию проверяющих.
 	 */
-	@UnmodifiableView
+	@Unmodifiable
 	@NotNull
 	public Map<@NotNull String, @NotNull Validator> getValidators()
 	{
@@ -112,50 +110,55 @@ public final class ValidatorRepository
 	/**
 	 * Загружает проверяющих.
 	 */
-	private void loadValidators()
+	@NotNull
+	private Map<@NotNull String, @NotNull Validator> loadValidators()
 	{
-		this.addValidator(Id.class.getName(), new IdValidator(this.locale));
-		this.addValidator(Size.class.getName(), new SizeValidator(this.locale));
-		this.addValidator(Length.class.getName(), new LengthValidator(this.locale));
-		this.addValidator(Localization.class.getName(), new LocalizationValidator(this.locale));
-		this.addValidator(Pattern.class.getName(), new PatternValidator(this.locale));
-		this.addValidator(Password.class.getName(), new PasswordValidator(this.locale));
+		Map<String, Validator> validators = new HashMap<>();
 
-		this.addValidator(NoNull.class.getName(), new NoNullValidator(this.locale));
-		this.addValidator(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
+		validators.put(Id.class.getName(), new IdValidator(this.locale));
+		validators.put(Size.class.getName(), new SizeValidator(this.locale));
+		validators.put(Length.class.getName(), new LengthValidator(this.locale));
+		validators.put(Localization.class.getName(), new LocalizationValidator(this.locale));
+		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
+		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
 
-		this.addValidator(Number.class.getName(), new NumberValidator(this.locale));
-		this.addValidator(NumberFloat.class.getName(), new NumberFloatValidator(this.locale));
+		validators.put(NoNull.class.getName(), new NoNullValidator(this.locale));
+		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
 
-		this.addValidator(Year.class.getName(), new YearValidator(this.locale));
-		this.addValidator(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
+		validators.put(Number.class.getName(), new NumberValidator(this.locale));
+		validators.put(NumberFloat.class.getName(), new NumberFloatValidator(this.locale));
 
-		this.addValidator(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
-		this.addValidator(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
-		this.addValidator(DayOfYear.class.getName(), new DayOfYearValidator(this.locale));
+		validators.put(Year.class.getName(), new YearValidator(this.locale));
+		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
 
-		this.addValidator(Hour.class.getName(), new HourValidator(this.locale));
-		this.addValidator(Minute.class.getName(), new MinuteValidator(this.locale));
-		this.addValidator(Second.class.getName(), new SecondValidator(this.locale));
-		this.addValidator(Millisecond.class.getName(), new MillisecondValidator(this.locale));
+		validators.put(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
+		validators.put(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
+		validators.put(DayOfYear.class.getName(), new DayOfYearValidator(this.locale));
 
-		this.addValidator(Letter.class.getName(), new LetterValidator(this.locale));
-		this.addValidator(LetterAlphabet.class.getName(), new LetterAlphabetValidator(this.locale));
+		validators.put(Hour.class.getName(), new HourValidator(this.locale));
+		validators.put(Minute.class.getName(), new MinuteValidator(this.locale));
+		validators.put(Second.class.getName(), new SecondValidator(this.locale));
+		validators.put(Millisecond.class.getName(), new MillisecondValidator(this.locale));
 
-		this.addValidator(Digit.class.getName(), new DigitValidator(this.locale));
-		this.addValidator(DigitSystem.class.getName(), new DigitSystemValidator(this.locale));
+		validators.put(Letter.class.getName(), new LetterValidator(this.locale));
+		validators.put(LetterAlphabet.class.getName(), new LetterAlphabetValidator(this.locale));
 
-		this.addValidator(InetAddress.class.getName(), new InetAddressValidator(this.locale));
-		this.addValidator(MacAddress.class.getName(), new MacAddressValidator(this.locale));
-		this.addValidator(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));
+		validators.put(Digit.class.getName(), new DigitValidator(this.locale));
+		validators.put(DigitSystem.class.getName(), new DigitSystemValidator(this.locale));
 
-		this.addValidator(RgbNumeric.class.getName(), new RgbNumericValidator(this.locale));
-		this.addValidator(RgbHex.class.getName(), new RgbHexValidator(this.locale));
+		validators.put(InetAddress.class.getName(), new InetAddressValidator(this.locale));
+		validators.put(MacAddress.class.getName(), new MacAddressValidator(this.locale));
+		validators.put(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));
 
-		this.addValidator(Valid.class.getName(), new ValidValidator(this.locale));
-		this.addValidator(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
+		validators.put(RgbNumeric.class.getName(), new RgbNumericValidator(this.locale));
+		validators.put(RgbHex.class.getName(), new RgbHexValidator(this.locale));
 
-		this.addValidator(Exist.class.getName(), new ExistValidator(this.locale));
-		this.addValidator(Exist.ManyExist.class.getName(), new ExistValidator(this.locale));
+		validators.put(Valid.class.getName(), new ValidValidator(this.locale));
+		validators.put(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
+
+		validators.put(Exist.class.getName(), new ExistValidator(this.locale));
+		validators.put(Exist.ManyExist.class.getName(), new ExistValidator(this.locale));
+
+		return validators;
 	}
 }
