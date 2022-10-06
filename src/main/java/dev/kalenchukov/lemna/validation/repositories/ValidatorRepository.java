@@ -46,6 +46,8 @@ public final class ValidatorRepository
 
 	/**
 	 * Конструктор для {@code ValidatorRepository}.
+	 *
+	 * @param locale Локализация.
 	 */
 	public ValidatorRepository(@NotNull final Locale locale)
 	{
