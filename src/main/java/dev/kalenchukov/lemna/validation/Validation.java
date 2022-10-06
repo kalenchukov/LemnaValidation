@@ -20,6 +20,7 @@ package dev.kalenchukov.lemna.validation;
 
 import dev.kalenchukov.lemna.validation.constraints.*;
 import dev.kalenchukov.lemna.validation.constraints.Number;
+import dev.kalenchukov.lemna.validation.repositories.ValidatorRepository;
 import dev.kalenchukov.lemna.validation.validators.*;
 import org.apache.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -44,8 +45,7 @@ public class Validation implements Validating
 	 * Коллекция всех возможных проверяющих.
 	 */
 	@NotNull
-	@UnmodifiableView
-	private final Map<@NotNull String, @NotNull Validator> validators;
+	private final ValidatorRepository validatorRepository;
 
 	/**
 	 * Объект класса в котором необходимо проверить данные.
@@ -87,7 +87,7 @@ public class Validation implements Validating
 			this.locale
 		);
 		this.pushy = true;
-		this.validators = this.loadValidators();
+		this.validatorRepository = new ValidatorRepository(this.locale);
 	}
 
 	/**
@@ -191,7 +191,7 @@ public class Validation implements Validating
 		{
 			Class<? extends Annotation> constraintType = constraintField.annotationType();
 
-			Validator constraintValidator = this.validators.get(constraintType.getName());
+			Validator constraintValidator = this.validatorRepository.getValidator(constraintType.getName());
 
 			if (constraintValidator == null) {
 				continue;
@@ -233,67 +233,5 @@ public class Validation implements Validating
 		}
 
 		return violations;
-	}
-
-	/**
-	 * Загружает коллекцию проверяющих.
-	 *
-	 * @return Коллекцию проверяющих.
-	 */
-	@UnmodifiableView
-	@NotNull
-	private Map<@NotNull String, @NotNull Validator> loadValidators()
-	{
-		LOG.debug(this.localeLogs.getString("00007"));
-
-		Map<String, Validator> validators = new LinkedHashMap<>();
-
-		validators.put(Id.class.getName(), new IdValidator(this.locale));
-		validators.put(Size.class.getName(), new SizeValidator(this.locale));
-		validators.put(Length.class.getName(), new LengthValidator(this.locale));
-		validators.put(Localization.class.getName(), new LocalizationValidator(this.locale));
-		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
-		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
-
-		validators.put(NoNull.class.getName(), new NoNullValidator(this.locale));
-		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
-
-		validators.put(Number.class.getName(), new NumberValidator(this.locale));
-		validators.put(NumberFloat.class.getName(), new NumberFloatValidator(this.locale));
-
-		validators.put(Year.class.getName(), new YearValidator(this.locale));
-		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
-
-		validators.put(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
-		validators.put(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
-		validators.put(DayOfYear.class.getName(), new DayOfYearValidator(this.locale));
-
-		validators.put(Hour.class.getName(), new HourValidator(this.locale));
-		validators.put(Minute.class.getName(), new MinuteValidator(this.locale));
-		validators.put(Second.class.getName(), new SecondValidator(this.locale));
-		validators.put(Millisecond.class.getName(), new MillisecondValidator(this.locale));
-
-		validators.put(Letter.class.getName(), new LetterValidator(this.locale));
-		validators.put(LetterAlphabet.class.getName(), new LetterAlphabetValidator(this.locale));
-
-		validators.put(Digit.class.getName(), new DigitValidator(this.locale));
-		validators.put(DigitSystem.class.getName(), new DigitSystemValidator(this.locale));
-
-		validators.put(InetAddress.class.getName(), new InetAddressValidator(this.locale));
-		validators.put(MacAddress.class.getName(), new MacAddressValidator(this.locale));
-		validators.put(EmailAddress.class.getName(), new EmailAddressValidator(this.locale));
-
-		validators.put(RgbNumeric.class.getName(), new RgbNumericValidator(this.locale));
-		validators.put(RgbHex.class.getName(), new RgbHexValidator(this.locale));
-
-		validators.put(Valid.class.getName(), new ValidValidator(this.locale));
-		validators.put(Valid.ManyValid.class.getName(), new ValidValidator(this.locale));
-
-		validators.put(Exist.class.getName(), new ExistValidator(this.locale));
-		validators.put(Exist.ManyExist.class.getName(), new ExistValidator(this.locale));
-
-		LOG.debug(this.localeLogs.getString("00008"));
-
-		return Collections.unmodifiableMap(validators);
 	}
 }
