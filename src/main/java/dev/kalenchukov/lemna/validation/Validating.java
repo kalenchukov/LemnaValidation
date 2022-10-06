@@ -37,7 +37,7 @@ public interface Validating
 	void setLocale(@NotNull Locale locale);
 
 	/**
-	 * Возвращает локализация.
+	 * Возвращает локализацию.
 	 *
 	 * @return Локализация.
 	 */
