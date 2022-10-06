@@ -149,6 +149,10 @@ public final class Violation implements Violating
 	@Override
 	public String toString()
 	{
-		return "Violation{" + "field='" + field + '\'' + ", message='" + message + '\'' + ", params=" + params + '}';
+		return "Violation{" +
+			"field='" + field + "', " +
+			"message='" + message + "', " +
+			"params=" + params +
+			"}";
 	}
 }
