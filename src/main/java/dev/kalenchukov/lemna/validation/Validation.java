@@ -38,7 +38,7 @@ public class Validation implements Validating
 	 * Локализация.
 	 */
 	@NotNull
-	private Locale locale = new Locale("ru", "RU");
+	private Locale locale;
 
 	/**
 	 * Коллекция всех возможных проверяющих.
@@ -57,22 +57,19 @@ public class Validation implements Validating
 	 * Настырность проверки.
 	 */
 	@NotNull
-	private Boolean pushy = true;
+	private Boolean pushy;
+
+	/**
+	 * Локализованные тексты логирования.
+	 */
+	@NotNull
+	private ResourceBundle localeLogs;
 
 	/**
 	 * Логгер для данного класса.
 	 */
 	@NotNull
 	private static final Logger LOG = Logger.getLogger(Validation.class);
-
-	/**
-	 * Локализованные тексты логирования.
-	 */
-	@NotNull
-	private ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"lemna/validation/localizations/logs",
-		this.locale
-	);
 
 	/**
 	 * Конструктор для {@code Validation}.
@@ -84,6 +81,12 @@ public class Validation implements Validating
 		Objects.requireNonNull(object);
 
 		this.object = object;
+		this.locale = new Locale("ru", "RU");
+		this.localeLogs = ResourceBundle.getBundle(
+			"lemna/validation/localizations/logs",
+			this.locale
+		);
+		this.pushy = true;
 		this.validators = this.loadValidators();
 	}
 
