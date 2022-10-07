@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет аннотации, необходимые для задания ограничений значений полей классов.
+ */
 package dev.kalenchukov.lemna.validation.constraints;

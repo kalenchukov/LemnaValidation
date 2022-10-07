@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 
+/**
+ * Предоставляет классы, необходимые для проверки соответствия ограничениям.
+ */
 package dev.kalenchukov.lemna.validation.validators;

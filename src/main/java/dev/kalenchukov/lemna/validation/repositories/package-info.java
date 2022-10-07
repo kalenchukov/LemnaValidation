@@ -17,6 +17,6 @@
  */
 
 /**
- * Предоставляет интерфейсы, необходимые для реализации классов на их основе.
+ * Предоставляет классы, необходимые для получения данных из хранилищ.
  */
-package dev.kalenchukov.lemna.validation.interfaces;
+package dev.kalenchukov.lemna.validation.repositories;

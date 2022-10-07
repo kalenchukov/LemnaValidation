@@ -17,6 +17,6 @@
  */
 
 /**
- * Предоставляет интерфейсы, необходимые для реализации классов на их основе.
+ * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.lemna.validation.interfaces;
+package dev.kalenchukov.lemna.validation.resources;
