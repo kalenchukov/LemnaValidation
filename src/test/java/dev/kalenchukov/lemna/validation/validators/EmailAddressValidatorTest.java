@@ -102,7 +102,7 @@ public class EmailAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением email адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением email адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrect()

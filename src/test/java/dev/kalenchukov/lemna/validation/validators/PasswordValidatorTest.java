@@ -103,7 +103,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за недостатка букв в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за недостатка букв в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinLetters()
@@ -121,7 +121,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за недостатка цифр в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за недостатка цифр в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinDigits()
@@ -139,7 +139,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за недостатка специальных символов в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за недостатка специальных символов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinSpecial()
@@ -157,7 +157,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMixedCase()

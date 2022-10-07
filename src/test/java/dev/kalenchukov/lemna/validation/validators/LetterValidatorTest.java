@@ -213,7 +213,7 @@ public class LetterValidatorTest
 
 
 	/**
-	 * Проверка с не корректным значением прописного регистра в поле типа {@code String}.
+	 * Проверка с некорректным значением прописного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectUpperCase()
@@ -231,7 +231,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением прописного регистра в поле типа {@code Character}.
+	 * Проверка с некорректным значением прописного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueNotCorrectUpperCase()
@@ -249,7 +249,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением строчного регистра в поле типа {@code String}.
+	 * Проверка с некорректным значением строчного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectLowerCase()
@@ -267,7 +267,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением строчного регистра в поле типа {@code Character}.
+	 * Проверка с некорректным значением строчного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueNotCorrectLowerCase()

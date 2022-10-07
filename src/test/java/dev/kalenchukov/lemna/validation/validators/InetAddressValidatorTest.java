@@ -120,7 +120,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion4()
@@ -138,7 +138,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion6()
@@ -156,7 +156,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с не корректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion4And6()
