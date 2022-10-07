@@ -1,3 +1,6 @@
+/**
+ * Определяет API для проверки корректности значений полей классов.
+ */
 module dev.kalenchukov.lemna.validation
 {
 	requires org.jetbrains.annotations;
