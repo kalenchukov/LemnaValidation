@@ -26,6 +26,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по существованию с помощью собственной реализации.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 @Repeatable(Exist.ManyExist.class)
@@ -53,6 +54,7 @@ public @interface Exist
 	/**
 	 * Ограничение множественным {@code Exist}.
 	 */
+	@Documented
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target(ElementType.FIELD)
 	@interface ManyExist

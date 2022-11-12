@@ -21,14 +21,12 @@ package dev.kalenchukov.lemna.validation.constraints;
 import dev.kalenchukov.lemna.validation.resources.DayOfWeekFormat;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Ограничение по номеру дня недели.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 public @interface DayOfWeek

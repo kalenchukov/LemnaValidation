@@ -26,6 +26,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по корректности с помощью собственной реализации.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 @Repeatable(Valid.ManyValid.class)
@@ -52,6 +53,7 @@ public @interface Valid
 	/**
 	 * Ограничение множественным {@code Valid}.
 	 */
+	@Documented
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target(ElementType.FIELD)
 	@interface ManyValid

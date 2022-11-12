@@ -26,6 +26,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по буквам алфавита.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 public @interface LetterAlphabet

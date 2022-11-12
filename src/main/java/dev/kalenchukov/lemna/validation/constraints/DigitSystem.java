@@ -21,14 +21,12 @@ package dev.kalenchukov.lemna.validation.constraints;
 import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Ограничение цифр по системе счисления.
  */
+@Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 public @interface DigitSystem
