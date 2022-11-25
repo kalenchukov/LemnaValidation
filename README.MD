@@ -973,14 +973,6 @@ List<Violating> violations = validation.validate();
 */
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/LemnaValidation.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/LemnaValidation/releases).
