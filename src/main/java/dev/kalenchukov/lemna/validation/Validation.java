@@ -81,7 +81,7 @@ public class Validation implements Validating
 		this.object = object;
 		this.locale = new Locale("ru", "RU");
 		this.localeLogs = ResourceBundle.getBundle(
-			"lemna/validation/localizations/logs",
+			"/lemna/validation/localizations/logs",
 			this.locale
 		);
 		this.pushy = true;
@@ -101,7 +101,7 @@ public class Validation implements Validating
 			this.locale = locale;
 
 			this.localeLogs = ResourceBundle.getBundle(
-				"lemna/validation/localizations/logs",
+				"/lemna/validation/localizations/logs",
 				this.locale
 			);
 		}

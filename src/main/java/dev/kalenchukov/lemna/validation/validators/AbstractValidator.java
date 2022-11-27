@@ -38,7 +38,7 @@ public abstract class AbstractValidator implements Validator
 	 */
 	@NotNull
 	protected ResourceBundle localeLogs = ResourceBundle.getBundle(
-		"lemna/validation/localizations/logs",
+		"/lemna/validation/localizations/logs",
 		this.locale
 	);
 
@@ -47,7 +47,7 @@ public abstract class AbstractValidator implements Validator
 	 */
 	@NotNull
 	protected ResourceBundle localeViolations = ResourceBundle.getBundle(
-		"lemna/validation/localizations/violations",
+		"/lemna/validation/localizations/violations",
 		this.locale
 	);
 
@@ -56,7 +56,7 @@ public abstract class AbstractValidator implements Validator
 	 */
 	@NotNull
 	protected ResourceBundle localeExceptions = ResourceBundle.getBundle(
-		"lemna/validation/localizations/exceptions",
+		"/lemna/validation/localizations/exceptions",
 		this.locale
 	);
 
@@ -86,12 +86,12 @@ public abstract class AbstractValidator implements Validator
 			this.locale = locale;
 
 			this.localeLogs = ResourceBundle.getBundle(
-				"lemna/validation/localizations/logs",
+				"/lemna/validation/localizations/logs",
 				this.locale
 			);
 
 			this.localeViolations = ResourceBundle.getBundle(
-				"lemna/validation/localizations/violations",
+				"/lemna/validation/localizations/violations",
 				this.locale
 			);
 		}
