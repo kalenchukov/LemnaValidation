@@ -30,8 +30,8 @@ public interface Validable<T>
 	/**
 	 * Проверяет корректность значения.
 	 *
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение корректно, иначе {@code false}.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение корректно, иначе {@code false}.
 	 */
 	boolean valid(@NotNull T value);
 }

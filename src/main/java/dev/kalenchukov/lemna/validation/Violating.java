@@ -31,7 +31,7 @@ public interface Violating
 	/**
 	 * Возвращает название поля класса.
 	 *
-	 * @return Название поля класса.
+	 * @return название поля класса.
 	 */
 	@NotNull
 	String getField();
@@ -39,7 +39,7 @@ public interface Violating
 	/**
 	 * Возвращает сообщение о нарушении.
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String getMessage();
@@ -50,7 +50,7 @@ public interface Violating
 	 * 		<li><b>key</b> - название.</li>
 	 * 		<li><b>value</b> - значение.</li>
 	 * </ul>
-	 * @return Коллекцию параметров нарушения.
+	 * @return коллекцию параметров нарушения.
 	 */
 	@UnmodifiableView
 	@NotNull

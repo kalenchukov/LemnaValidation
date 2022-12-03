@@ -30,7 +30,7 @@ public class InvalidValidationClassException extends RuntimeException
 	/**
 	 * Конструктор для {@code InvalidValidationClassException}.
 	 *
-	 * @param message Сообщение.
+	 * @param message сообщение.
 	 */
 	public InvalidValidationClassException(@NotNull final String message)
 	{

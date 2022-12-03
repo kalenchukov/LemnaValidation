@@ -52,8 +52,8 @@ public enum HourFormat
 	/**
 	 * Конструктор для {@code HourFormat}.
 	 *
-	 * @param minHour Минимальное количество часов.
-	 * @param maxHour Максимальное количество часов.
+	 * @param minHour минимальное количество часов.
+	 * @param maxHour максимальное количество часов.
 	 */
 	HourFormat(@NotNull final Integer minHour, @NotNull final Integer maxHour)
 	{
@@ -67,7 +67,7 @@ public enum HourFormat
 	/**
 	 * Возвращает минимальное количество часов.
 	 *
-	 * @return Минимальное количество часов.
+	 * @return минимальное количество часов.
 	 */
 	@NotNull
 	public Integer getMinHour()
@@ -78,7 +78,7 @@ public enum HourFormat
 	/**
 	 * Возвращает максимальное количество часов.
 	 *
-	 * @return Максимальное количество часов.
+	 * @return максимальное количество часов.
 	 */
 	@NotNull
 	public Integer getMaxHour()

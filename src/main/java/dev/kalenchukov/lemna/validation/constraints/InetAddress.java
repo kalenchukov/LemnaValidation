@@ -33,14 +33,14 @@ public @interface InetAddress
 	/**
 	 * Задаёт разрешение на IP адреса четвёртой версии.
 	 *
-	 * @return {@code True}, IP адреса четвёртой версии разрешены, иначе {@code false}..
+	 * @return {@code true}, IP адреса четвёртой версии разрешены, иначе {@code false}.
 	 */
 	boolean v4() default true;
 
 	/**
 	 * Задаёт разрешение на IP адреса шестой версии.
 	 *
-	 * @return {@code True}, IP адреса шестой версии разрешены, иначе {@code false}..
+	 * @return {@code true}, IP адреса шестой версии разрешены, иначе {@code false}.
 	 */
 	boolean v6() default true;
 
@@ -50,7 +50,7 @@ public @interface InetAddress
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

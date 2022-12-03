@@ -33,7 +33,7 @@ public @interface RgbHex
 	/**
 	 * Задаёт игнорирование регистра.
 	 *
-	 * @return {@code True}, если регистр игнорируется, иначе {@code false}..
+	 * @return {@code true}, если регистр игнорируется, иначе {@code false}.
 	 */
 	boolean ignoreCase() default true;
 
@@ -43,7 +43,7 @@ public @interface RgbHex
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

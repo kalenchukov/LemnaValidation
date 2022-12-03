@@ -35,7 +35,7 @@ public @interface Exist
 	/**
 	 * Задаёт класс с собственной реализацией проверки существования.
 	 *
-	 * @return Класс с собственной реализацией проверки существования.
+	 * @return класс с собственной реализацией проверки существования.
 	 */
 	@NotNull
 	Class<? extends Existable<?>> existence();
@@ -46,7 +46,7 @@ public @interface Exist
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";
@@ -62,7 +62,7 @@ public @interface Exist
 		/**
 		 * Задаёт множество {@code Exist}.
 		 *
-		 * @return Массив из {@code Exist}.
+		 * @return массив из {@code Exist}.
 		 */
 		@NotNull
 		Exist @NotNull [] value();

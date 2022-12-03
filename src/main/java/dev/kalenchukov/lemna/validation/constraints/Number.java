@@ -33,14 +33,14 @@ public @interface Number
 	/**
 	 * Задаёт минимальное значение.
 	 *
-	 * @return Минимальное значение.
+	 * @return минимальное значение.
 	 */
 	long min() default 0L;
 
 	/**
 	 * Задаёт максимальное значение.
 	 *
-	 * @return Максимальное значение.
+	 * @return максимальное значение.
 	 */
 	long max() default Long.MAX_VALUE;
 
@@ -52,7 +52,7 @@ public @interface Number
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

@@ -34,7 +34,7 @@ public @interface DayOfWeek
 	/**
 	 * Задаёт формат дней недели.
 	 *
-	 * @return Формат дней недели.
+	 * @return формат дней недели.
 	 */
 	@NotNull
 	DayOfWeekFormat format() default DayOfWeekFormat.ONE_TO_SEVEN;
@@ -47,7 +47,7 @@ public @interface DayOfWeek
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

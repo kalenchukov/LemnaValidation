@@ -75,11 +75,11 @@ public final class PatternValidator extends AbstractValidator
 	/**
 	 * Проверяет корректность значения поля класса.
 	 *
-	 * @param field Поле класса.
-	 * @param constraint Проверяемое ограничение.
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException Если тип поля класса не поддерживается данным ограничением.
+	 * @param field поле класса.
+	 * @param constraint проверяемое ограничение.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field, @NotNull final Pattern constraint, @Nullable final Object value)
 	{
@@ -110,9 +110,9 @@ public final class PatternValidator extends AbstractValidator
 	/**
 	 * Проверка значения поля класса типа {@code Character}.
 	 *
-	 * @param constraint Проверяемое ограничение.
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение поля корректно, иначе {@code false}.
+	 * @param constraint проверяемое ограничение.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
 	private boolean isValidCharacter(@NotNull final Pattern constraint, @NotNull final Character value)
 	{
@@ -125,9 +125,9 @@ public final class PatternValidator extends AbstractValidator
 	/**
 	 * Проверка значения поля класса типа {@code String}.
 	 *
-	 * @param constraint Проверяемое ограничение.
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение поля корректно, иначе {@code false}.
+	 * @param constraint проверяемое ограничение.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
 	private boolean isValidString(@NotNull final Pattern constraint, @NotNull final String value)
 	{
@@ -141,9 +141,9 @@ public final class PatternValidator extends AbstractValidator
 	 * Проверка значения поля класса абстрактного типа.
 	 * В качестве абстракции используется тип {@code String}.
 	 *
-	 * @param constraint Проверяемое ограничение.
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение поля корректно, иначе {@code false}.
+	 * @param constraint проверяемое ограничение.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
 	private boolean isValidAbstract(@NotNull final Pattern constraint, @NotNull final String value)
 	{

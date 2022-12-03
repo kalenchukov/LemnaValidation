@@ -47,7 +47,7 @@ public final class ValidatorRepository
 	/**
 	 * Конструктор для {@code ValidatorRepository}.
 	 *
-	 * @param locale Локализация.
+	 * @param locale локализация.
 	 */
 	public ValidatorRepository(@NotNull final Locale locale)
 	{
@@ -58,7 +58,7 @@ public final class ValidatorRepository
 	/**
 	 * Возвращает коллекцию проверяющих.
 	 *
-	 * @return Коллекцию проверяющих.
+	 * @return коллекцию проверяющих.
 	 */
 	@Unmodifiable
 	@NotNull
@@ -70,7 +70,7 @@ public final class ValidatorRepository
 	/**
 	 * Возвращает проверяющего.
 	 *
-	 * @return Проверяющий.
+	 * @return проверяющий.
 	 */
 	@Nullable
 	public Validator getValidator(@NotNull final String forConstraint)
@@ -83,7 +83,7 @@ public final class ValidatorRepository
 	/**
 	 * Добавляет коллекцию проверяющих.
 	 *
-	 * @param validators Коллекция проверяющих.
+	 * @param validators коллекция проверяющих.
 	 */
 	public void addValidators(@NotNull final Map<@NotNull String, @NotNull Validator> validators)
 	{
@@ -95,8 +95,8 @@ public final class ValidatorRepository
 	/**
 	 * Добавляет проверяющего.
 	 *
-	 * @param forConstraint Ограничение для которого используется проверяющий.
-	 * @param validator Класс проверяющего.
+	 * @param forConstraint ограничение для которого используется проверяющий.
+	 * @param validator класс проверяющего.
 	 */
 	public void addValidator(@NotNull final String forConstraint,
 							 @NotNull final Validator validator)

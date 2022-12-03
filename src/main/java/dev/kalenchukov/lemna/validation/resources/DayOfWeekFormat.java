@@ -53,8 +53,8 @@ public enum DayOfWeekFormat
 	/**
 	 * Конструктор для {@code DayOfWeekFormat}.
 	 *
-	 * @param firstDay Первый день недели.
-	 * @param lastDay Последний день недели.
+	 * @param firstDay первый день недели.
+	 * @param lastDay последний день недели.
 	 */
 	DayOfWeekFormat(@NotNull final Integer firstDay, @NotNull final Integer lastDay)
 	{
@@ -68,7 +68,7 @@ public enum DayOfWeekFormat
 	/**
 	 * Возвращает первый день недели.
 	 *
-	 * @return Первый день недели.
+	 * @return первый день недели.
 	 */
 	@NotNull
 	public Integer getFirstDay()
@@ -79,7 +79,7 @@ public enum DayOfWeekFormat
 	/**
 	 * Возвращает последний день недели.
 	 *
-	 * @return Последний день недели.
+	 * @return последний день недели.
 	 */
 	@NotNull
 	public Integer getLastDay()

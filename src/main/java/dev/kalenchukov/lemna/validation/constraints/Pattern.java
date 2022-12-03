@@ -33,7 +33,7 @@ public @interface Pattern
 	/**
 	 * Задаёт регулярное выражение.
 	 *
-	 * @return Регулярное выражение.
+	 * @return регулярное выражение.
 	 */
 	@NotNull
 	String regexp();
@@ -45,7 +45,7 @@ public @interface Pattern
 	 *     <li>{@code %REGEXP%} - регулярное выражение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

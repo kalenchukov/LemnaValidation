@@ -72,7 +72,7 @@ public class Validation implements Validating
 	/**
 	 * Конструктор для {@code Validation}.
 	 *
-	 * @param object Объект класса в котором необходимо проверить данные.
+	 * @param object объект класса в котором необходимо проверить данные.
 	 */
 	public Validation(@NotNull final Object object)
 	{
@@ -81,7 +81,7 @@ public class Validation implements Validating
 		this.object = object;
 		this.locale = new Locale("ru", "RU");
 		this.localeLogs = ResourceBundle.getBundle(
-			"/lemna/validation/localizations/logs",
+			"lemna/validation/localizations/logs",
 			this.locale
 		);
 		this.pushy = true;
@@ -101,7 +101,7 @@ public class Validation implements Validating
 			this.locale = locale;
 
 			this.localeLogs = ResourceBundle.getBundle(
-				"/lemna/validation/localizations/logs",
+				"lemna/validation/localizations/logs",
 				this.locale
 			);
 		}
@@ -175,8 +175,8 @@ public class Validation implements Validating
 	/**
 	 * Проверяет поле класса на корректность.
 	 *
-	 * @param field Поле класса.
-	 * @return Коллекцию нарушений.
+	 * @param field поле класса.
+	 * @return коллекцию нарушений.
 	 */
 	@NotNull
 	private List<@NotNull Violating> validateValueField(@NotNull final Field field)

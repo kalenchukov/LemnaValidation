@@ -32,14 +32,14 @@ public interface Validating
 	/**
 	 * Устанавливает локализацию.
 	 *
-	 * @param locale Локализация.
+	 * @param locale локализация.
 	 */
 	void setLocale(@NotNull Locale locale);
 
 	/**
 	 * Возвращает локализацию.
 	 *
-	 * @return Локализация.
+	 * @return локализация.
 	 */
 	@NotNull
 	Locale getLocale();
@@ -47,7 +47,7 @@ public interface Validating
 	/**
 	 * Определяет настырность проверки.
 	 *
-	 * @return {@code True} если проверка настырная, иначе {@code false}.
+	 * @return {@code true}, если проверка настырная, иначе {@code false}.
 	 */
 	@NotNull
 	Boolean isPushy();
@@ -55,14 +55,14 @@ public interface Validating
 	/**
 	 * Устанавливает настырность проверки.
 	 *
-	 * @param pushy Настырность.
+	 * @param pushy настырность.
 	 */
 	void setPushy(@NotNull Boolean pushy);
 
 	/**
 	 * Проверяет поля класса на корректность.
 	 *
-	 * @return Коллекцию нарушений.
+	 * @return коллекцию нарушений.
 	 */
 	@UnmodifiableView
 	@NotNull

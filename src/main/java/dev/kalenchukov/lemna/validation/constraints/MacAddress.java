@@ -33,7 +33,7 @@ public @interface MacAddress
 	/**
 	 * Задаёт игнорирование регистра.
 	 *
-	 * @return {@code True}, регистр учитывать не нужно, иначе {@code false}..
+	 * @return {@code true}, регистр учитывать не нужно, иначе {@code false}.
 	 */
 	boolean ignoreCase() default true;
 
@@ -43,7 +43,7 @@ public @interface MacAddress
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

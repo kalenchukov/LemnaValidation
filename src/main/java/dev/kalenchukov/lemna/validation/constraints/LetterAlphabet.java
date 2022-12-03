@@ -45,7 +45,7 @@ public @interface LetterAlphabet
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

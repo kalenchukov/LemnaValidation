@@ -33,21 +33,21 @@ public @interface Password
 	/**
 	 * Задаёт минимальное количество букв.
 	 *
-	 * @return Минимальное количество букв.
+	 * @return минимальное количество букв.
 	 */
 	int minLetters() default 11;
 
 	/**
 	 * Задаёт смешанный регистр букв.
 	 *
-	 * @return {@code True}, если необходимы буквы разных регистров, иначе {@code false}..
+	 * @return {@code true}, если необходимы буквы разных регистров, иначе {@code false}.
 	 */
 	boolean mixedCase() default true;
 
 	/**
 	 * Задаёт минимальное количество цифр.
 	 *
-	 * @return Минимальное количество цифр.
+	 * @return минимальное количество цифр.
 	 */
 	int minDigits() default 1;
 
@@ -63,7 +63,7 @@ public @interface Password
 	 * 		'&#125;', '&#34;', '&#60;', '&#62;'
 	 * 		</pre>
 	 * </blockquote>
-	 * @return Минимальное количество специальных символов.
+	 * @return минимальное количество специальных символов.
 	 */
 	int minSpecial() default 0;
 
@@ -76,7 +76,7 @@ public @interface Password
 	 *     <li>{@code %MIN_SPECIAL%} - минимальное количество специальных символов</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

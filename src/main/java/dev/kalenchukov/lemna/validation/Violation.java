@@ -52,9 +52,9 @@ public final class Violation implements Violating
 	/**
 	 * Конструктор для {@code Violation}.
 	 *
-	 * @param field Название поля класса.
-	 * @param message Сообщение о нарушении.
-	 * @param params Параметры нарушения.
+	 * @param field название поля класса.
+	 * @param message сообщение о нарушении.
+	 * @param params параметры нарушения.
 	 * <ul>
 	 * 		<li><b>key</b> - название.</li>
 	 * 		<li><b>value</b> - значение.</li>

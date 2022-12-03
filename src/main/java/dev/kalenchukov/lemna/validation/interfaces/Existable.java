@@ -30,8 +30,8 @@ public interface Existable<T>
 	/**
 	 * Проверяет существование значения.
 	 *
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение существует, иначе {@code false}.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение существует, иначе {@code false}.
 	 */
 	boolean exist(@NotNull T value);
 }

@@ -34,7 +34,7 @@ public @interface Hour
 	/**
 	 * Задаёт формат времени.
 	 *
-	 * @return Формат времени.
+	 * @return формат времени.
 	 */
 	@NotNull
 	HourFormat format() default HourFormat.HOUR_24;
@@ -47,7 +47,7 @@ public @interface Hour
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

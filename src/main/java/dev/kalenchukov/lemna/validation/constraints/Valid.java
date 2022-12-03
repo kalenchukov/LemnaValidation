@@ -35,7 +35,7 @@ public @interface Valid
 	/**
 	 * Задаёт класс с собственной реализацией проверки корректности.
 	 *
-	 * @return Класс с собственной реализацией проверки корректности.
+	 * @return класс с собственной реализацией проверки корректности.
 	 */
 	@NotNull
 	Class<? extends Validable<?>> validator();
@@ -45,7 +45,7 @@ public @interface Valid
 	 * Переменные: <ul>
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";
@@ -61,7 +61,7 @@ public @interface Valid
 		/**
 		 * Задаёт множество {@code Valid}.
 		 *
-		 * @return Массив из {@code Valid}.
+		 * @return массив из {@code Valid}.
 		 */
 		@NotNull
 		Valid @NotNull [] value();

@@ -38,7 +38,7 @@ public @interface Second
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

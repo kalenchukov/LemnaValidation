@@ -33,14 +33,14 @@ public @interface Digit
 	/**
 	 * Задаёт минимальное количество цифр.
 	 *
-	 * @return Минимальное количество цифр.
+	 * @return минимальное количество цифр.
 	 */
 	int min() default 1;
 
 	/**
 	 * Задаёт максимальное количество цифр.
 	 *
-	 * @return Максимальное количество цифр.
+	 * @return максимальное количество цифр.
 	 */
 	int max();
 
@@ -52,7 +52,7 @@ public @interface Digit
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

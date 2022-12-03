@@ -33,14 +33,14 @@ public @interface Letter
 	/**
 	 * Задаёт разрешение прописных букв.
 	 *
-	 * @return {@code True}, если прописные буквы разрешены, иначе {@code false}.
+	 * @return {@code true}, если прописные буквы разрешены, иначе {@code false}.
 	 */
 	boolean upperCase() default true;
 
 	/**
 	 * Задаёт разрешение строчных букв.
 	 *
-	 * @return {@code True}, если строчные буквы разрешены, иначе {@code false}.
+	 * @return {@code true}, если строчные буквы разрешены, иначе {@code false}.
 	 */
 	boolean lowerCase() default true;
 
@@ -50,7 +50,7 @@ public @interface Letter
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

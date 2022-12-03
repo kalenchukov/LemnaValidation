@@ -30,7 +30,7 @@ public class InvalidExistenceClassException extends RuntimeException
 	/**
 	 * Конструктор для {@code InvalidExistenceClassException}.
 	 *
-	 * @param message Сообщение.
+	 * @param message сообщение.
 	 */
 	public InvalidExistenceClassException(@NotNull final String message)
 	{

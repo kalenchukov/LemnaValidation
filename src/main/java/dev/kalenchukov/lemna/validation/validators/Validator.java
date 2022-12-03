@@ -33,9 +33,9 @@ public interface Validator
 	/**
 	 * Проверяет корректность значения поля класса.
 	 *
-	 * @param field Поле класса.
-	 * @param value Значение поля класса.
-	 * @return Нарушение, или {@code null} если значение поля класса корректно.
+	 * @param field поле класса.
+	 * @param value значение поля класса.
+	 * @return нарушение, или {@code null} если значение поля класса корректно.
 	 */
 	@Nullable
 	Violating
@@ -44,7 +44,7 @@ public interface Validator
 	/**
 	 * Возвращает параметры нарушения.
 	 *
-	 * @return Коллекцию параметров нарушения.
+	 * @return коллекцию параметров нарушения.
 	 */
 	@NotNull
 	Map<@NotNull String, @NotNull String> getParams();
@@ -52,15 +52,15 @@ public interface Validator
 	/**
 	 * Устанавливает параметр нарушения.
 	 *
-	 * @param key Название параметра.
-	 * @param value Значение параметра.
+	 * @param key название параметра.
+	 * @param value значение параметра.
 	 */
 	void setParam(@NotNull String key, @NotNull String value);
 
 	/**
 	 * Возвращает сообщение нарушения.
 	 *
-	 * @return Сообщение нарушения.
+	 * @return сообщение нарушения.
 	 */
 	@NotNull
 	String getMessage();
@@ -68,7 +68,7 @@ public interface Validator
 	/**
 	 * Устанавливает сообщение нарушения.
 	 *
-	 * @param message Сообщение нарушения.
+	 * @param message сообщение нарушения.
 	 */
 	void setMessage(@NotNull String message);
 }

@@ -33,7 +33,7 @@ public @interface NoEmpty
 	/**
 	 * Задаёт учёт пробельных символов.
 	 *
-	 * @return {@code True} если пробельные символы будут учитываться, иначе {@code false}.
+	 * @return {@code true}, если пробельные символы будут учитываться, иначе {@code false}.
 	 */
 	boolean allowSpace() default false;
 
@@ -43,7 +43,7 @@ public @interface NoEmpty
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

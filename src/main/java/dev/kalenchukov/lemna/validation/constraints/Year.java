@@ -33,14 +33,14 @@ public @interface Year
 	/**
 	 * Задаёт минимальный год.
 	 *
-	 * @return Минимальный год.
+	 * @return минимальный год.
 	 */
 	int min();
 
 	/**
 	 * Задаёт максимальный год.
 	 *
-	 * @return Максимальный год.
+	 * @return максимальный год.
 	 */
 	int max();
 
@@ -52,7 +52,7 @@ public @interface Year
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

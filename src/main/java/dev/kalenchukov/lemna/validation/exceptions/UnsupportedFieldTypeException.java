@@ -30,7 +30,7 @@ public class UnsupportedFieldTypeException extends RuntimeException
 	/**
 	 * Конструктор для {@code UnsupportedFieldTypeException}.
 	 *
-	 * @param message Сообщение.
+	 * @param message сообщение.
 	 */
 	public UnsupportedFieldTypeException(@NotNull final String message)
 	{

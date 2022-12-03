@@ -33,14 +33,14 @@ public @interface NumberFloat
 	/**
 	 * Задаёт минимальное значение.
 	 *
-	 * @return Минимальное значение.
+	 * @return минимальное значение.
 	 */
 	double min() default 0.0;
 
 	/**
 	 * Задаёт максимальное значение.
 	 *
-	 * @return Максимальное значение.
+	 * @return максимальное значение.
 	 */
 	double max() default Double.MAX_VALUE;
 
@@ -52,7 +52,7 @@ public @interface NumberFloat
 	 *     <li>{@code %MAX%} - максимальное значение</li>
 	 * </ul>
 	 *
-	 * @return Сообщение о нарушении.
+	 * @return сообщение о нарушении.
 	 */
 	@NotNull
 	String message() default "%DEFAULT_MESSAGE%";

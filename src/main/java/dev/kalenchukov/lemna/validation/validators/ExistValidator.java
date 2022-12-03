@@ -79,12 +79,12 @@ public final class ExistValidator extends AbstractValidator
 	/**
 	 * Проверяет корректность значения поля класса.
 	 *
-	 * @param field Поле класса.
-	 * @param constraint Проверяемое ограничение.
-	 * @param value Значение поля класса.
-	 * @return {@code True} если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException Если тип поля класса не поддерживается данным ограничением.
-	 * @throws InvalidExistenceClassException Если класс проверки существования некорректный.
+	 * @param field поле класса.
+	 * @param constraint проверяемое ограничение.
+	 * @param value значение поля класса.
+	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
+	 * @throws InvalidExistenceClassException если класс проверки существования некорректный.
 	 */
 	private boolean isValid(@NotNull final Field field, @NotNull final Exist constraint, @Nullable final Object value)
 	{
