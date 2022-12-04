@@ -159,6 +159,8 @@ public final class ValidatorRepository
 		validators.put(Exist.class.getName(), new ExistValidator(this.locale));
 		validators.put(Exist.ManyExist.class.getName(), new ExistValidator(this.locale));
 
+		validators.put(CountryCodeAlpha2.class.getName(), new CountryCodeAlpha2Validator(this.locale));
+
 		return validators;
 	}
 }
