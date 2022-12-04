@@ -161,6 +161,7 @@ public final class ValidatorRepository
 
 		validators.put(CountryCodeAlpha2.class.getName(), new CountryCodeAlpha2Validator(this.locale));
 		validators.put(CountryCodeAlpha3.class.getName(), new CountryCodeAlpha3Validator(this.locale));
+		validators.put(CountryCodeNumeric3.class.getName(), new CountryCodeNumeric3Validator(this.locale));
 
 		return validators;
 	}
