@@ -115,6 +115,84 @@ public class Experimental
 }
 ```
 
+#### Аннотация "@CountryCodeAlpha2"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по коду страны.
+
+##### Параметры
+
+| Параметр | Описание                         | Обязательный |
+|:--------:|:---------------------------------|:------------:|
+| message  | Задаёт сообщение нарушения       |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.lemna.validation.constraints.CountryCodeAlpha2;
+
+public class Experimental
+{
+	@CountryCodeAlpha2
+	private String countryCode = "RU";
+}
+```
+
+#### Аннотация "@CountryCodeAlpha3"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по коду страны.
+
+##### Параметры
+
+| Параметр | Описание                         | Обязательный |
+|:--------:|:---------------------------------|:------------:|
+| message  | Задаёт сообщение нарушения       |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.lemna.validation.constraints.CountryCodeAlpha3;
+
+public class Experimental
+{
+	@CountryCodeAlpha3
+	private String countryCode = "RUS";
+}
+```
+
+#### Аннотация "@CountryCodeNumeric3"
+
+Значение поля класса аннотированное данной аннотацией ограничивается по коду страны.
+
+##### Параметры
+
+| Параметр | Описание                         | Обязательный |
+|:--------:|:---------------------------------|:------------:|
+| message  | Задаёт сообщение нарушения       |     Нет      |
+
+##### Поддерживаемые типы полей
+
+* String
+
+#### Пример
+
+```java
+import dev.kalenchukov.lemna.validation.constraints.CountryCodeNumeric3;
+
+public class Experimental
+{
+	@CountryCodeNumeric3
+	private String countryCode = "052";
+}
+```
+
 #### Аннотация "@Password"
 
 Значение поля класса аннотированное данной аннотацией ограничивается по требованиям к паролю.
