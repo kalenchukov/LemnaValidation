@@ -5,6 +5,7 @@
 ### Добавлено
 * Добавлена аннотация Documented к аннотациям.
 * Добавлена аннотация CountryCodeAlpha2.
+* Добавлена аннотация CountryCodeAlpha3.
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.
