@@ -131,6 +131,7 @@ public final class ValidatorRepository
 		validators.put(Year.class.getName(), new YearValidator(this.locale));
 		validators.put(MonthOfYear.class.getName(), new MonthOfYearValidator(this.locale));
 		validators.put(WeekOfMonth.class.getName(), new WeekOfMonthValidator(this.locale));
+		validators.put(WeekOfYear.class.getName(), new WeekOfYearValidator(this.locale));
 
 		validators.put(DayOfWeek.class.getName(), new DayOfWeekValidator(this.locale));
 		validators.put(DayOfMonth.class.getName(), new DayOfMonthValidator(this.locale));
