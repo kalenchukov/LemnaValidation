@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class WeekOfYearValidator extends AbstractValidator
 {
 	/**
+	 * Минимальная неделя года.
+	 */
+	@NotNull
+	private static final Integer MIN_WEEK_OF_YEAR = 1;
+
+	/**
+	 * Максимальная неделя года.
+	 */
+	@NotNull
+	private static final Integer MAX_WEEK_OF_YEAR = 53;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public WeekOfYearValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class WeekOfYearValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(1)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(53)));
+			this.setParam("MIN", String.valueOf(MIN_WEEK_OF_YEAR));
+			this.setParam("MAX", String.valueOf(MAX_WEEK_OF_YEAR));
 
 			return new Violation(
 				field.getName(),
@@ -188,7 +200,7 @@ public final class WeekOfYearValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_WEEK_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -199,7 +211,7 @@ public final class WeekOfYearValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 53)
+		if (value > MAX_WEEK_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

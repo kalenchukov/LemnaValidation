@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class DayOfMonthValidator extends AbstractValidator
 {
 	/**
+	 * Минимальный день месяца.
+	 */
+	@NotNull
+	private static final Integer MIN_DAY_OF_MONTH = 1;
+
+	/**
+	 * Максимальный день месяца.
+	 */
+	@NotNull
+	private static final Integer MAX_DAY_OF_MONTH = 31;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public DayOfMonthValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class DayOfMonthValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(1)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(31)));
+			this.setParam("MIN", String.valueOf(MIN_DAY_OF_MONTH));
+			this.setParam("MAX", String.valueOf(MAX_DAY_OF_MONTH));
 
 			return new Violation(
 				field.getName(),
@@ -188,7 +200,7 @@ public final class DayOfMonthValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_DAY_OF_MONTH)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -199,7 +211,7 @@ public final class DayOfMonthValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 31)
+		if (value > MAX_DAY_OF_MONTH)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

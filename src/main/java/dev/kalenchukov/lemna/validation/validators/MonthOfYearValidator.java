@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class MonthOfYearValidator extends AbstractValidator
 {
 	/**
+	 * Минимальный месяц года.
+	 */
+	@NotNull
+	private static final Integer MIN_MONTH_OF_YEAR = 1;
+
+	/**
+	 * Максимальный месяц года.
+	 */
+	@NotNull
+	private static final Integer MAX_MONTH_OF_YEAR = 12;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public MonthOfYearValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class MonthOfYearValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(1)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(12)));
+			this.setParam("MIN", String.valueOf(MIN_MONTH_OF_YEAR));
+			this.setParam("MAX", String.valueOf(MAX_MONTH_OF_YEAR));
 
 			return new Violation(
 				field.getName(),
@@ -188,7 +200,7 @@ public final class MonthOfYearValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_MONTH_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -199,7 +211,7 @@ public final class MonthOfYearValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 12)
+		if (value > MAX_MONTH_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class WeekOfMonthValidator extends AbstractValidator
 {
 	/**
+	 * Минимальная неделя месяца.
+	 */
+	@NotNull
+	private static final Integer MIN_WEEK_OF_MONTH = 1;
+
+	/**
+	 * Максимальная неделя месяца.
+	 */
+	@NotNull
+	private static final Integer MAX_WEEK_OF_MONTH = 4;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public WeekOfMonthValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class WeekOfMonthValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(1)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(4)));
+			this.setParam("MIN", String.valueOf(MIN_WEEK_OF_MONTH));
+			this.setParam("MAX", String.valueOf(MAX_WEEK_OF_MONTH));
 
 			return new Violation(
 				field.getName(),
@@ -188,7 +200,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_WEEK_OF_MONTH)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -199,7 +211,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 4)
+		if (value > MAX_WEEK_OF_MONTH)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

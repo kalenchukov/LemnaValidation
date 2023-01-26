@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class MillisecondValidator extends AbstractValidator
 {
 	/**
+	 * Минимальное значение миллисекунд.
+	 */
+	@NotNull
+	private static final Integer MIN_MILLISECOND = 0;
+
+	/**
+	 * Максимальное значение миллисекунд.
+	 */
+	@NotNull
+	private static final Integer MAX_MILLISECOND = 999;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public MillisecondValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class MillisecondValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(0)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(999)));
+			this.setParam("MIN", String.valueOf(MIN_MILLISECOND));
+			this.setParam("MAX", String.valueOf(MAX_MILLISECOND));
 
 			return new Violation(
 				field.getName(),
@@ -169,7 +181,7 @@ public final class MillisecondValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 0)
+		if (value < MIN_MILLISECOND)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -180,7 +192,7 @@ public final class MillisecondValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 999)
+		if (value > MAX_MILLISECOND)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

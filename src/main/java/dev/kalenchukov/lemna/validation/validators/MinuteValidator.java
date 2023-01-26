@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class MinuteValidator extends AbstractValidator
 {
 	/**
+	 * Минимальное значение минут.
+	 */
+	@NotNull
+	private static final Integer MIN_MINUTE = 0;
+
+	/**
+	 * Максимальное значение минут.
+	 */
+	@NotNull
+	private static final Integer MAX_MINUTE = 59;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public MinuteValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class MinuteValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(0)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(59)));
+			this.setParam("MIN", String.valueOf(MIN_MINUTE));
+			this.setParam("MAX", String.valueOf(MAX_MINUTE));
 
 			return new Violation(
 				field.getName(),
@@ -188,7 +200,7 @@ public final class MinuteValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 0)
+		if (value < MIN_MINUTE)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -199,7 +211,7 @@ public final class MinuteValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 59)
+		if (value > MAX_MINUTE)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class IdValidator extends AbstractValidator
 {
 	/**
+	 * Минимальный идентификатор.
+	 */
+	@NotNull
+	private static final Long MIN_ID = 1L;
+
+	/**
+	 * Максимальный идентификатор.
+	 */
+	@NotNull
+	private static final Long MAX_ID = Long.MAX_VALUE;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public IdValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class IdValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(0)));
-			this.setParam("MAX", String.valueOf(Long.MAX_VALUE));
+			this.setParam("MIN", String.valueOf(MIN_ID));
+			this.setParam("MAX", String.valueOf(MAX_ID));
 
 			return new Violation(
 				field.getName(),
@@ -169,7 +181,7 @@ public final class IdValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_ID)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),

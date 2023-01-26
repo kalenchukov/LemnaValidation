@@ -36,6 +36,18 @@ import java.util.Objects;
 public final class DayOfYearValidator extends AbstractValidator
 {
 	/**
+	 * Минимальный день года.
+	 */
+	@NotNull
+	private static final Integer MIN_DAY_OF_YEAR = 1;
+
+	/**
+	 * Максимальный день года.
+	 */
+	@NotNull
+	private static final Integer MAX_DAY_OF_YEAR = 365;
+
+	/**
 	 * @see AbstractValidator#AbstractValidator(Locale)
 	 */
 	public DayOfYearValidator(@NotNull final Locale locale)
@@ -59,8 +71,8 @@ public final class DayOfYearValidator extends AbstractValidator
 		if (!valid)
 		{
 			this.setParam("FIELD", field.getName());
-			this.setParam("MIN", String.valueOf(Long.valueOf(1)));
-			this.setParam("MAX", String.valueOf(Long.valueOf(365)));
+			this.setParam("MIN", String.valueOf(MIN_DAY_OF_YEAR));
+			this.setParam("MAX", String.valueOf(MAX_DAY_OF_YEAR));
 
 			return new Violation(
 				field.getName(),
@@ -169,7 +181,7 @@ public final class DayOfYearValidator extends AbstractValidator
 		Objects.requireNonNull(constraint);
 		Objects.requireNonNull(value);
 
-		if (value < 1)
+		if (value < MIN_DAY_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
@@ -180,7 +192,7 @@ public final class DayOfYearValidator extends AbstractValidator
 			return false;
 		}
 
-		if (value > 365)
+		if (value > MAX_DAY_OF_YEAR)
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
