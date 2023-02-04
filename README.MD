@@ -914,8 +914,10 @@ import dev.kalenchukov.lemna.validation.Validation;
 
 Validating validation = new Validation(new Experimental());
 List<Violating> violations = validation.validate();
-/*
+```
+
 Результат выполнения:
+```
 [
     Violation {
         field='id',
@@ -938,7 +940,6 @@ List<Violating> violations = validation.validate();
         params={MIN=5, MAX=10, FIELD=days}
     }
 ]
-*/
 ```
 
 Проверка всех полей класса и возврат первого найденного нарушения:
@@ -950,8 +951,10 @@ import dev.kalenchukov.lemna.validation.Validation;
 Validating validation = new Validation(new Experimental());
 validation.setPushy(false);
 List<Violating> violations = validation.validate();
-/*
+```
+
 Результат выполнения:
+```
 [
     Violation {
         field='id', 
@@ -959,5 +962,4 @@ List<Violating> violations = validation.validate();
         params={FIELD=id}
     }
 ]
-*/
 ```
