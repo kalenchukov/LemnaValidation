@@ -24,18 +24,18 @@ import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.DayOfWeek;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.lemna.validation.resources.DayOfWeekFormat;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DayOfWeekValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
 	 */
-	@Test(expected = UnsupportedFieldTypeException.class)
+	@Test
 	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
@@ -44,8 +44,10 @@ public class DayOfWeekValidatorTest
 			private String dayOfWeek = "1";
 		}
 
-		Validating validation = new Validation(new Experimental());
-		List<Violating> violation = validation.validate();
+		assertThrows(UnsupportedFieldTypeException.class, () -> {
+			Validating validation = new Validation(new Experimental());
+			validation.validate();
+		});
 	}
 
 	/**

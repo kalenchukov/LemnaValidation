@@ -19,11 +19,11 @@
 package dev.kalenchukov.lemna.validation;
 
 import dev.kalenchukov.lemna.validation.constraints.Localization;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidationTest
 {

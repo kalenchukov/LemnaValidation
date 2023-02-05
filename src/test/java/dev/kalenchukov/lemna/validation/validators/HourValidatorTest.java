@@ -24,18 +24,18 @@ import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.Hour;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.lemna.validation.resources.HourFormat;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class HourValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
 	 */
-	@Test(expected = UnsupportedFieldTypeException.class)
+	@Test
 	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
@@ -44,8 +44,10 @@ public class HourValidatorTest
 			private String hour = "1";
 		}
 
-		Validating validation = new Validation(new Experimental());
-		List<Violating> violation = validation.validate();
+		assertThrows(UnsupportedFieldTypeException.class, () -> {
+			Validating validation = new Validation(new Experimental());
+			validation.validate();
+		});
 	}
 
 	/**

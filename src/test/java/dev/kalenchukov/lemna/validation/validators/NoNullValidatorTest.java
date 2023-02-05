@@ -22,11 +22,11 @@ import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.NoNull;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NoNullValidatorTest
 {

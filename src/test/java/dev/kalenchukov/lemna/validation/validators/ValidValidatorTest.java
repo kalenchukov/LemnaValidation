@@ -25,18 +25,18 @@ import dev.kalenchukov.lemna.validation.constraints.Pattern;
 import dev.kalenchukov.lemna.validation.constraints.Valid;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
 import dev.kalenchukov.lemna.validation.supports.validators.BrowserValidator;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ValidValidatorTest
 {
 	/**
 	 * Проверка с некорректным типом поля.
 	 */
-	@Test(expected = UnsupportedFieldTypeException.class)
+	@Test
 	public void testValidNotCorrectFieldType()
 	{
 		class Experimental
@@ -45,8 +45,10 @@ public class ValidValidatorTest
 			private Integer browser = 1;
 		}
 
-		Validating validation = new Validation(new Experimental());
-		List<Violating> violation = validation.validate();
+		assertThrows(UnsupportedFieldTypeException.class, () -> {
+			Validating validation = new Validation(new Experimental());
+			validation.validate();
+		});
 	}
 
 	/**
