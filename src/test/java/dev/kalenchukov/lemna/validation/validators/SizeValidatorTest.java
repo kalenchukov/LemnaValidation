@@ -29,10 +29,13 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link SizeValidator}.
+ */
 public class SizeValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -50,7 +53,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -68,10 +71,10 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа массив.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа массив.
 	 */
 	@Test
-	public void testValidArrayTypeValueCorrect()
+	public void testValidArrayTypeValue()
 	{
 		class Experimental
 		{
@@ -86,10 +89,10 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Collection}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Collection}.
 	 */
 	@Test
-	public void testValidCollectionTypeValueCorrect()
+	public void testValidCollectionTypeValue()
 	{
 		class Experimental
 		{
@@ -104,10 +107,10 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Map}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Map}.
 	 */
 	@Test
-	public void testValidMapTypeValueCorrect()
+	public void testValidMapTypeValue()
 	{
 		class Experimental
 		{
@@ -126,7 +129,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка без элементов в поле типа массив.
+	 * Проверка метода {@link Validation#validate()} без элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueCorrectZero()
@@ -144,7 +147,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка без элементов в поле типа {@code Collection}.
+	 * Проверка метода {@link Validation#validate()} без элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueCorrectZero()
@@ -162,7 +165,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка без элементов в поле типа {@code Map}.
+	 * Проверка метода {@link Validation#validate()} без элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueCorrectZero()
@@ -180,7 +183,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с меньшим количеством элементов в поле типа массив.
+	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueNotCorrectMin()
@@ -198,7 +201,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с меньшим количеством элементов в поле типа {@code Collection}.
+	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueNotCorrectMin()
@@ -216,7 +219,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с меньшим количеством элементов в поле типа {@code Map}.
+	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueNotCorrectMin()
@@ -236,7 +239,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с большим количеством элементов в поле типа массив.
+	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueNotCorrectMax()
@@ -254,7 +257,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с большим количеством элементов в поле типа {@code Collection}.
+	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueNotCorrectMax()
@@ -272,7 +275,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка с большим количеством элементов в поле типа {@code Map}.
+	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueNotCorrectMax()

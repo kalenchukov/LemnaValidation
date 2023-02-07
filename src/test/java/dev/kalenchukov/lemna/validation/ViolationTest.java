@@ -25,10 +25,13 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Violation}.
+ */
 public class ViolationTest
 {
 	/**
-	 * Проверка одинаковых объектов.
+	 * Проверка метода {@link Violation#equals(Object)} с одинаковыми объектами.
 	 */
 	@Test
 	public void testEquals()
@@ -43,10 +46,10 @@ public class ViolationTest
 	}
 
 	/**
-	 * Проверка разных объектов.
+	 * Проверка метода {@link Violation#equals(Object)} с разными объектами.
 	 */
 	@Test
-	public void testEqualsNot()
+	public void testEqualsNotCorrect()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
@@ -58,7 +61,7 @@ public class ViolationTest
 	}
 
 	/**
-	 * Проверка одинаковых объектов.
+	 * Проверка метода {@link Violation#hashCode()} с одинаковыми объектами.
 	 */
 	@Test
 	public void testHashCodeEquals()
@@ -73,7 +76,7 @@ public class ViolationTest
 	}
 
 	/**
-	 * Проверка разных объектов.
+	 * Проверка метода {@link Violation#hashCode()} с разными объектами.
 	 */
 	@Test
 	public void testHashCodeDifferent()

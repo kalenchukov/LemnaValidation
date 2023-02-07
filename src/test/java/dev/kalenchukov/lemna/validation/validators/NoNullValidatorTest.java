@@ -28,13 +28,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link NoNullValidator}.
+ */
 public class NoNullValidatorTest
 {
 	/**
-	 * Проверка с корректным значением.
+	 * Проверка метода {@link Validation#validate()} с корректным значением.
 	 */
 	@Test
-	public void testValidValueCorrect()
+	public void testValidValue()
 	{
 		class Experimental
 		{
@@ -49,7 +52,7 @@ public class NoNullValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()

@@ -29,10 +29,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link RgbHexValidator}.
+ */
 public class RgbHexValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -50,7 +53,7 @@ public class RgbHexValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -68,7 +71,7 @@ public class RgbHexValidatorTest
 	}
 
 	/**
-	 * Проверка с пустым значением.
+	 * Проверка метода {@link Validation#validate()} с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -86,10 +89,10 @@ public class RgbHexValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением RGB модели в шестнадцатеричной системе счисления в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением RGB модели в шестнадцатеричной системе счисления в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueCorrect()
+	public void testValidStringTypeValue()
 	{
 		class Experimental
 		{
@@ -104,7 +107,7 @@ public class RgbHexValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением RGB модели в шестнадцатеричной системе счисления без учёта регистра в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением RGB модели в шестнадцатеричной системе счисления без учёта регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectIgnoreCase()
@@ -122,7 +125,7 @@ public class RgbHexValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за учёта регистра RGB модели в шестнадцатеричной системе счисления в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за учёта регистра RGB модели в шестнадцатеричной системе счисления в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectIgnoreCase()

@@ -30,10 +30,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link MillisecondValidator}.
+ */
 public class MillisecondValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -51,7 +54,7 @@ public class MillisecondValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -69,7 +72,7 @@ public class MillisecondValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -87,10 +90,10 @@ public class MillisecondValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Short}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValueCorrect()
+	public void testValidShortTypeValue()
 	{
 		class Experimental
 		{
@@ -105,10 +108,10 @@ public class MillisecondValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Integer}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValueCorrect()
+	public void testValidIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -123,10 +126,10 @@ public class MillisecondValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Long}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValueCorrect()
+	public void testValidLongTypeValue()
 	{
 		class Experimental
 		{

@@ -29,10 +29,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link InetAddressValidator}.
+ */
 public class InetAddressValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -50,7 +53,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -68,7 +71,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с пустым значением.
+	 * Проверка метода {@link Validation#validate()} с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -86,7 +89,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением IP адреса четвёртой версии в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением IP адреса четвёртой версии в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectVersion4()
@@ -104,7 +107,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением IP адреса шестой версии в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением IP адреса шестой версии в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectVersion6()
@@ -122,7 +125,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion4()
@@ -140,7 +143,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion6()
@@ -158,7 +161,7 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectVersion4And6()

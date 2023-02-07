@@ -29,10 +29,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link NumberFloatValidator}.
+ */
 public class NumberFloatValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -50,7 +53,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -68,7 +71,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка со значением меньше минимального в поле типа {@code Double}.
+	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Double}.
 	 */
 	@Test
 	public void testValidDoubleTypeValueNotCorrectLessMin()
@@ -86,7 +89,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка со значением меньше минимального в поле типа {@code Float}.
+	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Float}.
 	 */
 	@Test
 	public void testValidFloatTypeValueNotCorrectLessMin()
@@ -104,7 +107,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с минимальным значением в поле типа {@code Double}.
+	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Double}.
 	 */
 	@Test
 	public void testValidDoubleTypeValueNotCorrectMin()
@@ -122,7 +125,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с минимальным значением в поле типа {@code Float}.
+	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Float}.
 	 */
 	@Test
 	public void testValidFloatTypeValueNotCorrectMin()
@@ -140,10 +143,10 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Double}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Double}.
 	 */
 	@Test
-	public void testValidDoubleTypeValueCorrect()
+	public void testValidDoubleTypeValue()
 	{
 		class Experimental
 		{
@@ -158,10 +161,10 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Float}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Float}.
 	 */
 	@Test
-	public void testValidFloatTypeValueCorrect()
+	public void testValidFloatTypeValue()
 	{
 		class Experimental
 		{
@@ -176,7 +179,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с максимальным значением в поле типа {@code Double}.
+	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Double}.
 	 */
 	@Test
 	public void testValidDoubleTypeValueNotCorrectMax()
@@ -194,7 +197,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка с максимальным значением в поле типа {@code Float}.
+	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Float}.
 	 */
 	@Test
 	public void testValidFloatTypeValueNotCorrectMax()
@@ -212,7 +215,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка со значением больше максимального в поле типа {@code Double}.
+	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Double}.
 	 */
 	@Test
 	public void testValidDoubleTypeMoreMax()
@@ -230,7 +233,7 @@ public class NumberFloatValidatorTest
 	}
 
 	/**
-	 * Проверка со значением больше максимального в поле типа {@code Float}.
+	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Float}.
 	 */
 	@Test
 	public void testValidFloatTypeMoreMax()

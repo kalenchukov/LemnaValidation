@@ -30,10 +30,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link HourValidator}.
+ */
 public class HourValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -51,7 +54,7 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -69,7 +72,7 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -87,7 +90,7 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением в 12 часовом формате.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением в 12 часовом формате.
 	 */
 	@Test
 	public void testValidValueNotCorrectFormat12()
@@ -105,7 +108,7 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением в 24 часовом формате.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением в 24 часовом формате.
 	 */
 	@Test
 	public void testValidValueNotCorrectFormat24()
@@ -123,10 +126,10 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Byte}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValueCorrect()
+	public void testValidByteTypeValue()
 	{
 		class Experimental
 		{
@@ -141,10 +144,10 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Short}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValueCorrect()
+	public void testValidShortTypeValue()
 	{
 		class Experimental
 		{
@@ -159,10 +162,10 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Integer}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValueCorrect()
+	public void testValidIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -177,10 +180,10 @@ public class HourValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code Long}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValueCorrect()
+	public void testValidLongTypeValue()
 	{
 		class Experimental
 		{

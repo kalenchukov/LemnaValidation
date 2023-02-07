@@ -25,10 +25,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link Validation}.
+ */
 public class ValidationTest
 {
 	/**
-	 * Проверка настырности на примере ограничения {@link Localization}.
+	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code true}.
 	 */
 	@Test
 	public void testValidatePushyTrue()
@@ -53,7 +56,7 @@ public class ValidationTest
 	}
 
 	/**
-	 * Проверка не настырности на примере ограничения {@link Localization}.
+	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code false}.
 	 */
 	@Test
 	public void testValidatePushyFalse()
@@ -78,7 +81,7 @@ public class ValidationTest
 	}
 
 	/**
-	 * Проверка собственного сообщения о нарушении.
+	 * Проверка метода {@link Validation#validate()} с собственным сообщением о нарушении.
 	 */
 	@Test
 	public void testValidateMessage()

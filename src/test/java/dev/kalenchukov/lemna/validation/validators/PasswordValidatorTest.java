@@ -30,10 +30,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link PasswordValidator}.
+ */
 public class PasswordValidatorTest
 {
 	/**
-	 * Проверка с некорректным типом поля.
+	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -51,7 +54,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -69,7 +72,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с пустым значением.
+	 * Проверка метода {@link Validation#validate()} с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -87,10 +90,10 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с корректным значением в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueCorrect()
+	public void testValidStringTypeValue()
 	{
 		class Experimental
 		{
@@ -105,7 +108,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за недостатка букв в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за недостатка букв в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinLetters()
@@ -123,7 +126,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за недостатка цифр в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за недостатка цифр в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinDigits()
@@ -141,7 +144,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за недостатка специальных символов в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за недостатка специальных символов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMinSpecial()
@@ -159,7 +162,7 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка с некорректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
+	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectMixedCase()
