@@ -31,12 +31,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link DayOfWeekValidator}.
+ * Класс проверки аннотации {@link DayOfWeek}.
  */
 public class DayOfWeekValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -54,7 +54,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -72,7 +72,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением.
+	 * Проверка с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -90,7 +90,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением по выбранному формату.
+	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
 	public void testValidValueNotCorrectFormat1()
@@ -108,7 +108,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением по выбранному формату.
+	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
 	public void testValidValueNotCorrectFormat2()
@@ -126,7 +126,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Byte}.
+	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValue()
@@ -144,7 +144,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
+	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValue()
@@ -162,7 +162,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
+	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValue()
@@ -180,7 +180,7 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
+	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValue()

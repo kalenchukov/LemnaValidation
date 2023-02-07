@@ -32,12 +32,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link ValidValidator}.
+ * Класс проверки аннотации {@link Valid}.
  */
 public class ValidValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -55,7 +55,7 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -73,7 +73,7 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с пустым значением.
+	 * Проверка с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -91,7 +91,7 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением поля.
+	 * Проверка с некорректным значением поля.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -109,7 +109,7 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением поля.
+	 * Проверка .
 	 */
 	@Test
 	public void testValidValue()
@@ -127,10 +127,10 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с множественной проверкой и корректным значением поля.
+	 * Проверка с множественной проверкой.
 	 */
 	@Test
-	public void testValidValueCorrectMany()
+	public void testValidValueMany()
 	{
 		class Experimental
 		{

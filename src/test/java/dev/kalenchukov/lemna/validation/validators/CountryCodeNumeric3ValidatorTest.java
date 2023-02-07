@@ -35,7 +35,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CountryCodeNumeric3ValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class CountryCodeNumeric3ValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -70,7 +70,7 @@ public class CountryCodeNumeric3ValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с пустым значением.
+	 * Проверка с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -88,7 +88,7 @@ public class CountryCodeNumeric3ValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением.
+	 * Проверка с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -105,7 +105,7 @@ public class CountryCodeNumeric3ValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code String}.
+	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValue()

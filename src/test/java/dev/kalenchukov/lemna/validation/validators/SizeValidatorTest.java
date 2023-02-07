@@ -30,12 +30,12 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link SizeValidator}.
+ * Класс проверки аннотации {@link Size}.
  */
 public class SizeValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа массив.
+	 * Проверка с полем типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValue()
@@ -89,7 +89,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Collection}.
+	 * Проверка с полем типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValue()
@@ -107,7 +107,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Map}.
+	 * Проверка с полем типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValue()
@@ -129,7 +129,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} без элементов в поле типа массив.
+	 * Проверка  без элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueCorrectZero()
@@ -147,7 +147,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} без элементов в поле типа {@code Collection}.
+	 * Проверка  без элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueCorrectZero()
@@ -165,7 +165,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} без элементов в поле типа {@code Map}.
+	 * Проверка  без элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueCorrectZero()
@@ -183,7 +183,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа массив.
+	 * Проверка с меньшим количеством элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueNotCorrectMin()
@@ -191,7 +191,7 @@ public class SizeValidatorTest
 		class Experimental
 		{
 			@Size(min = 2, max = 4)
-			private Integer[] days = {1}; // 1 элемент
+			private Integer[] days = {1};
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -201,7 +201,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа {@code Collection}.
+	 * Проверка с меньшим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueNotCorrectMin()
@@ -209,7 +209,7 @@ public class SizeValidatorTest
 		class Experimental
 		{
 			@Size(min = 2, max = 4)
-			private List<Integer> days = new ArrayList<>(List.of(1)); // 1 элемент
+			private List<Integer> days = new ArrayList<>(List.of(1));
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -219,7 +219,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с меньшим количеством элементов в поле типа {@code Map}.
+	 * Проверка с меньшим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueNotCorrectMin()
@@ -229,7 +229,7 @@ public class SizeValidatorTest
 			@Size(min = 2, max = 4)
 			private Map<Integer, Integer> days = new HashMap<>(Map.ofEntries(
 				Map.entry(0, 1)
-			)); // 1 элемент
+			));
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -239,7 +239,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа массив.
+	 * Проверка с большим количеством элементов в поле типа массив.
 	 */
 	@Test
 	public void testValidArrayTypeValueNotCorrectMax()
@@ -247,7 +247,7 @@ public class SizeValidatorTest
 		class Experimental
 		{
 			@Size(min = 2, max = 4)
-			private Integer[] days = {1, 2, 3, 4, 5}; // 5 элементов
+			private Integer[] days = {1, 2, 3, 4, 5};
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -257,7 +257,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа {@code Collection}.
+	 * Проверка с большим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
 	public void testValidCollectionTypeValueNotCorrectMax()
@@ -265,7 +265,7 @@ public class SizeValidatorTest
 		class Experimental
 		{
 			@Size(min = 2, max = 4)
-			private List<Integer> days = new ArrayList<>(List.of(1, 2, 3, 4, 5)); // 5 элементов
+			private List<Integer> days = new ArrayList<>(List.of(1, 2, 3, 4, 5));
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -275,7 +275,7 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с большим количеством элементов в поле типа {@code Map}.
+	 * Проверка с большим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
 	public void testValidMapTypeValueNotCorrectMax()
@@ -289,7 +289,7 @@ public class SizeValidatorTest
 				Map.entry(2, 3),
 				Map.entry(3, 4),
 				Map.entry(4, 5)
-			)); // 5 элементов
+			));
 		}
 
 		Validating validation = new Validation(new Experimental());

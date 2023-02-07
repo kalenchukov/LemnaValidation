@@ -30,12 +30,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link EmailAddressValidator}.
+ * Класс проверки аннотации {@link EmailAddress}.
  */
 public class EmailAddressValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class EmailAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class EmailAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с пустым значением.
+	 * Проверка с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -89,7 +89,7 @@ public class EmailAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением email адреса в поле типа {@code String}.
+	 * Проверка с email адресом в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValue()
@@ -107,7 +107,7 @@ public class EmailAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением email адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением email адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrect()

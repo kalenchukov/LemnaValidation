@@ -30,12 +30,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link NumberValidator}.
+ * Класс проверки аннотации {@link Number}.
  */
 public class NumberValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Long}.
+	 * Проверка со значением меньше минимального в поле типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValueNotCorrectLessMin()
@@ -89,7 +89,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Integer}.
+	 * Проверка со значением меньше минимального в поле типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValueNotCorrectLessMin()
@@ -107,7 +107,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Short}.
+	 * Проверка со значением меньше минимального в поле типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValueNotCorrectLessMin()
@@ -125,7 +125,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением меньше минимального в поле типа {@code Byte}.
+	 * Проверка со значением меньше минимального в поле типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValueNotCorrectLessMin()
@@ -143,7 +143,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Long}.
+	 * Проверка с минимальным значением в поле типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValueNotCorrectMin()
@@ -161,7 +161,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Integer}.
+	 * Проверка с минимальным значением в поле типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValueNotCorrectMin()
@@ -179,7 +179,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Short}.
+	 * Проверка с минимальным значением в поле типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValueNotCorrectMin()
@@ -197,7 +197,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с минимальным значением в поле типа {@code Byte}.
+	 * Проверка с минимальным значением в поле типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValueNotCorrectMin()
@@ -215,7 +215,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
+	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValue()
@@ -233,7 +233,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
+	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValue()
@@ -251,7 +251,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
+	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValue()
@@ -269,7 +269,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Byte}.
+	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValue()
@@ -287,7 +287,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Long}.
+	 * Проверка с максимальным значением в поле типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValueNotCorrectMax()
@@ -305,7 +305,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Integer}.
+	 * Проверка с максимальным значением в поле типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValueNotCorrectMax()
@@ -323,7 +323,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Short}.
+	 * Проверка с максимальным значением в поле типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValueNotCorrectMax()
@@ -341,7 +341,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с максимальным значением в поле типа {@code Byte}.
+	 * Проверка с максимальным значением в поле типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValueNotCorrectMax()
@@ -359,7 +359,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Long}.
+	 * Проверка со значением больше максимального в поле типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeMoreMax()
@@ -377,7 +377,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Integer}.
+	 * Проверка со значением больше максимального в поле типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeMoreMax()
@@ -395,7 +395,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Short}.
+	 * Проверка со значением больше максимального в поле типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeMoreMax()
@@ -413,7 +413,7 @@ public class NumberValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением больше максимального в поле типа {@code Byte}.
+	 * Проверка со значением больше максимального в поле типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeMoreMax()

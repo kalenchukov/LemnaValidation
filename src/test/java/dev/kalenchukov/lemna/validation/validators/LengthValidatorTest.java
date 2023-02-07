@@ -30,12 +30,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link LengthValidator}.
+ * Класс проверки аннотации {@link Length}.
  */
 public class LengthValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class LengthValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class LengthValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением в поле.
+	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
 	public void testValidValueNotCorrectMin()
@@ -89,7 +89,7 @@ public class LengthValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением в поле.
+	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
 	public void testValidValueNotCorrectMax()
@@ -107,7 +107,7 @@ public class LengthValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code String}.
+	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValue()

@@ -31,12 +31,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link DigitValidator}.
+ * Класс проверки аннотации {@link Digit}.
  */
 public class DigitValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -54,7 +54,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -72,7 +72,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением в поле.
+	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
 	public void testValidValueNotCorrectMin()
@@ -90,7 +90,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением в поле.
+	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
 	public void testValidValueNotCorrectMax()
@@ -108,7 +108,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
+	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValue()
@@ -126,7 +126,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
+	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValue()
@@ -144,7 +144,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
+	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValue()
@@ -162,7 +162,7 @@ public class DigitValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Byte}.
+	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
 	public void testValidByteTypeValue()

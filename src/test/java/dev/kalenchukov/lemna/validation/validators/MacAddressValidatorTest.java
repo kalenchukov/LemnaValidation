@@ -30,12 +30,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link MacAddressValidator}.
+ * Класс проверки аннотации {@link MacAddress}.
  */
 public class MacAddressValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class MacAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class MacAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с пустым значением.
+	 * Проверка с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -89,7 +89,7 @@ public class MacAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением MAC адреса с учётом регистра в поле типа {@code String}.
+	 * Проверка с MAC адресом с учётом регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValue()
@@ -107,7 +107,7 @@ public class MacAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением MAC адреса без учёта регистра в поле типа {@code String}.
+	 * Проверка с MAC адресом без учёта регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectIgnoreCase()
@@ -125,7 +125,7 @@ public class MacAddressValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением из-за запрета учёта регистра MAC адресов в поле типа {@code String}.
+	 * Проверка с некорректным значением из-за запрета учёта регистра MAC адресов в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectIgnoreCase()

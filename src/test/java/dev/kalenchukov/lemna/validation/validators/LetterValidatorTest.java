@@ -32,12 +32,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link LetterValidator}.
+ * Класс проверки аннотации {@link Letter}.
  */
 public class LetterValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -55,7 +55,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -73,7 +73,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с пустым значением.
+	 * Проверка с пустым значением.
 	 */
 	@Test
 	public void testValidValueNotCorrectEmpty()
@@ -91,7 +91,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением.
+	 * Проверка с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -109,7 +109,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code String}.
+	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValue()
@@ -127,7 +127,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Character}.
+	 * Проверка с полем типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValue()
@@ -145,7 +145,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением прописного регистра в поле типа {@code String}.
+	 * Проверка с буквами прописного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectUpperCase()
@@ -163,7 +163,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением прописного регистра в поле типа {@code Character}.
+	 * Проверка с буквами прописного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueCorrectUpperCase()
@@ -181,7 +181,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением строчного регистра в поле типа {@code String}.
+	 * Проверка с буквами строчного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueCorrectLowerCase()
@@ -199,7 +199,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением строчного регистра в поле типа {@code Character}.
+	 * Проверка с буквами строчного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueCorrectLowerCase()
@@ -218,7 +218,7 @@ public class LetterValidatorTest
 
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением прописного регистра в поле типа {@code String}.
+	 * Проверка с некорректным значением прописного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectUpperCase()
@@ -236,7 +236,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением прописного регистра в поле типа {@code Character}.
+	 * Проверка с некорректным значением прописного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueNotCorrectUpperCase()
@@ -254,7 +254,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением строчного регистра в поле типа {@code String}.
+	 * Проверка с некорректным значением строчного регистра в поле типа {@code String}.
 	 */
 	@Test
 	public void testValidStringTypeValueNotCorrectLowerCase()
@@ -272,7 +272,7 @@ public class LetterValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением строчного регистра в поле типа {@code Character}.
+	 * Проверка с некорректным значением строчного регистра в поле типа {@code Character}.
 	 */
 	@Test
 	public void testValidCharacterTypeValueNotCorrectLowerCase()

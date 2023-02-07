@@ -30,12 +30,12 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки методов класса {@link YearValidator}.
+ * Класс проверки аннотации {@link Year}.
  */
 public class YearValidatorTest
 {
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным типом поля.
+	 * Проверка с некорректным типом поля.
 	 */
 	@Test
 	public void testValidNotCorrectFieldType()
@@ -53,7 +53,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} со значением {@code null}.
+	 * Проверка со значением {@code null}.
 	 */
 	@Test
 	public void testValidValueNull()
@@ -71,7 +71,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с некорректным значением.
+	 * Проверка с некорректным значением.
 	 */
 	@Test
 	public void testValidValueNotCorrect()
@@ -89,7 +89,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением до н. э..
+	 * Проверка со значением до н. э..
 	 */
 	@Test
 	public void testValidValueCorrectBc()
@@ -107,7 +107,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Short}.
+	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
 	public void testValidShortTypeValue()
@@ -125,7 +125,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Integer}.
+	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
 	public void testValidIntegerTypeValue()
@@ -143,7 +143,7 @@ public class YearValidatorTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#validate()} с корректным значением в поле типа {@code Long}.
+	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
 	public void testValidLongTypeValue()
