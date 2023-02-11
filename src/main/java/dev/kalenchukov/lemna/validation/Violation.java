@@ -133,6 +133,9 @@ public final class Violation implements Violating
 		return true;
 	}
 
+	/**
+	 * @see Object#hashCode()
+	 */
 	@Override
 	public int hashCode()
 	{
