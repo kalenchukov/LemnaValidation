@@ -19,6 +19,7 @@
 package dev.kalenchukov.lemna.validation;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.Collections;
@@ -105,7 +106,7 @@ public final class Violation implements Violating
 	 * @see Object#equals(Object)
 	 */
 	@Override
-	public boolean equals(final Object obj)
+	public boolean equals(@Nullable final Object obj)
 	{
 		if (obj == null) {
 			return false;
