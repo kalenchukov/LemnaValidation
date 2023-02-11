@@ -145,6 +145,9 @@ public final class Violation implements Violating
 		return result;
 	}
 
+	/**
+	 * @see Object#toString()
+	 */
 	@NotNull
 	@Override
 	public String toString()
