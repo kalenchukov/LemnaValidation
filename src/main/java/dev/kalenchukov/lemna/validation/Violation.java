@@ -101,8 +101,11 @@ public final class Violation implements Violating
 		return Collections.unmodifiableMap(this.params);
 	}
 
+	/**
+	 * @see Object#equals(Object)
+	 */
 	@Override
-	public boolean equals(Object obj)
+	public boolean equals(final Object obj)
 	{
 		if (obj == null) {
 			return false;
