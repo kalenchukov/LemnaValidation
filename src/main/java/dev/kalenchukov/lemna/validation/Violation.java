@@ -138,7 +138,7 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Violating#hashCode()
 	 */
 	@Override
 	public int hashCode()
