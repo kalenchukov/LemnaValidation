@@ -6,7 +6,9 @@
 * Добавлен метод Violating.equals(Object).
 * Добавлен метод Violating.hashCode().
 * Добавлен метод Violating.toString().
-* 
+
+### Изменено
+* Изменена версия требуемого модуля string-regexp до 1.5.0
 
 ## v1.3.0 - 04.12.2022
 ### Добавлено
