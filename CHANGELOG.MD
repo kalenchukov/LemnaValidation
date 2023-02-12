@@ -5,6 +5,7 @@
 * Добавлена аннотация WeekOfYear.
 * Добавлен метод Violating.equals(Object).
 * Добавлен метод Violating.hashCode().
+* Добавлен метод Violating.toString().
 * 
 
 ## v1.3.0 - 04.12.2022

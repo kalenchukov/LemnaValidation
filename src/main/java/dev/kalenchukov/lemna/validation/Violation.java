@@ -153,7 +153,7 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Object#toString()
+	 * @see Violating#toString()
 	 */
 	@NotNull
 	@Override

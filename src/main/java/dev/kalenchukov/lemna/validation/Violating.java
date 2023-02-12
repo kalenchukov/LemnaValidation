@@ -66,4 +66,10 @@ public interface Violating
 	 * @see Object#hashCode()
 	 */
 	int hashCode();
+
+	/**
+	 * @see Object#toString()
+	 */
+	@NotNull
+	String toString();
 }
