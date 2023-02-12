@@ -103,7 +103,7 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Violating#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

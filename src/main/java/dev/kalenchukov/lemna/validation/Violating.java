@@ -19,6 +19,7 @@
 package dev.kalenchukov.lemna.validation;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.UnmodifiableView;
 
 import java.util.Map;
@@ -55,4 +56,9 @@ public interface Violating
 	@UnmodifiableView
 	@NotNull
 	Map<@NotNull String, @NotNull String> getParams();
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	boolean equals(@Nullable Object obj);
 }
