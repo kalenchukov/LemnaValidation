@@ -48,7 +48,8 @@ public final class DayOfYearValidator extends AbstractValidator
 	private static final Integer MAX_DAY_OF_YEAR = 365;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code DayOfYearValidator}.
+	 * @param locale локализация.
 	 */
 	public DayOfYearValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class DayOfYearValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

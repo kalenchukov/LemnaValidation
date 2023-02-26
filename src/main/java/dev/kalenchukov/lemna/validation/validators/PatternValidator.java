@@ -36,7 +36,8 @@ import java.util.Objects;
 public final class PatternValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code PatternValidator}.
+	 * @param locale локализация.
 	 */
 	public PatternValidator(@NotNull final Locale locale)
 	{
@@ -44,7 +45,11 @@ public final class PatternValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

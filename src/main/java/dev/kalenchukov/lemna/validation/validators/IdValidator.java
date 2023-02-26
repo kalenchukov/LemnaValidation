@@ -48,7 +48,8 @@ public final class IdValidator extends AbstractValidator
 	private static final Long MAX_ID = Long.MAX_VALUE;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code IdValidator}.
+	 * @param locale локализация.
 	 */
 	public IdValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class IdValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

@@ -48,7 +48,8 @@ public final class SecondValidator extends AbstractValidator
 	private static final Integer MAX_SECOND = 59;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code SecondValidator}.
+	 * @param locale локализация.
 	 */
 	public SecondValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class SecondValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

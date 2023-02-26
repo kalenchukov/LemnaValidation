@@ -37,7 +37,8 @@ import java.util.Objects;
 public final class RgbHexValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code RgbHexValidator}.
+	 * @param locale локализация.
 	 */
 	public RgbHexValidator(@NotNull final Locale locale)
 	{
@@ -45,7 +46,11 @@ public final class RgbHexValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

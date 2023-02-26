@@ -37,7 +37,8 @@ import java.util.Objects;
 public final class EmailAddressValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code EmailAddressValidator}.
+	 * @param locale локализация.
 	 */
 	public EmailAddressValidator(@NotNull final Locale locale)
 	{
@@ -45,7 +46,11 @@ public final class EmailAddressValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

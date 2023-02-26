@@ -48,7 +48,8 @@ public final class MillisecondValidator extends AbstractValidator
 	private static final Integer MAX_MILLISECOND = 999;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code MillisecondValidator}.
+	 * @param locale локализация.
 	 */
 	public MillisecondValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class MillisecondValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

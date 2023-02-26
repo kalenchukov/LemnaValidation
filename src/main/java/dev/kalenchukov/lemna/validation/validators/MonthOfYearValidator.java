@@ -48,7 +48,8 @@ public final class MonthOfYearValidator extends AbstractValidator
 	private static final Integer MAX_MONTH_OF_YEAR = 12;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code MonthOfYearValidator}.
+	 * @param locale локализация.
 	 */
 	public MonthOfYearValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class MonthOfYearValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

@@ -48,7 +48,8 @@ public final class DayOfMonthValidator extends AbstractValidator
 	private static final Integer MAX_DAY_OF_MONTH = 31;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code DayOfMonthValidator}.
+	 * @param locale локализация.
 	 */
 	public DayOfMonthValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class DayOfMonthValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

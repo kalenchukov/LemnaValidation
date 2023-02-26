@@ -33,7 +33,8 @@ public @interface CountryCodeAlpha2
 {
 	/**
 	 * Задаёт сообщение о нарушении.
-	 * Переменные: <ul>
+	 * Переменные:
+	 * <ul>
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *

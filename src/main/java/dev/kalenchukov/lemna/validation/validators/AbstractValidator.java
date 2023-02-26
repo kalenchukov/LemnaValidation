@@ -74,7 +74,6 @@ public abstract class AbstractValidator implements Validator
 
 	/**
 	 * Конструктор для {@code AbstractValidator}.
-	 *
 	 * @param locale локализация.
 	 */
 	public AbstractValidator(@NotNull final Locale locale)
@@ -98,7 +97,9 @@ public abstract class AbstractValidator implements Validator
 	}
 
 	/**
-	 * @see Validator#getParams()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -108,7 +109,11 @@ public abstract class AbstractValidator implements Validator
 	}
 
 	/**
-	 * @see Validator#setParam(String, String)
+	 * {@inheritDoc}
+	 *
+	 * @param key {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public void setParam(@NotNull final String key, @NotNull final String value)
@@ -120,7 +125,9 @@ public abstract class AbstractValidator implements Validator
 	}
 
 	/**
-	 * @see Validator#getMessage()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -130,7 +137,10 @@ public abstract class AbstractValidator implements Validator
 	}
 
 	/**
-	 * @see Validator#setMessage(String)
+	 * {@inheritDoc}
+	 *
+	 * @param message {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public void setMessage(@NotNull final String message)

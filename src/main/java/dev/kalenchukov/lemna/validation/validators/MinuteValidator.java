@@ -48,7 +48,8 @@ public final class MinuteValidator extends AbstractValidator
 	private static final Integer MAX_MINUTE = 59;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code MinuteValidator}.
+	 * @param locale локализация.
 	 */
 	public MinuteValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class MinuteValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

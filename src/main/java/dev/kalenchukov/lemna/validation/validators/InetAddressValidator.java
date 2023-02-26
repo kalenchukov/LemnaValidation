@@ -37,7 +37,8 @@ import java.util.Objects;
 public final class InetAddressValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code InetAddressValidator}.
+	 * @param locale локализация.
 	 */
 	public InetAddressValidator(@NotNull final Locale locale)
 	{
@@ -45,7 +46,11 @@ public final class InetAddressValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

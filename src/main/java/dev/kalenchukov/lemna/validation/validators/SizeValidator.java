@@ -36,7 +36,8 @@ import java.util.*;
 public final class SizeValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code SizeValidator}.
+	 * @param locale локализация.
 	 */
 	public SizeValidator(@NotNull final Locale locale)
 	{
@@ -44,7 +45,11 @@ public final class SizeValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

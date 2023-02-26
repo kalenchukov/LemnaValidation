@@ -48,7 +48,8 @@ public final class WeekOfYearValidator extends AbstractValidator
 	private static final Integer MAX_WEEK_OF_YEAR = 53;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code WeekOfYearValidator}.
+	 * @param locale локализация.
 	 */
 	public WeekOfYearValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class WeekOfYearValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

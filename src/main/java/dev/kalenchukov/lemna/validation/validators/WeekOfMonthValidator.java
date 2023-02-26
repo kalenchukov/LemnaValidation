@@ -48,7 +48,8 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	private static final Integer MAX_WEEK_OF_MONTH = 4;
 
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code WeekOfMonthValidator}.
+	 * @param locale локализация.
 	 */
 	public WeekOfMonthValidator(@NotNull final Locale locale)
 	{
@@ -56,7 +57,11 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

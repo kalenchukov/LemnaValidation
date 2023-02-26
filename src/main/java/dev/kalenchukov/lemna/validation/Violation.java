@@ -75,7 +75,9 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#getField()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	public String getField()
@@ -84,7 +86,9 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#getMessage()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	public String getMessage()
@@ -93,7 +97,9 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#getParams()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@UnmodifiableView
 	@NotNull
@@ -103,7 +109,10 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#equals(Object)
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -138,7 +147,9 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#hashCode()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public int hashCode()
@@ -153,7 +164,9 @@ public final class Violation implements Violating
 	}
 
 	/**
-	 * @see Violating#toString()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override

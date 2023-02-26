@@ -58,16 +58,26 @@ public interface Violating
 	Map<@NotNull String, @NotNull String> getParams();
 
 	/**
+	 * Проверяет равенство объектов.
+	 *
+	 * @param obj сравниваемый объект.
+	 * @return {@code true}, если объекты равны, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
 
 	/**
+	 * Возвращает значение объекта в виде числа.
+	 *
+	 * @return число.
 	 * @see Object#hashCode()
 	 */
 	int hashCode();
 
 	/**
+	 * Возвращает значение объекта в виде строки.
+	 *
+	 * @return строку.
 	 * @see Object#toString()
 	 */
 	@NotNull

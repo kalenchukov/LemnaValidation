@@ -89,7 +89,9 @@ public class Validation implements Validating
 	}
 
 	/**
-	 * @see Validating#setLocale(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
 	 */
 	@Override
 	public void setLocale(@NotNull final Locale locale)
@@ -108,7 +110,9 @@ public class Validation implements Validating
 	}
 
 	/**
-	 * @see Validating#getLocale()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -118,7 +122,9 @@ public class Validation implements Validating
 	}
 
 	/**
-	 * @see Validating#isPushy()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -128,7 +134,9 @@ public class Validation implements Validating
 	}
 
 	/**
-	 * @see Validating#setPushy(Boolean)
+	 * {@inheritDoc}
+	 *
+	 * @param pushy {@inheritDoc}
 	 */
 	@Override
 	public void setPushy(@NotNull final Boolean pushy)
@@ -139,7 +147,9 @@ public class Validation implements Validating
 	}
 
 	/**
-	 * @see Validating#validate()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@UnmodifiableView
 	@NotNull

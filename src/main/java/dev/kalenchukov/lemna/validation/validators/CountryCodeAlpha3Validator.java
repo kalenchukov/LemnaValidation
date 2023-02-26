@@ -37,7 +37,10 @@ import java.util.Objects;
 public final class CountryCodeAlpha3Validator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * {@inheritDoc}
+	 *
+	 * @param locale {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	public CountryCodeAlpha3Validator(@NotNull final Locale locale)
 	{
@@ -45,7 +48,11 @@ public final class CountryCodeAlpha3Validator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override

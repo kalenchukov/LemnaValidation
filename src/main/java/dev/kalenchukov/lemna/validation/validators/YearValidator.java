@@ -36,7 +36,8 @@ import java.util.Objects;
 public final class YearValidator extends AbstractValidator
 {
 	/**
-	 * @see AbstractValidator#AbstractValidator(Locale)
+	 * Конструктор для {@code YearValidator}.
+	 * @param locale локализация.
 	 */
 	public YearValidator(@NotNull final Locale locale)
 	{
@@ -44,7 +45,11 @@ public final class YearValidator extends AbstractValidator
 	}
 
 	/**
-	 * @see Validator#valid(Field, Object)
+	 * {@inheritDoc}
+	 *
+	 * @param field {@inheritDoc}
+	 * @param value {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Nullable
 	@Override
