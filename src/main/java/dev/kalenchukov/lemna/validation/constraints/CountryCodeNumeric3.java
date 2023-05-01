@@ -25,6 +25,8 @@ import java.lang.annotation.*;
 /**
  * Ограничение по коду страны.
  * <p>Используется стандарт ISO 3166-1 numeric.</p>
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

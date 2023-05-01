@@ -25,6 +25,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по буквам алфавита.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

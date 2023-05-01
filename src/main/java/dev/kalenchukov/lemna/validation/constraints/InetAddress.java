@@ -24,6 +24,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по IP адресу.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

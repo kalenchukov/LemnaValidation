@@ -24,6 +24,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по требованиям к паролю.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

@@ -26,6 +26,8 @@ import java.lang.annotation.*;
  * Ограничение по локализации.
  * <p>Для языка используется стандарт ISO 639-1.</p>
  * <p>Для страны используется стандарт ISO 3166-1 alpha-2.</p>
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

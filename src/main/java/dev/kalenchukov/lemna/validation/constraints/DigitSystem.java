@@ -25,6 +25,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение цифр по системе счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

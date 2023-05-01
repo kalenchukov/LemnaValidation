@@ -25,6 +25,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по существованию с помощью собственной реализации.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -53,7 +55,9 @@ public @interface Exist
 	String message() default "%DEFAULT_MESSAGE%";
 
 	/**
-	 * Ограничение множественным {@code Exist}.
+	 * Множество аннотаций {@code Exist}.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	@Documented
 	@Retention(RetentionPolicy.RUNTIME)

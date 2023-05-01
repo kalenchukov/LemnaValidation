@@ -25,6 +25,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по корректности с помощью собственной реализации.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -52,7 +54,9 @@ public @interface Valid
 	String message() default "%DEFAULT_MESSAGE%";
 
 	/**
-	 * Ограничение множественным {@code Valid}.
+	 * Множество аннотаций {@code Valid}.
+	 *
+	 * @author Aleksey Kalenchukov
 	 */
 	@Documented
 	@Retention(RetentionPolicy.RUNTIME)

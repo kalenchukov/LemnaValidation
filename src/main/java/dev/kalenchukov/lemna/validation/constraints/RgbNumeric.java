@@ -24,6 +24,8 @@ import java.lang.annotation.*;
 
 /**
  * Ограничение по RGB модели в числовом представлении.
+ *
+ * @author Aleksey Kalenchukov
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
