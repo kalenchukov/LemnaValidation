@@ -26,6 +26,8 @@ import java.util.Locale;
 
 /**
  * Интерфейс для реализации класса по проверке корректности значений полей класса.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface Validating
 {

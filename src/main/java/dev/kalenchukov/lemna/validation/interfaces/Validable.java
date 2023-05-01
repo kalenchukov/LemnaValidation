@@ -24,6 +24,7 @@ import org.jetbrains.annotations.NotNull;
  * Интерфейс для реализации собственного класса для проверки корректности.
  *
  * @param <T> Объект типа поля класса.
+ * @author Aleksey Kalenchukov
  */
 public interface Validable<T>
 {
