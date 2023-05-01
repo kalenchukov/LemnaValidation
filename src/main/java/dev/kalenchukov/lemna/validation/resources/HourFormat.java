@@ -24,6 +24,8 @@ import java.util.Objects;
 
 /**
  * Перечисление форматов времени.
+ *
+ * @author Aleksey Kalenchukov
  */
 public enum HourFormat
 {
