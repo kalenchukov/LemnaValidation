@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link RgbHex}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class RgbHexValidatorTest
 {

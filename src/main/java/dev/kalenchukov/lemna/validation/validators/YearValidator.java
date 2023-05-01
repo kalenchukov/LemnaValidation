@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Year}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class YearValidator extends AbstractValidator
 {

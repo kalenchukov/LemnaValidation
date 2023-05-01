@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Number}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class NumberValidator extends AbstractValidator
 {

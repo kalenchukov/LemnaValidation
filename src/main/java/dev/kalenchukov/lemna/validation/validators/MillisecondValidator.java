@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Millisecond}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class MillisecondValidator extends AbstractValidator
 {

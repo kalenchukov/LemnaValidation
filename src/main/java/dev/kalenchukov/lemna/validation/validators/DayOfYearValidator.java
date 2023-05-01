@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link DayOfYear}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class DayOfYearValidator extends AbstractValidator
 {

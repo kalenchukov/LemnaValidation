@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link WeekOfMonth}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class WeekOfMonthValidatorTest
 {

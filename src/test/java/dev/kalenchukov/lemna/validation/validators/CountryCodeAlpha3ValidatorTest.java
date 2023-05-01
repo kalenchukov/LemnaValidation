@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link CountryCodeAlpha3Validator}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class CountryCodeAlpha3ValidatorTest
 {

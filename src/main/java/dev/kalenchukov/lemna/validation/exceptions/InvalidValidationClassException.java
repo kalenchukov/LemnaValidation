@@ -24,6 +24,8 @@ import java.util.Objects;
 
 /**
  * Исключение для некорректного класса проверки корректности.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class InvalidValidationClassException extends RuntimeException
 {

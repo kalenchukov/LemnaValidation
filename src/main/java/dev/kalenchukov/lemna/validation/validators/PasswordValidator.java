@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Password}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class PasswordValidator extends AbstractValidator
 {

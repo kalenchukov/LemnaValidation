@@ -32,6 +32,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link Pattern}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class PatternValidatorTest
 {

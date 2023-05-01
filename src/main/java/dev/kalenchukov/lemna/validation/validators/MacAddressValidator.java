@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link MacAddress}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class MacAddressValidator extends AbstractValidator
 {

@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Hour}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class HourValidator extends AbstractValidator
 {

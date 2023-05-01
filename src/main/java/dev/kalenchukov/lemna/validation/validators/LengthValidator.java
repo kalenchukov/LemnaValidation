@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Length}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class LengthValidator extends AbstractValidator
 {

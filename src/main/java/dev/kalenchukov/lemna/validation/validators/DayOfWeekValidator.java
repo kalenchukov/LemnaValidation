@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link DayOfWeek}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class DayOfWeekValidator extends AbstractValidator
 {

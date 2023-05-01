@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link RgbNumeric}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class RgbNumericValidator extends AbstractValidator
 {

@@ -30,6 +30,8 @@ import java.util.*;
 
 /**
  * Класс проверки корректности значений полей класса.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class Validation implements Validating
 {

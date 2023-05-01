@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Id}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class IdValidator extends AbstractValidator
 {

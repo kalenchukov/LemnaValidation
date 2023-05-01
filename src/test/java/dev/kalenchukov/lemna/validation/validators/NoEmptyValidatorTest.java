@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link NoEmpty}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NoEmptyValidatorTest
 {

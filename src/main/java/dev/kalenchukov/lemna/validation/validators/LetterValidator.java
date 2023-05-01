@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Letter}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class LetterValidator extends AbstractValidator
 {

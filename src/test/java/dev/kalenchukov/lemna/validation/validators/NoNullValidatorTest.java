@@ -30,6 +30,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link NoNull}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NoNullValidatorTest
 {

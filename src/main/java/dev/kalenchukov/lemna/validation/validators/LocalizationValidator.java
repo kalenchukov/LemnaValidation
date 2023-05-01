@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Localization}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class LocalizationValidator extends AbstractValidator
 {

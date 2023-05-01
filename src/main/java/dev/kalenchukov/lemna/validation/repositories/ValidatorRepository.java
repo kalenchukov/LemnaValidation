@@ -29,6 +29,8 @@ import java.util.*;
 
 /**
  * Класс репозиторий всех проверяющих.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class ValidatorRepository
 {

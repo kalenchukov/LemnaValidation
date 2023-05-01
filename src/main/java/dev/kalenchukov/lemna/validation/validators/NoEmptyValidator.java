@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link NoEmpty}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class NoEmptyValidator extends AbstractValidator
 {

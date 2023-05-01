@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link Number}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NumberValidatorTest
 {

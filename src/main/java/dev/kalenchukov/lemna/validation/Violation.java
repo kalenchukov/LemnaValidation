@@ -29,6 +29,8 @@ import java.util.Objects;
 
 /**
  * Класс нарушения.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class Violation implements Violating
 {

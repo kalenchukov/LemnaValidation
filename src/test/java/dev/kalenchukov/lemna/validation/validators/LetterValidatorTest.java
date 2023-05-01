@@ -33,6 +33,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки аннотации {@link Letter}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class LetterValidatorTest
 {

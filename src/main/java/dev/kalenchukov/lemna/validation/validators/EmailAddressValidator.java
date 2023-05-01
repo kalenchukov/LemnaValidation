@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link EmailAddress}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class EmailAddressValidator extends AbstractValidator
 {

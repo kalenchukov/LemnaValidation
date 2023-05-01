@@ -24,6 +24,8 @@ import java.util.Objects;
 
 /**
  * Исключение для неподдерживаемого типа поля класса.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class UnsupportedFieldTypeException extends RuntimeException
 {

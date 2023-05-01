@@ -32,6 +32,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link Second}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class SecondValidator extends AbstractValidator
 {

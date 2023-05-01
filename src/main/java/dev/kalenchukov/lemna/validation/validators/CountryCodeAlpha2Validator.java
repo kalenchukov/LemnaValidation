@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс проверяющего для ограничения {@link CountryCodeAlpha2}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public final class CountryCodeAlpha2Validator extends AbstractValidator
 {
