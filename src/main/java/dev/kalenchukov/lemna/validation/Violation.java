@@ -175,9 +175,9 @@ public final class Violation implements Violating
 	public String toString()
 	{
 		return "Violation{" +
-			"field='" + field + "', " +
-			"message='" + message + "', " +
-			"params=" + params +
+			"field='" + this.getField() + "', " +
+			"message='" + this.getMessage() + "', " +
+			"params=" + this.getParams() +
 			"}";
 	}
 }
