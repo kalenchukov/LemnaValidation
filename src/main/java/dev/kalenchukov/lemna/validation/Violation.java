@@ -30,7 +30,7 @@ import java.util.Objects;
 /**
  * Класс нарушения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class Violation implements Violating
 {

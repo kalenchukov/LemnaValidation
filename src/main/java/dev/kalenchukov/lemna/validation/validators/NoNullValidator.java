@@ -32,7 +32,7 @@ import java.util.Objects;
 /**
  * Класс проверяющего для ограничения {@link NoNull}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class NoNullValidator extends AbstractValidator
 {

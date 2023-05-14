@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * Интерфейс для реализации класса нарушения.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Violating
 {

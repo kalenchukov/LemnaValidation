@@ -26,7 +26,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по существованию с помощью собственной реализации.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -57,7 +57,7 @@ public @interface Exist
 	/**
 	 * Множество аннотаций {@code Exist}.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	@Documented
 	@Retention(RetentionPolicy.RUNTIME)

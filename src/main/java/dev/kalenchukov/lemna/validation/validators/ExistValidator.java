@@ -36,7 +36,7 @@ import java.util.Objects;
 /**
  * Класс проверяющего для ограничения {@link Exist}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ExistValidator extends AbstractValidator
 {

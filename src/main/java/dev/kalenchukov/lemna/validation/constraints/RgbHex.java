@@ -25,7 +25,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по RGB модели в шестнадцатеричной системе счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

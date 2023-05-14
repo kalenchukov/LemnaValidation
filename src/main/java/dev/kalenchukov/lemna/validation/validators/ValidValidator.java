@@ -36,7 +36,7 @@ import java.util.Objects;
 /**
  * Класс проверяющего для ограничения {@link Valid}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class ValidValidator extends AbstractValidator
 {

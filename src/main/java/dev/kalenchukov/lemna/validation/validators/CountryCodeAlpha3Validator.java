@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс проверяющего для ограничения {@link CountryCodeAlpha3}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class CountryCodeAlpha3Validator extends AbstractValidator
 {

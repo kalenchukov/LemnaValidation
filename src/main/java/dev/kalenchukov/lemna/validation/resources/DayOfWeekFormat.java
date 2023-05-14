@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Перечисление форматов дней недели.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum DayOfWeekFormat
 {

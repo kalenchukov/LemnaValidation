@@ -33,7 +33,7 @@ import java.util.Objects;
 /**
  * Класс проверяющего для ограничения {@link Pattern}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class PatternValidator extends AbstractValidator
 {

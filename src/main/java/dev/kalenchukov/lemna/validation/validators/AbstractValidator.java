@@ -25,7 +25,7 @@ import java.util.*;
 /**
  * Класс абстрактного проверяющего.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public abstract class AbstractValidator implements Validator
 {

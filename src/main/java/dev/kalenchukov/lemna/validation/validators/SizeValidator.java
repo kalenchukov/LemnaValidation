@@ -33,7 +33,7 @@ import java.util.*;
 /**
  * Класс проверяющего для ограничения {@link Size}.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public final class SizeValidator extends AbstractValidator
 {

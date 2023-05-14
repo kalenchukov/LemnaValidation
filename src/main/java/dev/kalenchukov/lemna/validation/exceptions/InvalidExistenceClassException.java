@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * Исключение для некорректного класса проверки существования.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class InvalidExistenceClassException extends RuntimeException
 {

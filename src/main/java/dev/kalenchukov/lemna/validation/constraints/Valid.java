@@ -26,7 +26,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по корректности с помощью собственной реализации.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
@@ -56,7 +56,7 @@ public @interface Valid
 	/**
 	 * Множество аннотаций {@code Valid}.
 	 *
-	 * @author Aleksey Kalenchukov
+	 * @author Алексей Каленчуков
 	 */
 	@Documented
 	@Retention(RetentionPolicy.RUNTIME)

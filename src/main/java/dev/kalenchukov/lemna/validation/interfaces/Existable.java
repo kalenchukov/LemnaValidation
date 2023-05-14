@@ -24,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
  * Интерфейс для реализации собственного класса для проверки существования.
  *
  * @param <T> Объект типа поля класса.
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Existable<T>
 {

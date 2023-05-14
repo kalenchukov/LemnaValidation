@@ -25,7 +25,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по номеру месяца в году.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

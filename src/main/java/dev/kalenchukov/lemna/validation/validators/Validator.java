@@ -28,7 +28,7 @@ import java.util.Map;
 /**
  * Интерфейс для реализации проверяющего.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Validator
 {

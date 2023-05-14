@@ -25,7 +25,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по номеру недели в месяце.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

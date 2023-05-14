@@ -25,7 +25,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по количеству элементов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)

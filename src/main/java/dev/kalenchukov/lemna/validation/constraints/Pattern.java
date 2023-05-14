@@ -25,7 +25,7 @@ import java.lang.annotation.*;
 /**
  * Ограничение по регулярному выражению.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
