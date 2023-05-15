@@ -123,6 +123,7 @@ public final class ValidatorRepository
 		validators.put(Localization.class.getName(), new LocalizationValidator(this.locale));
 		validators.put(Pattern.class.getName(), new PatternValidator(this.locale));
 		validators.put(Password.class.getName(), new PasswordValidator(this.locale));
+		validators.put(Md5.class.getName(), new Md5Validator(this.locale));
 
 		validators.put(NoNull.class.getName(), new NoNullValidator(this.locale));
 		validators.put(NoEmpty.class.getName(), new NoEmptyValidator(this.locale));
