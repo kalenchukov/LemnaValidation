@@ -20,7 +20,8 @@ package dev.kalenchukov.lemna.validation;
 
 import dev.kalenchukov.lemna.validation.repositories.ValidatorRepository;
 import dev.kalenchukov.lemna.validation.validators.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.UnmodifiableView;
 
@@ -69,7 +70,7 @@ public class Validation implements Validating
 	 * Логгер для данного класса.
 	 */
 	@NotNull
-	private static final Logger LOG = Logger.getLogger(Validation.class);
+	private static final Logger LOG = LogManager.getLogger(Validation.class);
 
 	/**
 	 * Конструктор для {@code Validation}.
