@@ -76,9 +76,10 @@ public abstract class AbstractValidator implements Validator
 
 	/**
 	 * Конструктор для {@code AbstractValidator}.
+	 *
 	 * @param locale локализация.
 	 */
-	public AbstractValidator(@NotNull final Locale locale)
+	protected AbstractValidator(@NotNull final Locale locale)
 	{
 		Objects.requireNonNull(locale);
 
