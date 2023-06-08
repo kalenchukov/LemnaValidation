@@ -41,7 +41,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -59,7 +59,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -77,7 +77,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void testValidValueNotCorrect()
+	public void validValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -95,7 +95,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void testValidValueNotCorrectFormat1()
+	public void validValueNotCorrectFormat1()
 	{
 		class Experimental
 		{
@@ -113,7 +113,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void testValidValueNotCorrectFormat2()
+	public void validValueNotCorrectFormat2()
 	{
 		class Experimental
 		{
@@ -131,7 +131,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValue()
+	public void validByteTypeValue()
 	{
 		class Experimental
 		{
@@ -149,7 +149,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValue()
+	public void validShortTypeValue()
 	{
 		class Experimental
 		{
@@ -167,7 +167,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValue()
+	public void validIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -185,7 +185,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValue()
+	public void validLongTypeValue()
 	{
 		class Experimental
 		{

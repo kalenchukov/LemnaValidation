@@ -40,7 +40,7 @@ public class NumberValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -58,7 +58,7 @@ public class NumberValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -76,7 +76,7 @@ public class NumberValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValueNotCorrectLessMin()
+	public void validLongTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -94,7 +94,7 @@ public class NumberValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValueNotCorrectLessMin()
+	public void validIntegerTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class NumberValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValueNotCorrectLessMin()
+	public void validShortTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -130,7 +130,7 @@ public class NumberValidatorTest
 	 * Проверка со значением меньше минимального в поле типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValueNotCorrectLessMin()
+	public void validByteTypeValueNotCorrectLessMin()
 	{
 		class Experimental
 		{
@@ -148,7 +148,7 @@ public class NumberValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValueNotCorrectMin()
+	public void validLongTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -166,7 +166,7 @@ public class NumberValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValueNotCorrectMin()
+	public void validIntegerTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -184,7 +184,7 @@ public class NumberValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValueNotCorrectMin()
+	public void validShortTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -202,7 +202,7 @@ public class NumberValidatorTest
 	 * Проверка с минимальным значением в поле типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValueNotCorrectMin()
+	public void validByteTypeValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -220,7 +220,7 @@ public class NumberValidatorTest
 	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValue()
+	public void validLongTypeValue()
 	{
 		class Experimental
 		{
@@ -238,7 +238,7 @@ public class NumberValidatorTest
 	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValue()
+	public void validIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -256,7 +256,7 @@ public class NumberValidatorTest
 	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValue()
+	public void validShortTypeValue()
 	{
 		class Experimental
 		{
@@ -274,7 +274,7 @@ public class NumberValidatorTest
 	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValue()
+	public void validByteTypeValue()
 	{
 		class Experimental
 		{
@@ -292,7 +292,7 @@ public class NumberValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValueNotCorrectMax()
+	public void validLongTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -310,7 +310,7 @@ public class NumberValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValueNotCorrectMax()
+	public void validIntegerTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -328,7 +328,7 @@ public class NumberValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValueNotCorrectMax()
+	public void validShortTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -346,7 +346,7 @@ public class NumberValidatorTest
 	 * Проверка с максимальным значением в поле типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeValueNotCorrectMax()
+	public void validByteTypeValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -364,7 +364,7 @@ public class NumberValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeMoreMax()
+	public void validLongTypeMoreMax()
 	{
 		class Experimental
 		{
@@ -382,7 +382,7 @@ public class NumberValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeMoreMax()
+	public void validIntegerTypeMoreMax()
 	{
 		class Experimental
 		{
@@ -400,7 +400,7 @@ public class NumberValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeMoreMax()
+	public void validShortTypeMoreMax()
 	{
 		class Experimental
 		{
@@ -418,7 +418,7 @@ public class NumberValidatorTest
 	 * Проверка со значением больше максимального в поле типа {@code Byte}.
 	 */
 	@Test
-	public void testValidByteTypeMoreMax()
+	public void validByteTypeMoreMax()
 	{
 		class Experimental
 		{

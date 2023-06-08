@@ -40,7 +40,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -58,7 +58,7 @@ public class RgbNumericValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -76,7 +76,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void testValidValueNotCorrectEmpty()
+	public void validValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -94,7 +94,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с RGB моделью в числовом представлении в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValue()
+	public void validStringTypeValue()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с некорректным значением RGB модели в числовом представлении в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrect()
+	public void validStringTypeValueNotCorrect()
 	{
 		class Experimental
 		{

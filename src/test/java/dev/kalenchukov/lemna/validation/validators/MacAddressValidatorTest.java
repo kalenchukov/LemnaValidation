@@ -40,7 +40,7 @@ public class MacAddressValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -58,7 +58,7 @@ public class MacAddressValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -76,7 +76,7 @@ public class MacAddressValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void testValidValueNotCorrectEmpty()
+	public void validValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -94,7 +94,7 @@ public class MacAddressValidatorTest
 	 * Проверка с MAC адресом с учётом регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValue()
+	public void validStringTypeValue()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class MacAddressValidatorTest
 	 * Проверка с MAC адресом без учёта регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueCorrectIgnoreCase()
+	public void validStringTypeValueCorrectIgnoreCase()
 	{
 		class Experimental
 		{
@@ -130,7 +130,7 @@ public class MacAddressValidatorTest
 	 * Проверка с некорректным значением из-за запрета учёта регистра MAC адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectIgnoreCase()
+	public void validStringTypeValueNotCorrectIgnoreCase()
 	{
 		class Experimental
 		{

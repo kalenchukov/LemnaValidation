@@ -36,7 +36,7 @@ public class ValidationTest
 	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code true}.
 	 */
 	@Test
-	public void testValidatePushyTrue()
+	public void validatePushyTrue()
 	{
 		class Experimental
 		{
@@ -61,7 +61,7 @@ public class ValidationTest
 	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code false}.
 	 */
 	@Test
-	public void testValidatePushyFalse()
+	public void validatePushyFalse()
 	{
 		class Experimental
 		{
@@ -86,7 +86,7 @@ public class ValidationTest
 	 * Проверка метода {@link Validation#validate()} с собственным сообщением о нарушении.
 	 */
 	@Test
-	public void testValidateMessage()
+	public void validateMessage()
 	{
 		class Experimental
 		{

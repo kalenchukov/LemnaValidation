@@ -42,7 +42,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -60,7 +60,7 @@ public class LetterValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -78,7 +78,7 @@ public class LetterValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void testValidValueNotCorrectEmpty()
+	public void validValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -96,7 +96,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void testValidValueNotCorrect()
+	public void validValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -114,7 +114,7 @@ public class LetterValidatorTest
 	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValue()
+	public void validStringTypeValue()
 	{
 		class Experimental
 		{
@@ -132,7 +132,7 @@ public class LetterValidatorTest
 	 * Проверка с полем типа {@code Character}.
 	 */
 	@Test
-	public void testValidCharacterTypeValue()
+	public void validCharacterTypeValue()
 	{
 		class Experimental
 		{
@@ -150,7 +150,7 @@ public class LetterValidatorTest
 	 * Проверка с буквами прописного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueCorrectUpperCase()
+	public void validStringTypeValueCorrectUpperCase()
 	{
 		class Experimental
 		{
@@ -168,7 +168,7 @@ public class LetterValidatorTest
 	 * Проверка с буквами прописного регистра в поле типа {@code Character}.
 	 */
 	@Test
-	public void testValidCharacterTypeValueCorrectUpperCase()
+	public void validCharacterTypeValueCorrectUpperCase()
 	{
 		class Experimental
 		{
@@ -186,7 +186,7 @@ public class LetterValidatorTest
 	 * Проверка с буквами строчного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueCorrectLowerCase()
+	public void validStringTypeValueCorrectLowerCase()
 	{
 		class Experimental
 		{
@@ -204,7 +204,7 @@ public class LetterValidatorTest
 	 * Проверка с буквами строчного регистра в поле типа {@code Character}.
 	 */
 	@Test
-	public void testValidCharacterTypeValueCorrectLowerCase()
+	public void validCharacterTypeValueCorrectLowerCase()
 	{
 		class Experimental
 		{
@@ -223,7 +223,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным значением прописного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectUpperCase()
+	public void validStringTypeValueNotCorrectUpperCase()
 	{
 		class Experimental
 		{
@@ -241,7 +241,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным значением прописного регистра в поле типа {@code Character}.
 	 */
 	@Test
-	public void testValidCharacterTypeValueNotCorrectUpperCase()
+	public void validCharacterTypeValueNotCorrectUpperCase()
 	{
 		class Experimental
 		{
@@ -259,7 +259,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным значением строчного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectLowerCase()
+	public void validStringTypeValueNotCorrectLowerCase()
 	{
 		class Experimental
 		{
@@ -277,7 +277,7 @@ public class LetterValidatorTest
 	 * Проверка с некорректным значением строчного регистра в поле типа {@code Character}.
 	 */
 	@Test
-	public void testValidCharacterTypeValueNotCorrectLowerCase()
+	public void validCharacterTypeValueNotCorrectLowerCase()
 	{
 		class Experimental
 		{

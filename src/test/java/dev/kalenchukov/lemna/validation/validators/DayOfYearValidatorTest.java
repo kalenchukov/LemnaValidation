@@ -40,7 +40,7 @@ public class DayOfYearValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -58,7 +58,7 @@ public class DayOfYearValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -76,7 +76,7 @@ public class DayOfYearValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void testValidValueNotCorrect()
+	public void validValueNotCorrect()
 	{
 		class Experimental
 		{
@@ -94,7 +94,7 @@ public class DayOfYearValidatorTest
 	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
-	public void testValidShortTypeValue()
+	public void validShortTypeValue()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class DayOfYearValidatorTest
 	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
-	public void testValidIntegerTypeValue()
+	public void validIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -130,7 +130,7 @@ public class DayOfYearValidatorTest
 	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
-	public void testValidLongTypeValue()
+	public void validLongTypeValue()
 	{
 		class Experimental
 		{

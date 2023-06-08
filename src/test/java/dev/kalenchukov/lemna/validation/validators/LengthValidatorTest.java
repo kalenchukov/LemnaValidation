@@ -40,7 +40,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -58,7 +58,7 @@ public class LengthValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -76,7 +76,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void testValidValueNotCorrectMin()
+	public void validValueNotCorrectMin()
 	{
 		class Experimental
 		{
@@ -94,7 +94,7 @@ public class LengthValidatorTest
 	 * Проверка с некорректным значением в поле.
 	 */
 	@Test
-	public void testValidValueNotCorrectMax()
+	public void validValueNotCorrectMax()
 	{
 		class Experimental
 		{
@@ -112,7 +112,7 @@ public class LengthValidatorTest
 	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValue()
+	public void validStringTypeValue()
 	{
 		class Experimental
 		{

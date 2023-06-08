@@ -41,7 +41,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void testValidNotCorrectFieldType()
+	public void validNotCorrectFieldType()
 	{
 		class Experimental
 		{
@@ -59,7 +59,7 @@ public class PasswordValidatorTest
 	 * Проверка со значением {@code null}.
 	 */
 	@Test
-	public void testValidValueNull()
+	public void validValueNull()
 	{
 		class Experimental
 		{
@@ -77,7 +77,7 @@ public class PasswordValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void testValidValueNotCorrectEmpty()
+	public void validValueNotCorrectEmpty()
 	{
 		class Experimental
 		{
@@ -95,7 +95,7 @@ public class PasswordValidatorTest
 	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValue()
+	public void validStringTypeValue()
 	{
 		class Experimental
 		{
@@ -113,7 +113,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка букв в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectMinLetters()
+	public void validStringTypeValueNotCorrectMinLetters()
 	{
 		class Experimental
 		{
@@ -131,7 +131,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка цифр в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectMinDigits()
+	public void validStringTypeValueNotCorrectMinDigits()
 	{
 		class Experimental
 		{
@@ -149,7 +149,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка специальных символов в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectMinSpecial()
+	public void validStringTypeValueNotCorrectMinSpecial()
 	{
 		class Experimental
 		{
@@ -167,7 +167,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void testValidStringTypeValueNotCorrectMixedCase()
+	public void validStringTypeValueNotCorrectMixedCase()
 	{
 		class Experimental
 		{
