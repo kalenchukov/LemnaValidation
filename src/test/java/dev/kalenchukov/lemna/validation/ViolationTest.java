@@ -41,10 +41,10 @@ public class ViolationTest
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("id", "Сообщение", params);
+		Violating expected = new Violation("id", "Сообщение", params);
+		Violating actual = new Violation("id", "Сообщение", params);
 
-		assertEquals(violation1, violation2);
+		assertEquals(expected, actual);
 	}
 
 	/**
@@ -56,10 +56,10 @@ public class ViolationTest
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("name", "Сообщение", params);
+		Violating expected = new Violation("id", "Сообщение", params);
+		Violating actual = new Violation("name", "Сообщение", params);
 
-		assertNotEquals(violation1, violation2);
+		assertNotEquals(expected, actual);
 	}
 
 	/**
@@ -71,10 +71,10 @@ public class ViolationTest
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("id", "Сообщение", params);
+		Violating expected = new Violation("id", "Сообщение", params);
+		Violating actual = new Violation("id", "Сообщение", params);
 
-		assertEquals(violation1.hashCode(), violation2.hashCode());
+		assertEquals(expected.hashCode(), actual.hashCode());
 	}
 
 	/**
@@ -86,9 +86,9 @@ public class ViolationTest
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("name", "Сообщение", params);
+		Violating expected = new Violation("id", "Сообщение", params);
+		Violating actual = new Violation("name", "Сообщение", params);
 
-		assertNotEquals(violation1.hashCode(), violation2.hashCode());
+		assertNotEquals(expected.hashCode(), actual.hashCode());
 	}
 }

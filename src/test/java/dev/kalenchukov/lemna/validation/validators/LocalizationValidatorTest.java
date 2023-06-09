@@ -45,7 +45,7 @@ public class LocalizationValidatorTest
 		class Experimental
 		{
 			@Localization
-			private Integer localization = 1;
+			private Integer variable = 1;
 		}
 
 		assertThrows(UnsupportedFieldTypeException.class, () -> {
@@ -63,7 +63,7 @@ public class LocalizationValidatorTest
 		class Experimental
 		{
 			@Localization
-			private String localization = null;
+			private String variable = null;
 		}
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
@@ -75,12 +75,12 @@ public class LocalizationValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueNotCorrectEmpty()
+	public void validValueEmpty()
 	{
 		class Experimental
 		{
 			@Localization
-			private String localization = "";
+			private String variable = "";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -98,7 +98,7 @@ public class LocalizationValidatorTest
 		class Experimental
 		{
 			@Localization
-			private String localization = "Локализация";
+			private String variable = "Локализация";
 		}
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
@@ -115,7 +115,7 @@ public class LocalizationValidatorTest
 		class Experimental
 		{
 			@Localization
-			private String localization = "ru-RU";
+			private String variable = "ru-RU";
 		}
 
 		Validating validation = new Validation(new Experimental());

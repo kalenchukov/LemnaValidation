@@ -75,7 +75,7 @@ public class CountryCodeAlpha2ValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueNotCorrectEmpty()
+	public void validValueEmpty()
 	{
 		class Experimental
 		{

@@ -76,7 +76,7 @@ public class EmailAddressValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueNotCorrectEmpty()
+	public void validValueEmpty()
 	{
 		class Experimental
 		{

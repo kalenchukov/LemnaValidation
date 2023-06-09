@@ -77,7 +77,7 @@ public class PatternValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueNotCorrectEmpty()
+	public void validValueEmpty()
 	{
 		class Experimental
 		{

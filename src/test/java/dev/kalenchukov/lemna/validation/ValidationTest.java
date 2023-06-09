@@ -41,13 +41,13 @@ public class ValidationTest
 		class Experimental
 		{
 			@Localization
-			private String localization1 = "value";
+			private String variable1 = "value";
 
 			@Localization
-			private String localization2 = "ru-RU";
+			private String variable2 = "ru-RU";
 
 			@Localization
-			private String localization3 = "VALUE";
+			private String variable3 = "VALUE";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -66,13 +66,13 @@ public class ValidationTest
 		class Experimental
 		{
 			@Localization
-			private String localization1 = "ru-RU";
+			private String variable1 = "ru-RU";
 
 			@Localization
-			private String localization2 = "value";
+			private String variable2 = "value";
 
 			@Localization
-			private String localization3 = "VALUE";
+			private String variable3 = "VALUE";
 		}
 
 		Validating validation = new Validation(new Experimental());
@@ -91,7 +91,7 @@ public class ValidationTest
 		class Experimental
 		{
 			@Localization(message = "Некорректный формат локализации в поле класса '%FIELD%'")
-			private String localization = "value";
+			private String variable = "value";
 		}
 
 		Validating validation = new Validation(new Experimental());

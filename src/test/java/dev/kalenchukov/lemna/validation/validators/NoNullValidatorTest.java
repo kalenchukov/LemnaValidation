@@ -36,7 +36,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class NoNullValidatorTest
 {
 	/**
-	 * Проверка .
+	 * Проверка с корректным значением.
 	 */
 	@Test
 	public void validValue()
