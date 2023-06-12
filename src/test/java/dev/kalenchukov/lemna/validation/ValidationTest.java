@@ -54,7 +54,9 @@ public class ValidationTest
 		validation.setPushy(true);
 		List<Violating> violation = validation.validate();
 
-		assertEquals(2, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(2, actualSize);
 	}
 
 	/**
@@ -79,7 +81,9 @@ public class ValidationTest
 		validation.setPushy(false);
 		List<Violating> violation = validation.validate();
 
-		assertEquals(1, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(1, actualSize);
 	}
 
 	/**
@@ -97,6 +101,8 @@ public class ValidationTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals("Некорректный формат локализации в поле класса '%FIELD%'", violation.get(0).getMessage());
+		String actualMessage = violation.get(0).getMessage();
+
+		assertEquals("Некорректный формат локализации в поле класса '%FIELD%'", actualMessage);
 	}
 }

@@ -41,54 +41,64 @@ public class ViolationTest
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating expected = new Violation("id", "Сообщение", params);
-		Violating actual = new Violation("id", "Сообщение", params);
+		Violating violation1 = new Violation("id", "Сообщение", params);
+		Violating violation2 = new Violation("id", "Сообщение", params);
 
-		assertEquals(expected, actual);
+		boolean actual = violation1.equals(violation2);
+
+		assertTrue(actual);
 	}
 
 	/**
 	 * Проверка метода {@link Violation#equals(Object)} с разными объектами.
 	 */
 	@Test
-	public void equalsNotCorrect()
+	public void testEqualsDifferent()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating expected = new Violation("id", "Сообщение", params);
-		Violating actual = new Violation("name", "Сообщение", params);
+		Violating violation1 = new Violation("id", "Сообщение", params);
+		Violating violation2 = new Violation("name", "Сообщение", params);
 
-		assertNotEquals(expected, actual);
+		boolean actual = violation1.equals(violation2);
+
+		assertFalse(actual);
 	}
 
 	/**
 	 * Проверка метода {@link Violation#hashCode()} с одинаковыми объектами.
 	 */
 	@Test
-	public void hashCodeEquals()
+	public void testHashCode()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating expected = new Violation("id", "Сообщение", params);
-		Violating actual = new Violation("id", "Сообщение", params);
+		Violating violation1 = new Violation("id", "Сообщение", params);
+		Violating violation2 = new Violation("id", "Сообщение", params);
 
-		assertEquals(expected.hashCode(), actual.hashCode());
+		Integer expectedHashCode = violation1.hashCode();
+		Integer actualHashCode = violation2.hashCode();
+
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 
 	/**
 	 * Проверка метода {@link Violation#hashCode()} с разными объектами.
 	 */
 	@Test
-	public void hashCodeDifferent()
+	public void testHashCodeDifferent()
 	{
 		Map<String, String> params = new HashMap<>();
 		params.put("%FIELD%", "id");
 
-		Violating expected = new Violation("id", "Сообщение", params);
-		Violating actual = new Violation("name", "Сообщение", params);
+		Violating violation1 = new Violation("id", "Сообщение", params);
+		Violating violation2 = new Violation("name", "Сообщение", params);
 
-		assertNotEquals(expected.hashCode(), actual.hashCode());
+		Integer expectedHashCode = violation1.hashCode();
+		Integer actualHashCode = violation2.hashCode();
+
+		assertNotEquals(expectedHashCode, actualHashCode);
 	}
 }

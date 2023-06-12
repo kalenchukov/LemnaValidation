@@ -70,7 +70,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(0, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(0, actualSize);
 	}
 
 	/**
@@ -88,7 +90,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(1, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(1, actualSize);
 	}
 
 	/**
@@ -106,7 +110,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(1, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(1, actualSize);
 	}
 
 	/**
@@ -124,7 +130,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(1, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(1, actualSize);
 	}
 
 	/**
@@ -142,7 +150,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(0, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(0, actualSize);
 	}
 
 	/**
@@ -160,7 +170,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(0, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(0, actualSize);
 	}
 
 	/**
@@ -178,7 +190,9 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(0, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(0, actualSize);
 	}
 
 	/**
@@ -196,6 +210,8 @@ public class DayOfWeekValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		assertEquals(0, violation.size());
+		Integer actualSize = violation.size();
+
+		assertEquals(0, actualSize);
 	}
 }
