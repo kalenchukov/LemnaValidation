@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Validation}.
@@ -54,9 +54,9 @@ public class ValidationTest
 		validation.setPushy(true);
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(2, actualSize);
+		assertThat(actualSize).isEqualTo(2);
 	}
 
 	/**
@@ -81,9 +81,9 @@ public class ValidationTest
 		validation.setPushy(false);
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(1, actualSize);
+		assertThat(actualSize).isEqualTo(1);
 	}
 
 	/**
@@ -103,6 +103,6 @@ public class ValidationTest
 
 		String actualMessage = violation.get(0).getMessage();
 
-		assertEquals("Некорректный формат локализации в поле класса '%FIELD%'", actualMessage);
+		assertThat(actualMessage).isEqualTo("Некорректный формат локализации в поле класса '%FIELD%'");
 	}
 }

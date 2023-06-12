@@ -28,7 +28,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
 /**
  * Класс проверки аннотации {@link Exist}.
@@ -49,7 +50,7 @@ public class ExistValidatorTest
 			private Integer gender = 1;
 		}
 
-		assertThrows(UnsupportedFieldTypeException.class, () -> {
+		assertThatExceptionOfType(UnsupportedFieldTypeException.class).isThrownBy(() -> {
 			Validating validation = new Validation(new Experimental());
 			validation.validate();
 		});
@@ -70,9 +71,9 @@ public class ExistValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(0, actualSize);
+		assertThat(actualSize).isEqualTo(0);
 	}
 
 	/**
@@ -90,9 +91,9 @@ public class ExistValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(1, actualSize);
+		assertThat(actualSize).isEqualTo(1);
 	}
 
 	/**
@@ -110,9 +111,9 @@ public class ExistValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(1, actualSize);
+		assertThat(actualSize).isEqualTo(1);
 	}
 
 	/**
@@ -130,9 +131,9 @@ public class ExistValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(0, actualSize);
+		assertThat(actualSize).isEqualTo(0);
 	}
 
 	/**
@@ -151,8 +152,8 @@ public class ExistValidatorTest
 		Validating validation = new Validation(new Experimental());
 		List<Violating> violation = validation.validate();
 
-		Integer actualSize = violation.size();
+		int actualSize = violation.size();
 
-		assertEquals(0, actualSize);
+		assertThat(actualSize).isEqualTo(0);
 	}
 }

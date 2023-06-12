@@ -23,7 +23,7 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link Violation}.
@@ -46,7 +46,7 @@ public class ViolationTest
 
 		boolean actual = violation1.equals(violation2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class ViolationTest
 
 		boolean actual = violation1.equals(violation2);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -78,10 +78,10 @@ public class ViolationTest
 		Violating violation1 = new Violation("id", "Сообщение", params);
 		Violating violation2 = new Violation("id", "Сообщение", params);
 
-		Integer expectedHashCode = violation1.hashCode();
-		Integer actualHashCode = violation2.hashCode();
+		int expectedHashCode = violation1.hashCode();
+		int actualHashCode = violation2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 
 	/**
@@ -96,9 +96,9 @@ public class ViolationTest
 		Violating violation1 = new Violation("id", "Сообщение", params);
 		Violating violation2 = new Violation("name", "Сообщение", params);
 
-		Integer expectedHashCode = violation1.hashCode();
-		Integer actualHashCode = violation2.hashCode();
+		int expectedHashCode = violation1.hashCode();
+		int actualHashCode = violation2.hashCode();
 
-		assertNotEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
 	}
 }
