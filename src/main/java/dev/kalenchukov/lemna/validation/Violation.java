@@ -119,19 +119,15 @@ public final class Violation implements Violating
 	@Override
 	public boolean equals(@Nullable final Object obj)
 	{
-		if (obj == null) {
-			return false;
-		}
-
 		if (this == obj) {
 			return true;
 		}
 
-		if (this.getClass() != obj.getClass()) {
+		if (!(obj instanceof Violating)) {
 			return false;
 		}
 
-		Violation violation = (Violation) obj;
+		final Violating violation = (Violating) obj;
 
 		if (!Objects.equals(this.getField(), violation.getField())) {
 			return false;

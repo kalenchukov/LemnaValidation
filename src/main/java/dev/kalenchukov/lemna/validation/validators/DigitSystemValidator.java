@@ -164,9 +164,9 @@ public final class DigitSystemValidator extends AbstractValidator
 	 */
 	private boolean isValidAbstract(@NotNull final DigitSystem constraint, @NotNull final Character value)
 	{
-		Numerable alphabet = constraint.numeralSystem().getNumeralSystem();
+		Numerable numeralSystem = constraint.numeralSystem().getNumeralSystem();
 
-		if (!alphabet.contains(value))
+		if (!numeralSystem.contains(value))
 		{
 			this.setMessage(StringFormat.format(
 				constraint.message(),
