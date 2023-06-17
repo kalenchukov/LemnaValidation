@@ -18,6 +18,7 @@
 
 package dev.kalenchukov.lemna.validation;
 
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
@@ -33,72 +34,90 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ViolationTest
 {
 	/**
-	 * Проверка метода {@link Violation#equals(Object)} с одинаковыми объектами.
+	 * Класс проверки метода {@link Violation#equals(Object)}.
+	 *
+	 * @author Алексей Каленчуков
 	 */
-	@Test
-	public void testEquals()
+	@Nested
+	public class Equals
 	{
-		Map<String, String> params = new HashMap<>();
-		params.put("%FIELD%", "id");
+		/**
+		 * Проверка метода {@link Violation#equals(Object)} с одинаковыми объектами.
+		 */
+		@Test
+		public void testEquals()
+		{
+			Map<String, String> params = new HashMap<>();
+			params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("id", "Сообщение", params);
+			Violating violation1 = new Violation("id", "Сообщение", params);
+			Violating violation2 = new Violation("id", "Сообщение", params);
 
-		boolean actual = violation1.equals(violation2);
+			boolean actual = violation1.equals(violation2);
 
-		assertThat(actual).isTrue();
+			assertThat(actual).isTrue();
+		}
+
+		/**
+		 * Проверка метода {@link Violation#equals(Object)} с разными объектами.
+		 */
+		@Test
+		public void testEqualsDifferent()
+		{
+			Map<String, String> params = new HashMap<>();
+			params.put("%FIELD%", "id");
+
+			Violating violation1 = new Violation("id", "Сообщение", params);
+			Violating violation2 = new Violation("name", "Сообщение", params);
+
+			boolean actual = violation1.equals(violation2);
+
+			assertThat(actual).isFalse();
+		}
 	}
 
 	/**
-	 * Проверка метода {@link Violation#equals(Object)} с разными объектами.
+	 * Класс проверки метода {@link Violation#hashCode()}.
+	 *
+	 * @author Алексей Каленчуков
 	 */
-	@Test
-	public void testEqualsDifferent()
+	@Nested
+	public class HashCode
 	{
-		Map<String, String> params = new HashMap<>();
-		params.put("%FIELD%", "id");
+		/**
+		 * Проверка метода {@link Violation#hashCode()} с одинаковыми объектами.
+		 */
+		@Test
+		public void testHashCode()
+		{
+			Map<String, String> params = new HashMap<>();
+			params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("name", "Сообщение", params);
+			Violating violation1 = new Violation("id", "Сообщение", params);
+			Violating violation2 = new Violation("id", "Сообщение", params);
 
-		boolean actual = violation1.equals(violation2);
+			int expectedHashCode = violation1.hashCode();
+			int actualHashCode = violation2.hashCode();
 
-		assertThat(actual).isFalse();
-	}
+			assertThat(actualHashCode).isEqualTo(expectedHashCode);
+		}
 
-	/**
-	 * Проверка метода {@link Violation#hashCode()} с одинаковыми объектами.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		Map<String, String> params = new HashMap<>();
-		params.put("%FIELD%", "id");
+		/**
+		 * Проверка метода {@link Violation#hashCode()} с разными объектами.
+		 */
+		@Test
+		public void testHashCodeDifferent()
+		{
+			Map<String, String> params = new HashMap<>();
+			params.put("%FIELD%", "id");
 
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("id", "Сообщение", params);
+			Violating violation1 = new Violation("id", "Сообщение", params);
+			Violating violation2 = new Violation("name", "Сообщение", params);
 
-		int expectedHashCode = violation1.hashCode();
-		int actualHashCode = violation2.hashCode();
+			int expectedHashCode = violation1.hashCode();
+			int actualHashCode = violation2.hashCode();
 
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
-
-	/**
-	 * Проверка метода {@link Violation#hashCode()} с разными объектами.
-	 */
-	@Test
-	public void testHashCodeDifferent()
-	{
-		Map<String, String> params = new HashMap<>();
-		params.put("%FIELD%", "id");
-
-		Violating violation1 = new Violation("id", "Сообщение", params);
-		Violating violation2 = new Violation("name", "Сообщение", params);
-
-		int expectedHashCode = violation1.hashCode();
-		int actualHashCode = violation2.hashCode();
-
-		assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+			assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+		}
 	}
 }
