@@ -88,7 +88,9 @@ public final class YearValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Year constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Year constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -125,10 +127,9 @@ public final class YearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Year constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Year constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -140,10 +141,9 @@ public final class YearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Year constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Year constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -155,10 +155,9 @@ public final class YearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Year constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Year constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -171,10 +170,9 @@ public final class YearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Year constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Year constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < constraint.min())
 		{

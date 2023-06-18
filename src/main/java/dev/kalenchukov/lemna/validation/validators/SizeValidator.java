@@ -88,7 +88,9 @@ public final class SizeValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Size constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Size constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -171,7 +173,7 @@ public final class SizeValidator extends AbstractValidator
 	 * @param length количество элементов значения поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Size constraint, @NotNull final Integer length)
+	private boolean isValidAbstract(@NotNull final Size constraint, final int length)
 	{
 		Objects.requireNonNull(constraint);
 

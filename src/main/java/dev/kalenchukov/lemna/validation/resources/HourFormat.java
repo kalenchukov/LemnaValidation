@@ -18,10 +18,6 @@
 
 package dev.kalenchukov.lemna.validation.resources;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
-
 /**
  * Перечисление форматов времени.
  *
@@ -42,14 +38,12 @@ public enum HourFormat
 	/**
 	 * Минимальное количество часов.
 	 */
-	@NotNull
-	private final Integer minHour;
+	private final int minHour;
 
 	/**
 	 * Максимальное количество часов.
 	 */
-	@NotNull
-	private final Integer maxHour;
+	private final int maxHour;
 
 	/**
 	 * Конструктор для {@code HourFormat}.
@@ -57,11 +51,8 @@ public enum HourFormat
 	 * @param minHour минимальное количество часов.
 	 * @param maxHour максимальное количество часов.
 	 */
-	HourFormat(@NotNull final Integer minHour, @NotNull final Integer maxHour)
+	HourFormat(final int minHour, final int maxHour)
 	{
-		Objects.requireNonNull(minHour);
-		Objects.requireNonNull(maxHour);
-
 		this.minHour = minHour;
 		this.maxHour = maxHour;
 	}
@@ -71,8 +62,7 @@ public enum HourFormat
 	 *
 	 * @return минимальное количество часов.
 	 */
-	@NotNull
-	public Integer getMinHour()
+	public int getMinHour()
 	{
 		return this.minHour;
 	}
@@ -82,8 +72,7 @@ public enum HourFormat
 	 *
 	 * @return максимальное количество часов.
 	 */
-	@NotNull
-	public Integer getMaxHour()
+	public int getMaxHour()
 	{
 		return this.maxHour;
 	}

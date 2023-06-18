@@ -40,14 +40,12 @@ public final class SecondValidator extends AbstractValidator
 	/**
 	 * Минимальное значение секунд.
 	 */
-	@NotNull
-	private static final Integer MIN_SECOND = 0;
+	private static final int MIN_SECOND = 0;
 
 	/**
 	 * Максимальное значение секунд.
 	 */
-	@NotNull
-	private static final Integer MAX_SECOND = 59;
+	private static final int MAX_SECOND = 59;
 
 	/**
 	 * Конструктор для {@code SecondValidator}.
@@ -100,7 +98,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Second constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Second constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -141,10 +141,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidByte(@NotNull final Second constraint, @NotNull final Byte value)
+	private boolean isValidByte(@NotNull final Second constraint, final byte value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -156,10 +155,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Second constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Second constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -171,10 +169,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Second constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Second constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -186,10 +183,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Second constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Second constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -202,10 +198,9 @@ public final class SecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Second constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Second constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_SECOND)
 		{

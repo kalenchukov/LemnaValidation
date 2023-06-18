@@ -88,7 +88,9 @@ public final class LengthValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Length constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Length constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);

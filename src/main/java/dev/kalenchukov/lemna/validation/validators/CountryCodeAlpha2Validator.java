@@ -89,7 +89,9 @@ public final class CountryCodeAlpha2Validator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final CountryCodeAlpha2 constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final CountryCodeAlpha2 constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);

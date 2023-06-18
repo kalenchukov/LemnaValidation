@@ -88,7 +88,9 @@ public final class NumberValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Number constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Number constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -129,12 +131,11 @@ public final class NumberValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Number constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Number constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
-		return this.isValidAbstract(constraint, Long.valueOf(value));
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -144,12 +145,11 @@ public final class NumberValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Number constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Number constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
-		return this.isValidAbstract(constraint, Long.valueOf(value));
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -159,12 +159,11 @@ public final class NumberValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidByte(@NotNull final Number constraint, @NotNull final Byte value)
+	private boolean isValidByte(@NotNull final Number constraint, final byte value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
-		return this.isValidAbstract(constraint, Long.valueOf(value));
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -174,10 +173,9 @@ public final class NumberValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Number constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Number constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -190,10 +188,9 @@ public final class NumberValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Number constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Number constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < constraint.min())
 		{

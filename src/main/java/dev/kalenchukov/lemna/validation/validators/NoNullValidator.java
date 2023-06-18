@@ -84,7 +84,9 @@ public final class NoNullValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final NoNull constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final NoNull constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);

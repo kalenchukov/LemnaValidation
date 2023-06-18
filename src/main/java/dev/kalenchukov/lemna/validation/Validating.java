@@ -51,15 +51,14 @@ public interface Validating
 	 *
 	 * @return {@code true}, если проверка настырная, иначе {@code false}.
 	 */
-	@NotNull
-	Boolean isPushy();
+	boolean isPushy();
 
 	/**
 	 * Устанавливает настырность проверки.
 	 *
 	 * @param pushy настырность.
 	 */
-	void setPushy(@NotNull Boolean pushy);
+	void setPushy(boolean pushy);
 
 	/**
 	 * Проверяет поля класса на корректность.

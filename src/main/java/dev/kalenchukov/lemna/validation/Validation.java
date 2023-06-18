@@ -57,8 +57,7 @@ public class Validation implements Validating
 	/**
 	 * Настырность проверки.
 	 */
-	@NotNull
-	private Boolean pushy;
+	private boolean pushy;
 
 	/**
 	 * Локализованные тексты логирования.
@@ -129,9 +128,8 @@ public class Validation implements Validating
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Override
-	public Boolean isPushy()
+	public boolean isPushy()
 	{
 		return this.pushy;
 	}
@@ -142,7 +140,7 @@ public class Validation implements Validating
 	 * @param pushy {@inheritDoc}
 	 */
 	@Override
-	public void setPushy(@NotNull final Boolean pushy)
+	public void setPushy(final boolean pushy)
 	{
 		Objects.requireNonNull(pushy);
 

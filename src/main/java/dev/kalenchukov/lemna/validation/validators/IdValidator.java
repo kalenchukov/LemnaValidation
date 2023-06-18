@@ -40,14 +40,12 @@ public final class IdValidator extends AbstractValidator
 	/**
 	 * Минимальный идентификатор.
 	 */
-	@NotNull
-	private static final Long MIN_ID = 1L;
+	private static final long MIN_ID = 1L;
 
 	/**
 	 * Максимальный идентификатор.
 	 */
-	@NotNull
-	private static final Long MAX_ID = Long.MAX_VALUE;
+	private static final long MAX_ID = Long.MAX_VALUE;
 
 	/**
 	 * Конструктор для {@code IdValidator}.
@@ -100,7 +98,9 @@ public final class IdValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Id constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Id constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -137,10 +137,9 @@ public final class IdValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Id constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Id constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -152,10 +151,9 @@ public final class IdValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Id constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Id constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -167,10 +165,9 @@ public final class IdValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Id constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Id constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -183,10 +180,9 @@ public final class IdValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Id constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Id constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_ID)
 		{

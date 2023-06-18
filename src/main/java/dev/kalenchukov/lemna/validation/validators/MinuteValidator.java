@@ -40,14 +40,12 @@ public final class MinuteValidator extends AbstractValidator
 	/**
 	 * Минимальное значение минут.
 	 */
-	@NotNull
-	private static final Integer MIN_MINUTE = 0;
+	private static final int MIN_MINUTE = 0;
 
 	/**
 	 * Максимальное значение минут.
 	 */
-	@NotNull
-	private static final Integer MAX_MINUTE = 59;
+	private static final int MAX_MINUTE = 59;
 
 	/**
 	 * Конструктор для {@code MinuteValidator}.
@@ -100,7 +98,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Minute constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Minute constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -141,10 +141,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidByte(@NotNull final Minute constraint, @NotNull final Byte value)
+	private boolean isValidByte(@NotNull final Minute constraint, final byte value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -156,10 +155,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Minute constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Minute constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -171,10 +169,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Minute constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Minute constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -186,10 +183,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Minute constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Minute constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -202,10 +198,9 @@ public final class MinuteValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Minute constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Minute constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_MINUTE)
 		{

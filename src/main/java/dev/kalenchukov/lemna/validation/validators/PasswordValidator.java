@@ -90,7 +90,9 @@ public final class PasswordValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Password constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Password constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -136,7 +138,7 @@ public final class PasswordValidator extends AbstractValidator
 		int digit = 0;
 		int specialCharacter = 0;
 
-		for (Character symbol : value.toCharArray())
+		for (char symbol : value.toCharArray())
 		{
 			if (Character.isLetter(symbol)) {
 				letter++;

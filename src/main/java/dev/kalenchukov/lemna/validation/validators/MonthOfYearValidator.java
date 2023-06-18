@@ -40,14 +40,12 @@ public final class MonthOfYearValidator extends AbstractValidator
 	/**
 	 * Минимальный месяц года.
 	 */
-	@NotNull
-	private static final Integer MIN_MONTH_OF_YEAR = 1;
+	private static final int MIN_MONTH_OF_YEAR = 1;
 
 	/**
 	 * Максимальный месяц года.
 	 */
-	@NotNull
-	private static final Integer MAX_MONTH_OF_YEAR = 12;
+	private static final int MAX_MONTH_OF_YEAR = 12;
 
 	/**
 	 * Конструктор для {@code MonthOfYearValidator}.
@@ -100,7 +98,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final MonthOfYear constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final MonthOfYear constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -141,10 +141,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidByte(@NotNull final MonthOfYear constraint, @NotNull final Byte value)
+	private boolean isValidByte(@NotNull final MonthOfYear constraint, final byte value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -156,10 +155,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final MonthOfYear constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final MonthOfYear constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -171,10 +169,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final MonthOfYear constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final MonthOfYear constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -186,10 +183,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final MonthOfYear constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final MonthOfYear constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -202,10 +198,9 @@ public final class MonthOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final MonthOfYear constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final MonthOfYear constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_MONTH_OF_YEAR)
 		{

@@ -93,7 +93,9 @@ public final class ExistValidator extends AbstractValidator
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 * @throws InvalidExistenceClassException если класс проверки существования некорректный.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Exist constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Exist constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);

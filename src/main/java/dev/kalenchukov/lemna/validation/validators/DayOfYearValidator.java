@@ -40,14 +40,12 @@ public final class DayOfYearValidator extends AbstractValidator
 	/**
 	 * Минимальный день года.
 	 */
-	@NotNull
-	private static final Integer MIN_DAY_OF_YEAR = 1;
+	private static final int MIN_DAY_OF_YEAR = 1;
 
 	/**
 	 * Максимальный день года.
 	 */
-	@NotNull
-	private static final Integer MAX_DAY_OF_YEAR = 365;
+	private static final int MAX_DAY_OF_YEAR = 365;
 
 	/**
 	 * Конструктор для {@code DayOfYearValidator}.
@@ -100,7 +98,9 @@ public final class DayOfYearValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final DayOfYear constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final DayOfYear constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -137,10 +137,9 @@ public final class DayOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final DayOfYear constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final DayOfYear constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -152,10 +151,9 @@ public final class DayOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final DayOfYear constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final DayOfYear constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -167,10 +165,9 @@ public final class DayOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final DayOfYear constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final DayOfYear constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -183,10 +180,9 @@ public final class DayOfYearValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final DayOfYear constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final DayOfYear constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_DAY_OF_YEAR)
 		{

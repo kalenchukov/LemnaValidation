@@ -87,7 +87,9 @@ public final class DigitSystemValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final DigitSystem constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final DigitSystem constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -120,10 +122,9 @@ public final class DigitSystemValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidCharacter(@NotNull final DigitSystem constraint, @NotNull final Character value)
+	private boolean isValidCharacter(@NotNull final DigitSystem constraint, final char value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -144,7 +145,7 @@ public final class DigitSystemValidator extends AbstractValidator
 			return false;
 		}
 
-		for (Character character : value.toCharArray())
+		for (char character : value.toCharArray())
 		{
 			if (!this.isValidAbstract(constraint, character)) {
 				return false;
@@ -162,7 +163,7 @@ public final class DigitSystemValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final DigitSystem constraint, @NotNull final Character value)
+	private boolean isValidAbstract(@NotNull final DigitSystem constraint, final char value)
 	{
 		Numerable numeralSystem = constraint.numeralSystem().getNumeralSystem();
 

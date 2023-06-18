@@ -18,10 +18,6 @@
 
 package dev.kalenchukov.lemna.validation.resources;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
-
 /**
  * Перечисление форматов дней недели.
  *
@@ -43,14 +39,12 @@ public enum DayOfWeekFormat
 	/**
 	 * Первый день недели.
 	 */
-	@NotNull
-	private final Integer firstDay;
+	private final int firstDay;
 
 	/**
 	 * Последний день недели.
 	 */
-	@NotNull
-	private final Integer lastDay;
+	private final int lastDay;
 
 	/**
 	 * Конструктор для {@code DayOfWeekFormat}.
@@ -58,11 +52,8 @@ public enum DayOfWeekFormat
 	 * @param firstDay первый день недели.
 	 * @param lastDay последний день недели.
 	 */
-	DayOfWeekFormat(@NotNull final Integer firstDay, @NotNull final Integer lastDay)
+	DayOfWeekFormat(final int firstDay, final int lastDay)
 	{
-		Objects.requireNonNull(firstDay);
-		Objects.requireNonNull(lastDay);
-
 		this.firstDay = firstDay;
 		this.lastDay = lastDay;
 	}
@@ -72,8 +63,7 @@ public enum DayOfWeekFormat
 	 *
 	 * @return первый день недели.
 	 */
-	@NotNull
-	public Integer getFirstDay()
+	public int getFirstDay()
 	{
 		return this.firstDay;
 	}
@@ -83,8 +73,7 @@ public enum DayOfWeekFormat
 	 *
 	 * @return последний день недели.
 	 */
-	@NotNull
-	public Integer getLastDay()
+	public int getLastDay()
 	{
 		return this.lastDay;
 	}

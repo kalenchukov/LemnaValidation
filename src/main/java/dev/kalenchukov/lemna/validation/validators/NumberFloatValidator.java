@@ -88,7 +88,9 @@ public final class NumberFloatValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final NumberFloat constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final NumberFloat constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -121,12 +123,11 @@ public final class NumberFloatValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidFloat(@NotNull final NumberFloat constraint, @NotNull final Float value)
+	private boolean isValidFloat(@NotNull final NumberFloat constraint, final float value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
-		return this.isValidAbstract(constraint, Double.valueOf(value));
+		return this.isValidAbstract(constraint, value);
 	}
 
 	/**
@@ -136,10 +137,9 @@ public final class NumberFloatValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidDouble(@NotNull final NumberFloat constraint, @NotNull final Double value)
+	private boolean isValidDouble(@NotNull final NumberFloat constraint, final double value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -152,10 +152,9 @@ public final class NumberFloatValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final NumberFloat constraint, @NotNull final Double value)
+	private boolean isValidAbstract(@NotNull final NumberFloat constraint, final double value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < constraint.min())
 		{

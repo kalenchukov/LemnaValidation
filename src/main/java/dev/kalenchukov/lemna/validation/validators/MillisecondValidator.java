@@ -40,14 +40,12 @@ public final class MillisecondValidator extends AbstractValidator
 	/**
 	 * Минимальное значение миллисекунд.
 	 */
-	@NotNull
-	private static final Integer MIN_MILLISECOND = 0;
+	private static final int MIN_MILLISECOND = 0;
 
 	/**
 	 * Максимальное значение миллисекунд.
 	 */
-	@NotNull
-	private static final Integer MAX_MILLISECOND = 999;
+	private static final int MAX_MILLISECOND = 999;
 
 	/**
 	 * Конструктор для {@code MillisecondValidator}.
@@ -100,7 +98,9 @@ public final class MillisecondValidator extends AbstractValidator
 	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
 	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
 	 */
-	private boolean isValid(@NotNull final Field field, @NotNull final Millisecond constraint, @Nullable final Object value)
+	private boolean isValid(@NotNull final Field field,
+							@NotNull final Millisecond constraint,
+							@Nullable final Object value)
 	{
 		Objects.requireNonNull(field);
 		Objects.requireNonNull(constraint);
@@ -137,10 +137,9 @@ public final class MillisecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidShort(@NotNull final Millisecond constraint, @NotNull final Short value)
+	private boolean isValidShort(@NotNull final Millisecond constraint, final short value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -152,10 +151,9 @@ public final class MillisecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidInteger(@NotNull final Millisecond constraint, @NotNull final Integer value)
+	private boolean isValidInteger(@NotNull final Millisecond constraint, final int value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, Long.parseLong(String.valueOf(value)));
 	}
@@ -167,10 +165,9 @@ public final class MillisecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidLong(@NotNull final Millisecond constraint, @NotNull final Long value)
+	private boolean isValidLong(@NotNull final Millisecond constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		return this.isValidAbstract(constraint, value);
 	}
@@ -183,10 +180,9 @@ public final class MillisecondValidator extends AbstractValidator
 	 * @param value значение поля класса.
 	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
 	 */
-	private boolean isValidAbstract(@NotNull final Millisecond constraint, @NotNull final Long value)
+	private boolean isValidAbstract(@NotNull final Millisecond constraint, final long value)
 	{
 		Objects.requireNonNull(constraint);
-		Objects.requireNonNull(value);
 
 		if (value < MIN_MILLISECOND)
 		{
