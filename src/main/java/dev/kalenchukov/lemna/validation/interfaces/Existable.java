@@ -23,10 +23,10 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Интерфейс для реализации собственного класса для проверки существования.
  *
- * @param <T> Объект типа поля класса.
+ * @param <V> тип поля класса.
  * @author Алексей Каленчуков
  */
-public interface Existable<T>
+public interface Existable<V>
 {
 	/**
 	 * Проверяет существование значения.
@@ -34,5 +34,5 @@ public interface Existable<T>
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} существует, иначе {@code false}.
 	 */
-	boolean exist(@NotNull T value);
+	boolean exist(@NotNull V value);
 }

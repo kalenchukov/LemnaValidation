@@ -23,10 +23,10 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Интерфейс для реализации собственного класса для проверки корректности.
  *
- * @param <T> Объект типа поля класса.
+ * @param <V> тип поля класса.
  * @author Алексей Каленчуков
  */
-public interface Validable<T>
+public interface Validable<V>
 {
 	/**
 	 * Проверяет корректность значения.
@@ -34,5 +34,5 @@ public interface Validable<T>
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
-	boolean valid(@NotNull T value);
+	boolean valid(@NotNull V value);
 }
