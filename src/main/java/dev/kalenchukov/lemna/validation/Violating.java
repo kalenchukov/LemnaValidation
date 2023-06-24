@@ -63,7 +63,7 @@ public interface Violating
 	 * Проверяет равенство объектов.
 	 *
 	 * @param obj сравниваемый объект.
-	 * @return {@code true}, если объекты равны, иначе {@code false}.
+	 * @return {@code true}, если данный объект равен {@code obj}, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);

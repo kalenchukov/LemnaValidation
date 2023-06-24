@@ -85,8 +85,8 @@ public final class NumberFloatValidator extends AbstractValidator
 	 * @param field поле класса.
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
+	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field,
 							@NotNull final NumberFloat constraint,
@@ -121,7 +121,7 @@ public final class NumberFloatValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidFloat(@NotNull final NumberFloat constraint, final float value)
 	{
@@ -135,7 +135,7 @@ public final class NumberFloatValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidDouble(@NotNull final NumberFloat constraint, final double value)
 	{
@@ -150,7 +150,7 @@ public final class NumberFloatValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidAbstract(@NotNull final NumberFloat constraint, final double value)
 	{

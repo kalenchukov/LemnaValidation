@@ -85,8 +85,8 @@ public final class SizeValidator extends AbstractValidator
 	 * @param field поле класса.
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
+	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field,
 							@NotNull final Size constraint,
@@ -125,7 +125,7 @@ public final class SizeValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidMap(@NotNull final Size constraint, @NotNull final Map<?, ?> value)
 	{
@@ -140,7 +140,7 @@ public final class SizeValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidCollection(@NotNull final Size constraint, @NotNull final Collection<?> value)
 	{
@@ -155,7 +155,7 @@ public final class SizeValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidArray(@NotNull final Size constraint, @NotNull final Object value)
 	{
@@ -171,7 +171,7 @@ public final class SizeValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param length количество элементов значения поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidAbstract(@NotNull final Size constraint, final int length)
 	{

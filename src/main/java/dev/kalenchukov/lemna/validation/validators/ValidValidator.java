@@ -89,8 +89,8 @@ public final class ValidValidator extends AbstractValidator
 	 * @param field поле класса.
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
+	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 * @throws InvalidExistenceClassException если класс проверки существования некорректный.
 	 */
 	private boolean isValid(@NotNull final Field field,

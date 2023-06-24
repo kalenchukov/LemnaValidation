@@ -85,8 +85,8 @@ public final class DigitValidator extends AbstractValidator
 	 * @param field поле класса.
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
-	 * @throws UnsupportedFieldTypeException если тип поля класса не поддерживается данным ограничением.
+	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field,
 							@NotNull final Digit constraint,
@@ -129,7 +129,7 @@ public final class DigitValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidInteger(@NotNull final Digit constraint, final int value)
 	{
@@ -143,7 +143,7 @@ public final class DigitValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidLong(@NotNull final Digit constraint, final long value)
 	{
@@ -157,7 +157,7 @@ public final class DigitValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidShort(@NotNull final Digit constraint, final short value)
 	{
@@ -171,7 +171,7 @@ public final class DigitValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidByte(@NotNull final Digit constraint, final byte value)
 	{
@@ -186,7 +186,7 @@ public final class DigitValidator extends AbstractValidator
 	 *
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
 	 */
 	private boolean isValidAbstract(@NotNull final Digit constraint, @NotNull final String value)
 	{

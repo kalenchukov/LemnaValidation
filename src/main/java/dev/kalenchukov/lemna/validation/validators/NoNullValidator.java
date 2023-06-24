@@ -82,7 +82,7 @@ public final class NoNullValidator extends AbstractValidator
 	 * @param field поле класса.
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
-	 * @return {@code true}, если значение поля класса корректно, иначе {@code false}.
+	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
 	 */
 	private boolean isValid(@NotNull final Field field,
 							@NotNull final NoNull constraint,
