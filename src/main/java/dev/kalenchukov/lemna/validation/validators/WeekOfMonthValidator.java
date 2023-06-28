@@ -50,6 +50,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	/**
 	 * Конструктор для {@code WeekOfMonthValidator}.
 	 * @param locale локализация.
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	public WeekOfMonthValidator(@NotNull final Locale locale)
 	{
@@ -62,6 +63,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param field {@inheritDoc}
 	 * @param value {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
 	 */
 	@Nullable
 	@Override
@@ -96,6 +98,8 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field,
@@ -140,6 +144,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 */
 	private boolean isValidByte(@NotNull final WeekOfMonth constraint, final byte value)
 	{
@@ -154,6 +159,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 */
 	private boolean isValidShort(@NotNull final WeekOfMonth constraint, final short value)
 	{
@@ -168,6 +174,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 */
 	private boolean isValidInteger(@NotNull final WeekOfMonth constraint, final int value)
 	{
@@ -182,6 +189,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 */
 	private boolean isValidLong(@NotNull final WeekOfMonth constraint, final long value)
 	{
@@ -197,6 +205,7 @@ public final class WeekOfMonthValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 */
 	private boolean isValidAbstract(@NotNull final WeekOfMonth constraint, final long value)
 	{

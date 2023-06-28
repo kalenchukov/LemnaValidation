@@ -50,6 +50,7 @@ public final class DayOfMonthValidator extends AbstractValidator
 	/**
 	 * Конструктор для {@code DayOfMonthValidator}.
 	 * @param locale локализация.
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	public DayOfMonthValidator(@NotNull final Locale locale)
 	{

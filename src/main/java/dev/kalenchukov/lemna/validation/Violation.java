@@ -62,6 +62,9 @@ public final class Violation implements Violating
 	 * 		<li><b>key</b> - название.</li>
 	 * 		<li><b>value</b> - значение.</li>
 	 * </ul>
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code message} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code params} передан {@code null}.
 	 */
 	public Violation(@NotNull final String field,
 					 @NotNull final String message,

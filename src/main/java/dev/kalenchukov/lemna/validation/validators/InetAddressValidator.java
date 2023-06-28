@@ -41,6 +41,7 @@ public final class InetAddressValidator extends AbstractValidator
 	/**
 	 * Конструктор для {@code InetAddressValidator}.
 	 * @param locale локализация.
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	public InetAddressValidator(@NotNull final Locale locale)
 	{
@@ -53,6 +54,7 @@ public final class InetAddressValidator extends AbstractValidator
 	 * @param field {@inheritDoc}
 	 * @param value {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
 	 */
 	@Nullable
 	@Override
@@ -85,6 +87,8 @@ public final class InetAddressValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно в {@code field}, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
 	 * @throws UnsupportedFieldTypeException если тип {@code field} не поддерживается данным ограничением.
 	 */
 	private boolean isValid(@NotNull final Field field,
@@ -117,6 +121,8 @@ public final class InetAddressValidator extends AbstractValidator
 	 * @param constraint проверяемое ограничение.
 	 * @param value значение поля класса.
 	 * @return {@code true}, если {@code value} корректно, иначе {@code false}.
+	 * @throws NullPointerException если в качестве {@code constraint} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code value} передан {@code null}.
 	 */
 	private boolean isValidString(@NotNull final InetAddress constraint, @NotNull final String value)
 	{

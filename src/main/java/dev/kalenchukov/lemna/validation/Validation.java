@@ -75,6 +75,7 @@ public class Validation implements Validating
 	 * Конструктор для {@code Validation}.
 	 *
 	 * @param object объект класса в котором необходимо проверить данные.
+	 * @throws NullPointerException если в качестве {@code object} передан {@code null}.
 	 */
 	public Validation(@NotNull final Object object)
 	{
@@ -94,6 +95,7 @@ public class Validation implements Validating
 	 * {@inheritDoc}
 	 *
 	 * @param locale {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	@Override
 	public void setLocale(@NotNull final Locale locale)
@@ -142,8 +144,6 @@ public class Validation implements Validating
 	@Override
 	public void setPushy(final boolean pushy)
 	{
-		Objects.requireNonNull(pushy);
-
 		this.pushy = pushy;
 	}
 
@@ -188,6 +188,7 @@ public class Validation implements Validating
 	 *
 	 * @param field поле класса.
 	 * @return коллекцию нарушений.
+	 * @throws NullPointerException если в качестве {@code field} передан {@code null}.
 	 */
 	@NotNull
 	private List<@NotNull Violating> validateValueField(@NotNull final Field field)

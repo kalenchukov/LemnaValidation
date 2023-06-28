@@ -78,6 +78,7 @@ public abstract class AbstractValidator implements Validator
 	 * Конструктор для {@code AbstractValidator}.
 	 *
 	 * @param locale локализация.
+	 * @throws NullPointerException если в качестве {@code locale} передан {@code null}.
 	 */
 	protected AbstractValidator(@NotNull final Locale locale)
 	{
@@ -117,6 +118,8 @@ public abstract class AbstractValidator implements Validator
 	 * @param key {@inheritDoc}
 	 * @param value {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code key} передан {@code null}.
+	 * @throws NullPointerException если в качестве {@code value} передан {@code null}.
 	 */
 	@Override
 	public void setParam(@NotNull final String key, @NotNull final String value)
@@ -144,6 +147,7 @@ public abstract class AbstractValidator implements Validator
 	 *
 	 * @param message {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code message} передан {@code null}.
 	 */
 	@Override
 	public void setMessage(@NotNull final String message)
