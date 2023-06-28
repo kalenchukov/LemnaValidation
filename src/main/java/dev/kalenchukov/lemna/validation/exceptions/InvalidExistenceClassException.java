@@ -18,9 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.exceptions;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Исключение для некорректного класса проверки существования.
@@ -34,8 +32,8 @@ public class InvalidExistenceClassException extends RuntimeException
 	 *
 	 * @param message сообщение.
 	 */
-	public InvalidExistenceClassException(@NotNull final String message)
+	public InvalidExistenceClassException(@Nullable final String message)
 	{
-		super(Objects.requireNonNull(message));
+		super(message);
 	}
 }

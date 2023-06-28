@@ -18,9 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.exceptions;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Objects;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Исключение для неподдерживаемого типа поля класса.
@@ -34,8 +32,8 @@ public class UnsupportedFieldTypeException extends RuntimeException
 	 *
 	 * @param message сообщение.
 	 */
-	public UnsupportedFieldTypeException(@NotNull final String message)
+	public UnsupportedFieldTypeException(@Nullable final String message)
 	{
-		super(Objects.requireNonNull(message));
+		super(message);
 	}
 }
