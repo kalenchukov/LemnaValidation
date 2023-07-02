@@ -26,7 +26,7 @@ package dev.kalenchukov.lemna.validation.resources;
 public enum HourFormat
 {
 	/**
-	 * 12 часовой.
+	 * 12-часовой.
 	 */
 	HOUR_12(1, 12),
 

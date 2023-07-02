@@ -56,6 +56,12 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.jetbrains</groupId>
+			<artifactId>annotations</artifactId>
+			<version>24.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
 			<groupId>dev.kalenchukov</groupId>
 			<artifactId>string-formatting</artifactId>
 			<version>1.4.0</version>
@@ -77,12 +83,6 @@
 			<groupId>dev.kalenchukov</groupId>
 			<artifactId>string-regexp</artifactId>
 			<version>1.6.0</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.jetbrains</groupId>
-			<artifactId>annotations</artifactId>
-			<version>23.0.0</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
