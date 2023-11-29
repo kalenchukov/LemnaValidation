@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.constraints;
 
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
+import dev.kalenchukov.numeralsystem.types.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.*;

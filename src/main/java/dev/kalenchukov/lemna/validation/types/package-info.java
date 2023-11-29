@@ -19,4 +19,4 @@
 /**
  * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.lemna.validation.resources;
+package dev.kalenchukov.lemna.validation.types;

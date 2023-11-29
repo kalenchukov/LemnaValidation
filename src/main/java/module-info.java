@@ -12,7 +12,7 @@ module dev.kalenchukov.lemna.validation
 
 	exports dev.kalenchukov.lemna.validation;
 	exports dev.kalenchukov.lemna.validation.constraints;
-	exports dev.kalenchukov.lemna.validation.resources;
+	exports dev.kalenchukov.lemna.validation.types;
 	exports dev.kalenchukov.lemna.validation.interfaces;
 	exports dev.kalenchukov.lemna.validation.exceptions;
 

@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.validators;
 
-import dev.kalenchukov.alphabet.resources.Alphabet;
+import dev.kalenchukov.alphabet.types.Alphabet;
 import dev.kalenchukov.lemna.validation.Validating;
 import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;

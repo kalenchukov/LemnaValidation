@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.constraints;
 
-import dev.kalenchukov.alphabet.resources.Alphabet;
+import dev.kalenchukov.alphabet.types.Alphabet;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.*;

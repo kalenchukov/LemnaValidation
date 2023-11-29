@@ -23,7 +23,7 @@ import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.Hour;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
-import dev.kalenchukov.lemna.validation.resources.HourFormat;
+import dev.kalenchukov.lemna.validation.types.HourFormat;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

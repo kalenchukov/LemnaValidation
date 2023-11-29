@@ -342,7 +342,7 @@ public class Experimental
 
 #### Пример
 ```java
-import dev.kalenchukov.alphabet.resources.Alphabet;
+import dev.kalenchukov.alphabet.types.Alphabet;
 import dev.kalenchukov.lemna.validation.constraints.LetterAlphabet;
 
 public class Experimental
@@ -419,7 +419,7 @@ public class Experimental
 
 #### Пример
 ```java
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
+import dev.kalenchukov.numeralsystem.types.NumeralSystem;
 import dev.kalenchukov.lemna.validation.constraints.DigitSystem;
 
 public class Experimental

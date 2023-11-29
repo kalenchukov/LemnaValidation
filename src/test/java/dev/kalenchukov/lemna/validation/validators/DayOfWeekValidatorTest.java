@@ -23,7 +23,7 @@ import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.DayOfWeek;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
-import dev.kalenchukov.lemna.validation.resources.DayOfWeekFormat;
+import dev.kalenchukov.lemna.validation.types.DayOfWeekFormat;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.constraints;
 
-import dev.kalenchukov.lemna.validation.resources.HourFormat;
+import dev.kalenchukov.lemna.validation.types.HourFormat;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.*;

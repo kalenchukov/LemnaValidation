@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package dev.kalenchukov.lemna.validation.resources;
+package dev.kalenchukov.lemna.validation.types;
 
 /**
  * Перечисление форматов дней недели.

@@ -18,7 +18,7 @@
 
 package dev.kalenchukov.lemna.validation.constraints;
 
-import dev.kalenchukov.lemna.validation.resources.DayOfWeekFormat;
+import dev.kalenchukov.lemna.validation.types.DayOfWeekFormat;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.*;

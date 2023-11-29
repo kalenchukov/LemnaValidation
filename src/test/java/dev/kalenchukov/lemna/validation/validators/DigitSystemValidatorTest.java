@@ -23,7 +23,7 @@ import dev.kalenchukov.lemna.validation.Validation;
 import dev.kalenchukov.lemna.validation.Violating;
 import dev.kalenchukov.lemna.validation.constraints.DigitSystem;
 import dev.kalenchukov.lemna.validation.exceptions.UnsupportedFieldTypeException;
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
+import dev.kalenchukov.numeralsystem.types.NumeralSystem;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
