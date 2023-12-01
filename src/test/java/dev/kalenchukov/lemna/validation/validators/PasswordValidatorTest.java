@@ -42,7 +42,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -57,10 +57,10 @@ public class PasswordValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -80,7 +80,7 @@ public class PasswordValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -100,7 +100,7 @@ public class PasswordValidatorTest
 	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValue()
+	public void validateWithStringTypeValue()
 	{
 		class Experimental
 		{
@@ -120,7 +120,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка букв в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectMinLetters()
+	public void validateWithStringTypeMinLettersValue()
 	{
 		class Experimental
 		{
@@ -140,7 +140,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка цифр в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectMinDigits()
+	public void validateWithStringTypeMinDigitsValue()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка специальных символов в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectMinSpecial()
+	public void validateWithStringTypeMinSpecialValue()
 	{
 		class Experimental
 		{
@@ -180,7 +180,7 @@ public class PasswordValidatorTest
 	 * Проверка с некорректным значением из-за недостатка букв разного регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectMixedCase()
+	public void validateWithStringTypeMixedCaseValue()
 	{
 		class Experimental
 		{

@@ -42,10 +42,10 @@ public class ViolationTest
 	public class Equals
 	{
 		/**
-		 * Проверка метода {@link Violation#equals(Object)} с одинаковыми объектами.
+		 * Проверка метода {@link Violation#equals(Object)} с равными объектами.
 		 */
 		@Test
-		public void testEquals()
+		public void equalsWithEqualsValue()
 		{
 			Map<String, String> params = new HashMap<>();
 			params.put("%FIELD%", "id");
@@ -62,7 +62,7 @@ public class ViolationTest
 		 * Проверка метода {@link Violation#equals(Object)} с разными объектами.
 		 */
 		@Test
-		public void testEqualsDifferent()
+		public void equalsWithDifferentField()
 		{
 			Map<String, String> params = new HashMap<>();
 			params.put("%FIELD%", "id");
@@ -85,10 +85,10 @@ public class ViolationTest
 	public class HashCode
 	{
 		/**
-		 * Проверка метода {@link Violation#hashCode()} с одинаковыми объектами.
+		 * Проверка метода {@link Violation#hashCode()} с равными объектами.
 		 */
 		@Test
-		public void testHashCode()
+		public void hashCodeWithEqualsValue()
 		{
 			Map<String, String> params = new HashMap<>();
 			params.put("%FIELD%", "id");
@@ -106,7 +106,7 @@ public class ViolationTest
 		 * Проверка метода {@link Violation#hashCode()} с разными объектами.
 		 */
 		@Test
-		public void testHashCodeDifferent()
+		public void hashCodeWithDifferentValue()
 		{
 			Map<String, String> params = new HashMap<>();
 			params.put("%FIELD%", "id");

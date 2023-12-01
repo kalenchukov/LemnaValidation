@@ -41,7 +41,7 @@ public class SizeValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -56,10 +56,10 @@ public class SizeValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class SizeValidatorTest
 	 * Проверка с полем типа массив.
 	 */
 	@Test
-	public void validArrayTypeValue()
+	public void validateWithArrayTypeValue()
 	{
 		class Experimental
 		{
@@ -99,7 +99,7 @@ public class SizeValidatorTest
 	 * Проверка с полем типа {@code Collection}.
 	 */
 	@Test
-	public void validCollectionTypeValue()
+	public void validateWithCollectionTypeValue()
 	{
 		class Experimental
 		{
@@ -119,7 +119,7 @@ public class SizeValidatorTest
 	 * Проверка с полем типа {@code Map}.
 	 */
 	@Test
-	public void validMapTypeValue()
+	public void validateWithMapTypeValue()
 	{
 		class Experimental
 		{
@@ -143,7 +143,7 @@ public class SizeValidatorTest
 	 * Проверка  без элементов в поле типа массив.
 	 */
 	@Test
-	public void validArrayTypeValueCorrectZero()
+	public void validateWithArrayTypeValueZero()
 	{
 		class Experimental
 		{
@@ -163,7 +163,7 @@ public class SizeValidatorTest
 	 * Проверка  без элементов в поле типа {@code Collection}.
 	 */
 	@Test
-	public void validCollectionTypeValueCorrectZero()
+	public void validateWithCollectionTypeValueZero()
 	{
 		class Experimental
 		{
@@ -183,7 +183,7 @@ public class SizeValidatorTest
 	 * Проверка  без элементов в поле типа {@code Map}.
 	 */
 	@Test
-	public void validMapTypeValueCorrectZero()
+	public void validateWithMapTypeValueZero()
 	{
 		class Experimental
 		{
@@ -203,7 +203,7 @@ public class SizeValidatorTest
 	 * Проверка с меньшим количеством элементов в поле типа массив.
 	 */
 	@Test
-	public void validArrayTypeValueNotCorrectMin()
+	public void validateWithArrayTypeMinValue()
 	{
 		class Experimental
 		{
@@ -223,7 +223,7 @@ public class SizeValidatorTest
 	 * Проверка с меньшим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
-	public void validCollectionTypeValueNotCorrectMin()
+	public void validateWithCollectionTypeMinValue()
 	{
 		class Experimental
 		{
@@ -243,7 +243,7 @@ public class SizeValidatorTest
 	 * Проверка с меньшим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
-	public void validMapTypeValueNotCorrectMin()
+	public void validateWithMapTypeMinValue()
 	{
 		class Experimental
 		{
@@ -265,7 +265,7 @@ public class SizeValidatorTest
 	 * Проверка с большим количеством элементов в поле типа массив.
 	 */
 	@Test
-	public void validArrayTypeValueNotCorrectMax()
+	public void validateWithArrayTypeMaxValue()
 	{
 		class Experimental
 		{
@@ -285,7 +285,7 @@ public class SizeValidatorTest
 	 * Проверка с большим количеством элементов в поле типа {@code Collection}.
 	 */
 	@Test
-	public void validCollectionTypeValueNotCorrectMax()
+	public void validateWithCollectionTypeMaxValue()
 	{
 		class Experimental
 		{
@@ -305,7 +305,7 @@ public class SizeValidatorTest
 	 * Проверка с большим количеством элементов в поле типа {@code Map}.
 	 */
 	@Test
-	public void validMapTypeValueNotCorrectMax()
+	public void validateWithMapTypeMaxValue()
 	{
 		class Experimental
 		{

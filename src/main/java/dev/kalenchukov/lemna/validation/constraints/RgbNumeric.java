@@ -35,7 +35,7 @@ public @interface RgbNumeric
 	/**
 	 * Задаёт сообщение о нарушении.
 	 * Переменные:
-     * <ul>
+	 * <ul>
 	 *     <li>{@code %FIELD%} - название поля класса</li>
 	 * </ul>
 	 *

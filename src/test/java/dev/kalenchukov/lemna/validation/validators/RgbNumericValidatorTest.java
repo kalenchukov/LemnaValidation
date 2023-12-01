@@ -41,7 +41,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -56,10 +56,10 @@ public class RgbNumericValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class RgbNumericValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -96,30 +96,10 @@ public class RgbNumericValidatorTest
 	}
 
 	/**
-	 * Проверка с RGB моделью в числовом представлении в поле типа {@code String}.
-	 */
-	@Test
-	public void validStringTypeValue()
-	{
-		class Experimental
-		{
-			@RgbNumeric
-			private String rgbNumeric = "100,150, 200";
-		}
-
-		Validating validation = new Validation(new Experimental());
-		List<Violating> violation = validation.validate();
-
-		int actualSize = violation.size();
-
-		assertThat(actualSize).isEqualTo(0);
-	}
-
-	/**
 	 * Проверка с некорректным значением RGB модели в числовом представлении в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrect()
+	public void validateWithValue()
 	{
 		class Experimental
 		{
@@ -133,5 +113,25 @@ public class RgbNumericValidatorTest
 		int actualSize = violation.size();
 
 		assertThat(actualSize).isEqualTo(1);
+	}
+
+	/**
+	 * Проверка с RGB моделью в числовом представлении в поле типа {@code String}.
+	 */
+	@Test
+	public void validateWithValueInvalid()
+	{
+		class Experimental
+		{
+			@RgbNumeric
+			private String rgbNumeric = "100,150, 200";
+		}
+
+		Validating validation = new Validation(new Experimental());
+		List<Violating> violation = validation.validate();
+
+		int actualSize = violation.size();
+
+		assertThat(actualSize).isEqualTo(0);
 	}
 }

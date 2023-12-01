@@ -42,7 +42,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -57,10 +57,10 @@ public class DayOfWeekValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -80,7 +80,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void validValueNotCorrect()
+	public void validateWithValueInvalid()
 	{
 		class Experimental
 		{
@@ -100,7 +100,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void validValueNotCorrectFormat1()
+	public void validateWithValueInvalidFormat1()
 	{
 		class Experimental
 		{
@@ -120,7 +120,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с некорректным значением по выбранному формату.
 	 */
 	@Test
-	public void validValueNotCorrectFormat2()
+	public void validateWithValueInvalidFormat2()
 	{
 		class Experimental
 		{
@@ -140,7 +140,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Byte}.
 	 */
 	@Test
-	public void validByteTypeValue()
+	public void validateWithByteTypeValue()
 	{
 		class Experimental
 		{
@@ -160,7 +160,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
-	public void validShortTypeValue()
+	public void validateWithShortTypeValue()
 	{
 		class Experimental
 		{
@@ -180,7 +180,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
-	public void validIntegerTypeValue()
+	public void validateWithIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -200,7 +200,7 @@ public class DayOfWeekValidatorTest
 	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
-	public void validLongTypeValue()
+	public void validateWithLongTypeValue()
 	{
 		class Experimental
 		{

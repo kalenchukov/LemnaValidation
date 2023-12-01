@@ -41,7 +41,7 @@ public class InetAddressValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -56,10 +56,10 @@ public class InetAddressValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class InetAddressValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -99,7 +99,7 @@ public class InetAddressValidatorTest
 	 * Проверка с IP адресом четвёртой версии в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueCorrectVersion4()
+	public void validateWithStringTypeValueVersion4()
 	{
 		class Experimental
 		{
@@ -119,7 +119,7 @@ public class InetAddressValidatorTest
 	 * Проверка с IP адресом шестой версии в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueCorrectVersion6()
+	public void validateWithStringTypeValueVersion6()
 	{
 		class Experimental
 		{
@@ -139,7 +139,7 @@ public class InetAddressValidatorTest
 	 * Проверка с некорректным значением из-за запрета четвёртой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectVersion4()
+	public void validateWithStringTypeVersion4Value()
 	{
 		class Experimental
 		{
@@ -159,7 +159,7 @@ public class InetAddressValidatorTest
 	 * Проверка с некорректным значением из-за запрета шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectVersion6()
+	public void validateWithStringTypeVersion6Value()
 	{
 		class Experimental
 		{
@@ -179,7 +179,7 @@ public class InetAddressValidatorTest
 	 * Проверка с некорректным значением из-за запрета четвёртой и шестой версии IP адресов в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectVersion4And6()
+	public void validateWithStringTypeVersion4And6Value()
 	{
 		class Experimental
 		{

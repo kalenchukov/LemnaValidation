@@ -43,7 +43,7 @@ public class ValidValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -58,10 +58,10 @@ public class ValidValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -81,7 +81,7 @@ public class ValidValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -101,7 +101,7 @@ public class ValidValidatorTest
 	 * Проверка с некорректным значением поля.
 	 */
 	@Test
-	public void validValueNotCorrect()
+	public void validateWithValueInvalid()
 	{
 		class Experimental
 		{
@@ -121,7 +121,7 @@ public class ValidValidatorTest
 	 * Проверка .
 	 */
 	@Test
-	public void validValue()
+	public void validateWithValue()
 	{
 		class Experimental
 		{
@@ -141,7 +141,7 @@ public class ValidValidatorTest
 	 * Проверка с множественной проверкой.
 	 */
 	@Test
-	public void validValueMany()
+	public void validateWithValueMany()
 	{
 		class Experimental
 		{

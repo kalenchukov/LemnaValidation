@@ -42,7 +42,7 @@ public class IdValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -57,10 +57,10 @@ public class IdValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -80,7 +80,7 @@ public class IdValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void validValueNotCorrect()
+	public void validateWithValueInvalid()
 	{
 		class Experimental
 		{
@@ -100,7 +100,7 @@ public class IdValidatorTest
 	 * Проверка с полем типа {@code Short}.
 	 */
 	@Test
-	public void validShortTypeValue()
+	public void validateWithShortTypeValue()
 	{
 		class Experimental
 		{
@@ -120,7 +120,7 @@ public class IdValidatorTest
 	 * Проверка с полем типа {@code Integer}.
 	 */
 	@Test
-	public void validIntegerTypeValue()
+	public void validateWithIntegerTypeValue()
 	{
 		class Experimental
 		{
@@ -140,7 +140,7 @@ public class IdValidatorTest
 	 * Проверка с полем типа {@code Long}.
 	 */
 	@Test
-	public void validLongTypeValue()
+	public void validateWithLongTypeValue()
 	{
 		class Experimental
 		{

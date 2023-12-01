@@ -23,8 +23,8 @@ import dev.kalenchukov.lemna.validation.constraints.NoNull;
 
 public class Experimental
 {
-    @NoNull
-    private Long id = 1L;
+	@NoNull
+	private Long id = 1L;
 }
 ```
 
@@ -46,8 +46,8 @@ import dev.kalenchukov.lemna.validation.constraints.NoEmpty;
 
 public class Experimental
 {
-    @NoEmpty
-    private String message = "сообщение";
+	@NoEmpty
+	private String message = "сообщение";
 }
 ```
 
@@ -70,8 +70,8 @@ import dev.kalenchukov.lemna.validation.constraints.Length;
 
 public class Experimental
 {
-    @Length(min = 3, max = 13)
-    private String comment = "значение";
+	@Length(min = 3, max = 13)
+	private String comment = "значение";
 }
 ```
 
@@ -399,8 +399,8 @@ import dev.kalenchukov.lemna.validation.constraints.Digit;
 
 public class Experimental
 {
-    @Digit(min = 3, max = 13)
-    private Integer digit = 123;
+	@Digit(min = 3, max = 13)
+	private Integer digit = 123;
 }
 ```
 
@@ -450,8 +450,8 @@ import dev.kalenchukov.lemna.validation.constraints.Size;
 
 public class Experimental
 {
-    @Size(min = 2, max = 4)
-    private Integer[] days = {1, 2, 3};
+	@Size(min = 2, max = 4)
+	private Integer[] days = {1, 2, 3};
 }
 ```
 
@@ -474,8 +474,8 @@ import dev.kalenchukov.lemna.validation.constraints.Id;
 
 public class Experimental
 {
-    @Id
-    private Long id = 13;
+	@Id
+	private Long id = 13;
 }
 ```
 
@@ -777,8 +777,8 @@ import dev.kalenchukov.lemna.validation.constraints.Number;
 
 public class Experimental
 {
-    @Number(min = 0, max = 1000)
-    private Integer sum = 785;
+	@Number(min = 0, max = 1000)
+	private Integer sum = 785;
 }
 ```
 
@@ -802,8 +802,8 @@ import dev.kalenchukov.lemna.validation.constraints.NumberFloat;
 
 public class Experimental
 {
-    @NumberFloat(min = 0.0, max = 1000.1000)
-    private Double sum = 785.785;
+	@NumberFloat(min = 0.0, max = 1000.1000)
+	private Double sum = 785.785;
 }
 ```
 
@@ -826,8 +826,8 @@ import dev.kalenchukov.lemna.validation.constraints.Pattern;
 
 public class Experimental
 {
-    @Pattern(regexp = "[0-9A-F]+")
-    private String hexadecimal = "08A6D9";
+	@Pattern(regexp = "[0-9A-F]+")
+	private String hexadecimal = "08A6D9";
 }
 ```
 
@@ -863,8 +863,8 @@ import dev.kalenchukov.lemna.validation.constraints.Exist;
 
 public class Experimental
 {
-    @Exist(existence = GenderExistence.class)
-    private String gender = "MALE";
+	@Exist(existence = GenderExistence.class)
+	private String gender = "MALE";
 }
 ```
 
@@ -900,8 +900,8 @@ import dev.kalenchukov.lemna.validation.constraints.Valid;
 
 public class Experimental
 {
-    @Valid(validator = BrowserValidator.class)
-    private String browser = "FIREFOX";
+	@Valid(validator = BrowserValidator.class)
+	private String browser = "FIREFOX";
 }
 ```
 
@@ -917,17 +917,17 @@ import dev.kalenchukov.lemna.validation.constraints.Size;
 
 public class Experimental
 {
-    @NoNull
-    private Long id = null;
-    
-    @NoEmpty
-    private String message = "";
-    
-    @Length(min = 10, max = 13)
-    private String comment = "значение";
-    
-    @Size(min = 5, max = 10)
-    private Integer[] days = {1, 2, 3};
+	@NoNull
+	private Long id = null;
+
+	@NoEmpty
+	private String message = "";
+
+	@Length(min = 10, max = 13)
+	private String comment = "значение";
+
+	@Size(min = 5, max = 10)
+	private Integer[] days = {1, 2, 3};
 }
 ```
 
@@ -944,26 +944,26 @@ List<Violating> violations = validation.validate();
 Результат выполнения:
 ```
 [
-    Violation {
-        field='id',
-        message='Значение поля '%FIELD%' не должно быть null',
-        params={FIELD=id}
-    },
-    Violation {
-        field='message',
-        message='Значение поля '%FIELD%' не должно быть пустым',
-        params={FIELD=message}
-    }, 
-    Violation {
-        field='comment',
-        message='Количество символов значения поля '%FIELD%' должно быть больше %MIN%',
-        params={MIN=10, MAX=13, FIELD=comment}
-    }, 
-    Violation {
-        field='days',
-        message='Количество элементов поля '%FIELD%' должны быть больше %MIN%',
-        params={MIN=5, MAX=10, FIELD=days}
-    }
+	Violation {
+		field='id',
+		message='Значение поля '%FIELD%' не должно быть null',
+		params={FIELD=id}
+	},
+	Violation {
+		field='message',
+		message='Значение поля '%FIELD%' не должно быть пустым',
+		params={FIELD=message}
+	},
+	Violation {
+		field='comment',
+		message='Количество символов значения поля '%FIELD%' должно быть больше %MIN%',
+		params={MIN=10, MAX=13, FIELD=comment}
+	},
+	Violation {
+		field='days',
+		message='Количество элементов поля '%FIELD%' должны быть больше %MIN%',
+		params={MIN=5, MAX=10, FIELD=days}
+	}
 ]
 ```
 
@@ -981,10 +981,10 @@ List<Violating> violations = validation.validate();
 Результат выполнения:
 ```
 [
-    Violation {
-        field='id', 
-        message='Значение поля '%FIELD%' не должно быть null', 
-        params={FIELD=id}
-    }
+	Violation {
+		field='id',
+		message='Значение поля '%FIELD%' не должно быть null',
+		params={FIELD=id}
+	}
 ]
 ```

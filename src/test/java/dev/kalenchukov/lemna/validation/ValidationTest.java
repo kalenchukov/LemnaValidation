@@ -33,10 +33,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ValidationTest
 {
 	/**
-	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code true}.
+	 * Проверка метода {@link Validation#setPushy(Boolean)} с значением {@code true}.
 	 */
 	@Test
-	public void validatePushyTrue()
+	public void validateWithPushyTrue()
 	{
 		class Experimental
 		{
@@ -60,10 +60,10 @@ public class ValidationTest
 	}
 
 	/**
-	 * Проверка метода {@link Validation#setPushy(Boolean)} со значением {@code false}.
+	 * Проверка метода {@link Validation#setPushy(Boolean)} с значением {@code false}.
 	 */
 	@Test
-	public void validatePushyFalse()
+	public void validateWithPushyFalse()
 	{
 		class Experimental
 		{
@@ -90,7 +90,7 @@ public class ValidationTest
 	 * Проверка метода {@link Validation#validate()} с собственным сообщением о нарушении.
 	 */
 	@Test
-	public void validateMessage()
+	public void validateWithMessage()
 	{
 		class Experimental
 		{

@@ -41,7 +41,7 @@ public class Md5ValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -56,10 +56,10 @@ public class Md5ValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -79,7 +79,7 @@ public class Md5ValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -99,7 +99,7 @@ public class Md5ValidatorTest
 	 * Проверка с MD5-хеша с учётом регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValue()
+	public void validateWithStringTypeValue()
 	{
 		class Experimental
 		{
@@ -119,7 +119,7 @@ public class Md5ValidatorTest
 	 * Проверка с MD5-хеша без учёта регистра в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueCorrectIgnoreCase()
+	public void validateWithStringTypeValueIgnoreCase()
 	{
 		class Experimental
 		{
@@ -139,7 +139,7 @@ public class Md5ValidatorTest
 	 * Проверка с некорректным значением из-за запрета учёта регистра MD5-хеша в поле типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValueNotCorrectIgnoreCase()
+	public void validateWithStringTypeIgnoreCaseValue()
 	{
 		class Experimental
 		{

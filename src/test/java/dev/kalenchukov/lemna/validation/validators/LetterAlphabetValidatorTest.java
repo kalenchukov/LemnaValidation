@@ -42,7 +42,7 @@ public class LetterAlphabetValidatorTest
 	 * Проверка с некорректным типом поля.
 	 */
 	@Test
-	public void validNotCorrectFieldType()
+	public void validateWithFieldTypeInvalid()
 	{
 		class Experimental
 		{
@@ -57,10 +57,10 @@ public class LetterAlphabetValidatorTest
 	}
 
 	/**
-	 * Проверка со значением {@code null}.
+	 * Проверка с значением в виде {@code null}.
 	 */
 	@Test
-	public void validValueNull()
+	public void validateWithValueNull()
 	{
 		class Experimental
 		{
@@ -80,7 +80,7 @@ public class LetterAlphabetValidatorTest
 	 * Проверка с пустым значением.
 	 */
 	@Test
-	public void validValueEmpty()
+	public void validateWithValueEmpty()
 	{
 		class Experimental
 		{
@@ -100,7 +100,7 @@ public class LetterAlphabetValidatorTest
 	 * Проверка с некорректным значением.
 	 */
 	@Test
-	public void validValueNotCorrect()
+	public void validateWithValueInvalid()
 	{
 		class Experimental
 		{
@@ -120,7 +120,7 @@ public class LetterAlphabetValidatorTest
 	 * Проверка с полем типа {@code String}.
 	 */
 	@Test
-	public void validStringTypeValue()
+	public void validateWithStringTypeValue()
 	{
 		class Experimental
 		{
@@ -140,7 +140,7 @@ public class LetterAlphabetValidatorTest
 	 * Проверка с полем типа {@code Character}.
 	 */
 	@Test
-	public void validCharacterTypeValue()
+	public void validateWithCharacterTypeValue()
 	{
 		class Experimental
 		{
